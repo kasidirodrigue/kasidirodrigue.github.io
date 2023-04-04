@@ -1,0 +1,91 @@
+/* Styles pour la barre de navigation */
+.navbar-brand {
+  font-weight: bold;
+}
+.nav-link {
+  color: #343a40;
+}
+.nav-link:hover {
+  color: #007bff;
+}
+
+/* Styles pour la section bannière */
+.banner {
+  background-image: url('assets/images/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.banner h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+.banner p {
+  font-size: 1.5rem;
+}
+
+/* Styles pour la section à propos */
+.apropos {
+  background-color: #f8f9fa;
+  padding: 3rem 0;
+  text-align: center;
+}
+.apropos h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.apropos p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+/* Styles pour la section projets */
+.projets {
+  padding: 3rem 0;
+}
+.projet-card {
+  margin-bottom: 2rem;
+}
+.projet-card .card {
+  height: 100%;
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.projet-card .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.projet-card .card-text {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.projet-card .badge {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+.projet-card .btn {
+  font-size: 1.25rem;
+  padding: 0.75rem 2rem;
+}
+
+/* Styles pour les projets populaires */
+.projet-populaire .card {
+  border: 2px solid #007bff;
+}
+
+/* Styles pour le pied de page */
+footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 1rem 0;
+}
+footer p {
+  font-size: 1rem;
+}

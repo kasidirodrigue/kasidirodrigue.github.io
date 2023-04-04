@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XP Project - Ajouter un projet</title>
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">XP Project</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="projets.html">Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ajouter-projet.html">Ajouter un projet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inscription.html">Inscription</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">À propos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 class="mb-4">Ajouter un projet</h1>
+
+        <form>
+            <div class="mb-3">
+                <label for="titre" class="form-label">Titre</label>
+                <input type="text" class="form-control" id="titre">
+            </div>
+            <div class="mb-3">
+                <label for="secteur" class="form-label">Secteur</label>
+                <select class="form-select" id="secteur">
+                    <option value="secteur1">Secteur 1</option>                    
+                    <option value="secteur2">Secteur 2</option>
+                    <option value="secteur3">Secteur 3</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="nombre-equipes" class="form-label">Nombre d'équipes</label>
+                <input type="number" class="form-control" id="nombre-equipes">
+            </div>
+            <div class="mb-3">
+                <label for="competences" class="form-label">Compétences requises</label>
+                <textarea class="form-control" id="competences" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="date-limite" class="form-label">Date limite</label>
+                <input type="date" class="form-control" id="date-limite">
+            </div>
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+        </form>
+
+    </main>
+
+    <footer class="bg-light py-4">
+        <div class="container">
+            <p class="text-center">&copy; 2023 - XP Project. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
+

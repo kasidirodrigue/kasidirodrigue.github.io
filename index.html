@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>XP Project</title>
+
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Scripts JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Importation du fichier populaire.js -->
+    <script src="assets/js/populaire.js"></script>
+
+    <script>
+        // Récupérer les projets de la page projets.html
+        const projets = [...document.querySelectorAll('.projet-card')].map(card => {
+            return {
+                nom: card.querySelector('.card-title').innerText,
+                description: card.querySelector('.card-text').innerText,
+                image: card.querySelector('img').src,
+                equipeMax: Number(card.querySelector('.badge').textContent.split('/')[1]),
+                equipe: [],
+                vues: Math.floor(Math.random() * 500) + 100
+            };
+        });
+
+        // Trier les projets par popularité et récupérer les 3 plus populaires
+        const projetsPopulaires = trierProjets(projets).slice(0, 3);
+
+        // Générer le HTML des projets populaires
+        const html = projetsPopulaires.map(projet => {
+            return `
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="${projet.image}" class="card-img-top" alt="${projet.nom}">
+                        <div class="card-body">
+                            <h5 class="card-title">${projet.nom}</h5>
+                            <p class="card-text">${projet.description}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge badge-secondary">${projet.equipe.length}/${projet.equipeMax} équipe(s)</span>
+                                <small class="text-muted">${projet.vues} vues</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        // Insérer le HTML généré dans la page
+        const projetsPopulairesSection = document.getElementById("projets-populaires");
+        projetsPopulairesSection.innerHTML += html;
+    </script>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">XP Project</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="projets.html">Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ajouter-projet.html">Ajouter un projet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inscription.html">Inscription</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">À propos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-primary text-white">
+        <div class="container py-5">
+            <h1 class="display-4">Créez votre expérience professionnelle.</h1>
+            <p class="lead">Notre plateforme vous permet de participer à des projets professionnels, même si vous n'êtes pas encore dans le monde du travail.</p>
+            <a href="projets.html" class="btn btn-lg btn-light mt-4">Trouvez un projet</a>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                    <h2>Qui sommes-nous ?</h2>
+                    <p class="lead">Nous sommes Ahmet et Kasidi, deux amis proches qui se sont rencontrés dans les bancs de l'école et qui ont fait leurs études universitaires ensemble. Nous avons lancé plusieurs projets ensemble au fil des ans, et celui-ci est notre dernier projet en date.</p>
+                </div>
+                <div class="col-md-6">
+                    <h2>Pourquoi nous rejoindre ?</h2>
+                    <p class="lead">Notre plateforme est un moyen de mettre en pratique vos compétences et de gagner de l'expérience professionnelle, même si vous êtes en recherche d'emploi depuis longtemps ou si vous êtes encore étudiant. Vous pouvez travailler sur des projets qui vous intéressent et qui correspondent à vos compétences, tout en collaborant avec d'autres personnes talentueuses.</p>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <section id="projets-populaires" class="my-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Projets les plus populaires</h2>
+            <div class="row">
+                <!-- Cards des projets les plus populaires -->
+            </div>
+        </div>
+    </section>    
+
+
+
+    <footer class="bg-light py-4">
+        <div class="container text-center">
+            <p>Copyright © XP Project 2023.
+                <br>Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/populaire.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNSMww7"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+

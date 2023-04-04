@@ -1,0 +1,11 @@
+- index.html
+- projets.html
+- ajouter-projet.html
+- inscription.html
+- navbar.html ( to include )
+- assets/
+  - css/
+    - styles.css
+  - js/
+    - populaire.js
+    - app.js
