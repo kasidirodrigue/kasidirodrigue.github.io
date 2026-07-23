@@ -337,22 +337,29 @@ a:hover {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 1.5px solid var(--border-gold);
+  border: 1px solid var(--border-gold);
   background: var(--bg-card);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px var(--accent-gold-glow);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6), 0 0 25px rgba(224, 173, 78, 0.15);
+  transition: var(--transition-smooth);
+}
+
+.avatar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.7), 0 0 35px rgba(224, 173, 78, 0.25);
 }
 
 .avatar-card img {
   width: 100%;
   aspect-ratio: 4/5;
   object-fit: cover;
+  object-position: center top;
   display: block;
 }
 
 .avatar-card-info {
   padding: 16px 20px;
-  background: linear-gradient(to top, rgba(15, 14, 12, 0.95), rgba(15, 14, 12, 0.7));
-  border-top: 1px solid var(--border-subtle);
+  background: rgba(21, 18, 13, 0.95);
+  border-top: 1px solid var(--border-gold);
 }
 
 .avatar-card-info h3 {
