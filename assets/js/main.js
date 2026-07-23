@@ -1,60 +1,72 @@
-/* ==========================================================================
-   Kasidi Rodrigue Mwinyi - Portfolio Cyber-Génératif 2026
-   JavaScript Interactive Controller
-   ========================================================================== */
+/**
+ * Kasidi Rodrigue Mwinyi — Main Interactivity & Animations 2026
+ */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Navbar scroll background effect
-  const navbar = document.querySelector('.navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
 
-  // Project Matrix View Toggle (Grid vs Timeline)
-  const viewGridBtn = document.getElementById('viewGridBtn');
-  const viewTimelineBtn = document.getElementById('viewTimelineBtn');
-  const projectsGrid = document.getElementById('projectsGrid');
-  const timelineWrapper = document.getElementById('timelineWrapper');
-  const categoryFilters = document.getElementById('categoryFilters');
+  /* -------------------------------------------------------------------------- */
+  /* 1. Animated Metrics Counter (IntersectionObserver)                         */
+  /* -------------------------------------------------------------------------- */
+  const metricEls = document.querySelectorAll('.metric-number');
+  
+  if (metricEls.length > 0) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateMetrics();
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
 
-  if (viewGridBtn && viewTimelineBtn) {
-    viewGridBtn.addEventListener('click', () => {
-      viewGridBtn.classList.add('active');
-      viewTimelineBtn.classList.remove('active');
-      projectsGrid.style.display = 'grid';
-      timelineWrapper.style.display = 'none';
-      categoryFilters.style.display = 'flex';
-    });
-
-    viewTimelineBtn.addEventListener('click', () => {
-      viewTimelineBtn.classList.add('active');
-      viewGridBtn.classList.remove('active');
-      projectsGrid.style.display = 'none';
-      timelineWrapper.style.display = 'block';
-      categoryFilters.style.display = 'none';
-    });
+    observer.observe(metricEls[0]);
   }
 
-  // Category Filtering for Grid View
-  const catChips = document.querySelectorAll('.cat-chip');
+  function animateMetrics() {
+    const duration = 1500;
+    const startTime = performance.now();
+
+    function updateCounters(currentTime) {
+      const elapsedTime = currentTime - startTime;
+      const progress = Math.min(elapsedTime / duration, 1);
+      // Ease-out cubic formula
+      const easeProgress = 1 - Math.pow(1 - progress, 3);
+
+      metricEls.forEach(el => {
+        const target = parseInt(el.getAttribute('data-target'), 10) || 0;
+        const suffix = el.getAttribute('data-suffix') || '';
+        const currentVal = Math.round(target * easeProgress);
+        el.textContent = currentVal + suffix;
+      });
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCounters);
+      }
+    }
+
+    requestAnimationFrame(updateCounters);
+  }
+
+  /* -------------------------------------------------------------------------- */
+  /* 2. Projects Matrix Category Filtering                                      */
+  /* -------------------------------------------------------------------------- */
+  const catFilterBtns = document.querySelectorAll('.cat-chip');
   const projectCards = document.querySelectorAll('.project-card');
 
-  catChips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      catChips.forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
+  catFilterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Remove active class from all chips
+      catFilterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
 
-      const filter = chip.getAttribute('data-filter');
+      const filter = btn.getAttribute('data-filter');
 
       projectCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filter === 'all' || category === filter) {
+        const category = card.getAttribute('data-category') || '';
+        if (filter === 'all' || category.includes(filter)) {
           card.style.display = 'flex';
           card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
         } else {
           card.style.display = 'none';
         }
@@ -62,83 +74,66 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Metrics Counter Animation
-  const metricValues = document.querySelectorAll('.metric-value');
-  let animated = false;
+  /* -------------------------------------------------------------------------- */
+  /* 3. Modal Handler (Audit Diagnostic Form)                                  */
+  /* -------------------------------------------------------------------------- */
+  const modal = document.getElementById('auditModal');
+  const openModalBtns = document.querySelectorAll('.open-audit-modal');
+  const closeModalBtn = document.querySelector('.modal-close');
+  const auditForm = document.getElementById('auditForm');
 
-  const animateCounters = () => {
-    metricValues.forEach(counter => {
-      const targetStr = counter.getAttribute('data-target');
-      const hasPlus = targetStr.includes('+');
-      const hasDot = targetStr.includes('.');
-      const numericTarget = parseFloat(targetStr.replace('+', ''));
-      
-      let current = 0;
-      const duration = 2000;
-      const stepTime = 30;
-      const steps = duration / stepTime;
-      const increment = numericTarget / steps;
-
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= numericTarget) {
-          current = numericTarget;
-          clearInterval(timer);
-        }
-        
-        let formatted = hasDot ? current.toFixed(1) : Math.floor(current).toString();
-        if (hasPlus) formatted += '+';
-        counter.textContent = formatted;
-      }, stepTime);
-    });
-  };
-
-  // Intersection Observer for scroll triggers
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !animated) {
-        animateCounters();
-        animated = true;
-      }
-    });
-  }, { threshold: 0.3 });
-
-  const metricsSection = document.querySelector('.metrics-section');
-  if (metricsSection) {
-    observer.observe(metricsSection);
-  }
-
-  // Modal Dialog Controller (Audit Booking & Project Detail)
-  const auditModal = document.getElementById('auditModal');
-  const openAuditBtns = document.querySelectorAll('.open-audit-modal');
-  const closeModalBtns = document.querySelectorAll('.modal-close');
-
-  openAuditBtns.forEach(btn => {
+  openModalBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      if (auditModal) auditModal.classList.add('active');
+      if (modal) modal.classList.add('active');
     });
   });
 
-  closeModalBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      if (auditModal) auditModal.classList.remove('active');
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener('click', () => {
+      if (modal) modal.classList.remove('active');
     });
-  });
+  }
 
-  window.addEventListener('click', (e) => {
-    if (e.target === auditModal) {
-      auditModal.classList.remove('active');
-    }
-  });
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+      }
+    });
+  }
 
-  // Form submission feedback
-  const auditForm = document.getElementById('auditForm');
   if (auditForm) {
     auditForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      alert('Merci ! Votre demande d\'audit diagnostic a été enregistrée. Kasidi vous recontactera sous 24h.');
-      if (auditModal) auditModal.classList.remove('active');
+      alert("Merci ! Votre demande d'audit gratuit a bien été prise en compte. Kasidi vous recontactera sous 24h.");
+      if (modal) modal.classList.remove('active');
+      auditForm.reset();
     });
   }
+
+  /* -------------------------------------------------------------------------- */
+  /* 4. Active Nav Highlight on Scroll                                         */
+  /* -------------------------------------------------------------------------- */
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (window.scrollY >= (sectionTop - 180)) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  });
+
 });
