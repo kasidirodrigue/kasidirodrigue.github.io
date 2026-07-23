@@ -1,146 +1,532 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>XP Project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- SEO & Social Meta Tags 2026 -->
+  <title>Kasidi Rodrigue Mwinyi — Ingénieur IA, Master Praticien PNL, Cofondateur StuFlow.app & Réalisateur</title>
+  <meta name="description" content="Portfolio officiel 2026 de Kasidi Rodrigue Mwinyi. Coach académique, Ingénieur en IA (ULB Polytech), Master Praticien PNL (NLPU Dilts), Cofondateur de StuFlow.app et Réalisateur de film.">
+  <meta name="keywords" content="Kasidi Rodrigue Mwinyi, StuFlow.app, Coaching Académique, PNL Dilts, Ingénieur IA, BrainCair, PsyBru, Ce bout de tissu, Bruxelles">
+  
+  <meta property="og:title" content="Kasidi Rodrigue Mwinyi — Portfolio 2026">
+  <meta property="og:description" content="Découvrez le parcours, les projets EdTech, la méthode PNL et les réalisations de Kasidi Rodrigue Mwinyi.">
+  <meta property="og:image" content="assets/images/kasidi_avatar.png">
+  <meta property="og:type" content="website">
 
-    <!-- Styles CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- Scripts JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-    <!-- Importation du fichier populaire.js -->
-    <script src="assets/js/populaire.js"></script>
-
-    <script>
-        // Récupérer les projets de la page projets.html
-        const projets = [...document.querySelectorAll('.projet-card')].map(card => {
-            return {
-                nom: card.querySelector('.card-title').innerText,
-                description: card.querySelector('.card-text').innerText,
-                image: card.querySelector('img').src,
-                equipeMax: Number(card.querySelector('.badge').textContent.split('/')[1]),
-                equipe: [],
-                vues: Math.floor(Math.random() * 500) + 100
-            };
-        });
-
-        // Trier les projets par popularité et récupérer les 3 plus populaires
-        const projetsPopulaires = trierProjets(projets).slice(0, 3);
-
-        // Générer le HTML des projets populaires
-        const html = projetsPopulaires.map(projet => {
-            return `
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm">
-                        <img src="${projet.image}" class="card-img-top" alt="${projet.nom}">
-                        <div class="card-body">
-                            <h5 class="card-title">${projet.nom}</h5>
-                            <p class="card-text">${projet.description}</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="badge badge-secondary">${projet.equipe.length}/${projet.equipeMax} équipe(s)</span>
-                                <small class="text-muted">${projet.vues} vues</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
-        }).join('');
-
-        // Insérer le HTML généré dans la page
-        const projetsPopulairesSection = document.getElementById("projets-populaires");
-        projetsPopulairesSection.innerHTML += html;
-    </script>
-
+  <!-- Icons & Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">XP Project</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="projets.html">Projets</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="ajouter-projet.html">Ajouter un projet</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="inscription.html">Inscription</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">À propos</a>
-                    </li>
-                </ul>
+  <!-- Ambient Glowing Orbs -->
+  <div class="bg-orb bg-orb-1"></div>
+  <div class="bg-orb bg-orb-2"></div>
+  <div class="bg-orb bg-orb-3"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-badge">KR</span>
+        <span>Kasidi Rodrigue</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+        <li><a href="#projets" class="nav-link">Matrice Projets</a></li>
+        <li><a href="#methode" class="nav-link">Méthode PNL</a></li>
+        <li><a href="#formations" class="nav-link">Formations</a></li>
+        <li><a href="#offre" class="nav-link">Audit Offert</a></li>
+      </ul>
+
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        <span>Disponible 2026</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="accueil" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-subhead">
+          <span class="pill-tag"><i class="fa-solid fa-brain"></i> NLP Master Practitioner (NLPU)</span>
+          <span class="pill-tag"><i class="fa-solid fa-robot"></i> Ingénieur IA (ULB Polytech)</span>
+          <span class="pill-tag"><i class="fa-solid fa-rocket"></i> Cofondateur StuFlow.app</span>
+          <span class="pill-tag"><i class="fa-solid fa-film"></i> Réalisateur Cinema</span>
+        </div>
+
+        <h1 class="hero-title">
+          Transformer le stress académique en <span class="gradient-text">progrès mesurables</span> & autonomie durable.
+        </h1>
+
+        <p class="hero-description">
+          Ingénieur en informatique de formation et coach formé en PNL systémique et générative (certifié par Robert Dilts). Je combine rigueur scientifique, stratégie EdTech et accompagnement humain pour vous aider à exprimer votre plein potentiel.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#offre" class="btn btn-primary open-audit-modal">
+            <i class="fa-solid fa-calendar-check"></i> Audit Diagnostic Offert (20 min)
+          </a>
+          <a href="https://stuflow.app" target="_blank" rel="noopener" class="btn btn-secondary">
+            <i class="fa-solid fa-bolt"></i> Découvrir StuFlow.app
+          </a>
+          <a href="https://www.linkedin.com/in/kasidirodrigue" target="_blank" rel="noopener" class="btn btn-outline">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-avatar-card">
+        <img src="assets/images/kasidi_avatar.png" alt="Kasidi Rodrigue Mwinyi" class="hero-avatar-img">
+        <div class="hero-avatar-info">
+          <h3>Kasidi Rodrigue Mwinyi</h3>
+          <p>Coach Académique & Innovateur EdTech</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics Section -->
+  <section class="metrics-section">
+    <div class="container">
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-value" data-target="150+">0</div>
+          <div class="metric-label">Élèves & Étudiants Accompagnés</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value" data-target="100+">0</div>
+          <div class="metric-label">Professionnels Coached (37 Secteurs)</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value" data-target="+2.0">+0</div>
+          <div class="metric-label">Points de Moyenne en 60 Jours</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value" data-target="20+">0</div>
+          <div class="metric-label">Séminaires & Conférences Animés</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value" data-target="1">0</div>
+          <div class="metric-label">Film Documentaire Réalisé (CVB)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Genius Concept: Quantum Project Matrix & Neural Timeline Section -->
+  <section id="projets" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Exploration des Réalisations</div>
+        <h2 class="section-title">Quantum Project Matrix & Neural Timeline</h2>
+        <p class="section-desc">Explorez la succession de mes projets à travers une matrice dynamique ou une timeline interactive 3D.</p>
+      </div>
+
+      <!-- Controls -->
+      <div class="project-matrix-controls">
+        <button id="viewGridBtn" class="matrix-btn active">
+          <i class="fa-solid fa-table-cells-large"></i> Vue Matrice Grille
+        </button>
+        <button id="viewTimelineBtn" class="matrix-btn">
+          <i class="fa-solid fa-timeline"></i> Vue Timeline Neurologique 3D
+        </button>
+      </div>
+
+      <!-- Category Filter Chips (Grid View) -->
+      <div id="categoryFilters" class="category-filters">
+        <button class="cat-chip active" data-filter="all">Tous les projets</button>
+        <button class="cat-chip" data-filter="edtech">EdTech & IA</button>
+        <button class="cat-chip" data-filter="cinema">Cinéma & Art</button>
+        <button class="cat-chip" data-filter="braincair">BrainCair & PsyBru</button>
+        <button class="cat-chip" data-filter="coaching">Coaching & PNL</button>
+        <button class="cat-chip" data-filter="enseignement">Enseignement & Impact</button>
+      </div>
+
+      <!-- Projects Grid View -->
+      <div id="projectsGrid" class="projects-grid">
+
+        <!-- Card 1: StuFlow.app -->
+        <div class="project-card" data-category="edtech">
+          <div class="project-img-wrapper">
+            <img src="assets/images/stuflow_app.png" alt="StuFlow.app" class="project-img">
+            <span class="project-badge-tag">Nov 2025 – Présent</span>
+          </div>
+          <div class="project-body">
+            <div class="project-period">Co-fondateur & CEO • EdTech Startup</div>
+            <h3 class="project-title">StuFlow.app</h3>
+            <p class="project-desc">Plateforme d'apprentissage actif révolutionnaire. Importez votre cours, reformulez de mémoire et mesurez votre rétention réelle grâce à l'IA et aux routines PNL.</p>
+            <ul class="project-features">
+              <li><i class="fa-solid fa-circle-check"></i> Reformulation active de cours & suivi IA</li>
+              <li><i class="fa-solid fa-circle-check"></i> Routines spatialisées & réduction du stress</li>
+              <li><i class="fa-solid fa-circle-check"></i> Objectif : +2 points de moyenne en 60 jours</li>
+            </ul>
+            <div class="project-footer">
+              <div class="project-links">
+                <a href="https://stuflow.app" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Accéder à stuflow.app
+                </a>
+              </div>
             </div>
+          </div>
         </div>
-    </nav>
 
-    <header class="bg-primary text-white">
-        <div class="container py-5">
-            <h1 class="display-4">Créez votre expérience professionnelle.</h1>
-            <p class="lead">Notre plateforme vous permet de participer à des projets professionnels, même si vous n'êtes pas encore dans le monde du travail.</p>
-            <a href="projets.html" class="btn btn-lg btn-light mt-4">Trouvez un projet</a>
-        </div>
-    </header>
-
-    <section class="py-5">
-        <div class="container">
-            <div class="row">
-               <div class="col-md-6">
-                    <h2>Qui sommes-nous ?</h2>
-                    <p class="lead">Nous sommes Ahmet et Kasidi, deux amis proches qui se sont rencontrés dans les bancs de l'école et qui ont fait leurs études universitaires ensemble. Nous avons lancé plusieurs projets ensemble au fil des ans, et celui-ci est notre dernier projet en date.</p>
-                </div>
-                <div class="col-md-6">
-                    <h2>Pourquoi nous rejoindre ?</h2>
-                    <p class="lead">Notre plateforme est un moyen de mettre en pratique vos compétences et de gagner de l'expérience professionnelle, même si vous êtes en recherche d'emploi depuis longtemps ou si vous êtes encore étudiant. Vous pouvez travailler sur des projets qui vous intéressent et qui correspondent à vos compétences, tout en collaborant avec d'autres personnes talentueuses.</p>
+        <!-- Card 2: Film "Ce bout de tissu" -->
+        <div class="project-card" data-category="cinema">
+          <div class="project-img-wrapper">
+            <img src="assets/images/ce_bout_de_tissu.png" alt="Ce bout de tissu" class="project-img">
+            <span class="project-badge-tag">Oct 2025 – Janv 2026</span>
+          </div>
+          <div class="project-body">
+            <div class="project-period">Réalisateur • Documentaire CVB</div>
+            <h3 class="project-title">Film Documentaire "Ce bout de tissu"</h3>
+            <p class="project-desc">Réalisation d'un film documentaire poignant produit en collaboration avec le Centre Vidéo de Bruxelles (CVB), explorant les dimensions sociétales et la mémoire collective.</p>
+            <ul class="project-features">
+              <li><i class="fa-solid fa-circle-check"></i> Co-création cinématographique & réalisation</li>
+              <li><i class="fa-solid fa-circle-check"></i> Production déléguée CVB (Centre Vidéo de Bruxelles)</li>
+              <li><i class="fa-solid fa-circle-check"></i> Diffusion & témoignages engagés</li>
+            </ul>
+            <div class="project-footer">
+              <div class="project-links">
+                <a href="https://cvb.be/fr/films/ce-bout-de-tissu" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+                  <i class="fa-solid fa-film"></i> Fiche du Film CVB
+                </a>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
 
-
-    
-    <section id="projets-populaires" class="my-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Projets les plus populaires</h2>
-            <div class="row">
-                <!-- Cards des projets les plus populaires -->
+        <!-- Card 3: BrainCair & PsyBru -->
+        <div class="project-card" data-category="braincair">
+          <div class="project-img-wrapper">
+            <img src="assets/images/braincair_psybru.png" alt="BrainCair & PsyBru" class="project-img">
+            <span class="project-badge-tag">Sept 2024 – Juil 2025</span>
+          </div>
+          <div class="project-body">
+            <div class="project-period">Responsable Coaching Académique & Fondateur SMI Club</div>
+            <h3 class="project-title">BrainCair & Ateliers PsyBru</h3>
+            <p class="project-desc">Direction du pôle coaching académique chez BrainCair. Conception du SMI Club (Science Math Info) et co-conception des ateliers PsyBru pour l'autonomie des enfants et des parents.</p>
+            <ul class="project-features">
+              <li><i class="fa-solid fa-circle-check"></i> 150+ suivis personnalisés (élèves 8-23 ans)</li>
+              <li><i class="fa-solid fa-circle-check"></i> Création du Science-Math-Informatique (SMI) Club</li>
+              <li><i class="fa-solid fa-circle-check"></i> Ateliers PsyBru : "Je développe mon autonomie"</li>
+            </ul>
+            <div class="project-footer">
+              <div class="project-links">
+                <a href="https://psybru.be/fr/psychologue/je-developpe-mon-autonomie" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Atelier PsyBru Autonomie
+                </a>
+              </div>
             </div>
+          </div>
         </div>
-    </section>    
 
-
-
-    <footer class="bg-light py-4">
-        <div class="container text-center">
-            <p>Copyright © XP Project 2023.
-                <br>Tous droits réservés.</p>
+        <!-- Card 4: Coach de Carrière & PNL -->
+        <div class="project-card" data-category="coaching">
+          <div class="project-img-wrapper">
+            <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg, #1e1b4b, #312e81);">
+              <i class="fa-solid fa-users-gear" style="font-size:4rem; color:var(--primary);"></i>
+            </div>
+            <span class="project-badge-tag">2019 – 2024 (5 ans)</span>
+          </div>
+          <div class="project-body">
+            <div class="project-period">Coach de Carrière & Praticien PNL</div>
+            <h3 class="project-title">Accompagnement Professionnel & 20+ Séminaires</h3>
+            <p class="project-desc">Accompagnement de plus de 100 professionnels dans 37 domaines (santé, neuropsychologie, tech, immobilier, éducation). Organisation de 20 séminaires et de la conférence santé mentale (75 participants).</p>
+            <ul class="project-features">
+              <li><i class="fa-solid fa-circle-check"></i> 100+ professionnels coachés dans 37 métiers</li>
+              <li><i class="fa-solid fa-circle-check"></i> Organisation de 20 séminaires de développement</li>
+              <li><i class="fa-solid fa-circle-check"></i> PNL systémique & alignement d'identité</li>
+            </ul>
+            <div class="project-footer">
+              <div class="project-links">
+                <a href="https://www.linkedin.com/in/kasidirodrigue" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fa-brands fa-linkedin"></i> Profil LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
 
-    <script src="assets/js/populaire.js"></script>
+        <!-- Card 5: Institut Cardinal Mercier -->
+        <div class="project-card" data-category="enseignement">
+          <div class="project-img-wrapper">
+            <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg, #064e3b, #047857);">
+              <i class="fa-solid fa-calculator" style="font-size:4rem; color:var(--accent-emerald);"></i>
+            </div>
+            <span class="project-badge-tag">2020 – 2021</span>
+          </div>
+          <div class="project-body">
+            <div class="project-period">Professeur de Mathématiques • Schaerbeek</div>
+            <h3 class="project-title">Réapprentissage des Mathématiques (CEB)</h3>
+            <p class="project-desc">Pédagogie différenciée auprès des élèves de 1ère et 2ème secondaire différenciée à l'Institut Cardinal Mercier pour la réussite de leur CEB.</p>
+            <ul class="project-features">
+              <li><i class="fa-solid fa-circle-check"></i> Méthodes actives & déblocage des freins mathématiques</li>
+              <li><i class="fa-solid fa-circle-check"></i> Pédagogie de la réussite & bienveillance</li>
+            </ul>
+          </div>
+        </div>
 
+        <!-- Card 6: CIProC asbl -->
+        <div class="project-card" data-category="enseignement">
+          <div class="project-img-wrapper">
+            <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg, #78350f, #b45309);">
+              <i class="fa-solid fa-hands-holding-circle" style="font-size:4rem; color:var(--accent-amber);"></i>
+            </div>
+            <span class="project-badge-tag">Mars 2024</span>
+          </div>
+          <div class="project-body">
+            <div class="project-period">CIProC asbl • Mentorat & Autonomisation</div>
+            <h3 class="project-title">Atelier Identités & Confiance en soi</h3>
+            <p class="project-desc">Animation d'ateliers sur la déconstruction des freins, le renforcement de l'estime de soi et l'autonomisation des jeunes et professionnels afro-descendants.</p>
+            <ul class="project-features">
+              <li><i class="fa-solid fa-circle-check"></i> Stratégies d'épanouissement personnel et professionnel</li>
+              <li><i class="fa-solid fa-circle-check"></i> Affirmation de soi & levée des blocages</li>
+            </ul>
+          </div>
+        </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNSMww7"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+      </div>
+
+      <!-- Projects Timeline View -->
+      <div id="timelineWrapper" class="timeline-wrapper">
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="project-period">Nov 2025 – Présent</span>
+            <h3>StuFlow.app — Launch</h3>
+            <p>Lancement de StuFlow.app, plateforme web d'apprentissage actif basée sur la PNL et l’IA pour booster la réussite des étudiants (+2 points de moyenne).</p>
+            <a href="https://stuflow.app" target="_blank" class="btn btn-sm btn-primary mt-2">
+              <i class="fa-solid fa-globe"></i> Visit stuflow.app
+            </a>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="project-period">Oct 2025 – Janv 2026</span>
+            <h3>Film Documentaire "Ce bout de tissu"</h3>
+            <p>Réalisation cinématographique produite avec le Centre Vidéo de Bruxelles (CVB).</p>
+            <a href="https://cvb.be/fr/films/ce-bout-de-tissu" target="_blank" class="btn btn-sm btn-outline mt-2">
+              <i class="fa-solid fa-film"></i> Fiche du film CVB
+            </a>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="project-period">Sept 2024 – Juil 2025</span>
+            <h3>BrainCair, SMI Club & Ateliers PsyBru</h3>
+            <p>Direction du coaching académique chez BrainCair, création du SMI Club et des ateliers d'autonomie enfant/parent PsyBru.</p>
+            <a href="https://psybru.be/fr/psychologue/je-developpe-mon-autonomie" target="_blank" class="btn btn-sm btn-outline mt-2">
+              <i class="fa-solid fa-link"></i> Atelier PsyBru
+            </a>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="project-period">2022</span>
+            <h3>Master Praticien PNL Systémique (Robert Dilts / NLPU)</h3>
+            <p>Obtention de la certification de Maître-Praticien en PNL Systémique et Générative à la Spiral Academy (signée par Robert Dilts).</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="project-period">2017 – 2020</span>
+            <h3>Master en IA & Ingénierie Informatique (ULB Polytech)</h3>
+            <p>Formation d'Ingénieur civil en informatique et intelligence artificielle à l'École Polytechnique de Bruxelles.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Vision & PNL Method Section -->
+  <section id="methode" class="section" style="background: rgba(15, 23, 42, 0.3); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Approche PNL 3e Génération</div>
+        <h2 class="section-title">Une méthodologie fondée sur la science & l'humain</h2>
+        <p class="section-desc">Combiner la rigueur de l'intelligence artificielle et l'alignement des 3 intelligences PNL (Cognitive, Somatique, Champ) pour des résultats durables.</p>
+      </div>
+
+      <div class="pnl-grid">
+        <div class="pnl-card">
+          <div class="pnl-icon"><i class="fa-solid fa-stethoscope"></i></div>
+          <h3>1. Diagnostic Personnalisé</h3>
+          <p>Analyse précise des habitudes d'apprentissage, du profil cognitif et des croyances limitantes via nos grilles de lecture PNL de 3e génération.</p>
+        </div>
+
+        <div class="pnl-card">
+          <div class="pnl-icon"><i class="fa-solid fa-route"></i></div>
+          <h3>2. Routine Clairs & Réaliste</h3>
+          <p>Mise en place d'un plan d'action 14 jours étape par étape sans surcharge cognitive, conçu pour restaurer la sérénité et le contrôle.</p>
+        </div>
+
+        <div class="pnl-card">
+          <div class="pnl-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <h3>3. Suivi via StuFlow.app</h3>
+          <p>Utilisation de notre webapp d'organisation et de reformulation active pour visualiser les progrès en temps réel et ancrer des habitudes concrètes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formations & Certifications Section -->
+  <section id="formations" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Excellence Académique & Certifications</div>
+        <h2 class="section-title">Parcours d'Ingénieur & de Coach Certifié</h2>
+      </div>
+
+      <div class="credentials-grid">
+        <div>
+          <div class="cred-column-title"><i class="fa-solid fa-graduation-cap"></i> Formation Universitaire</div>
+          
+          <div class="cred-card">
+            <h4>Master Student in Computer Science and Engineering, Artificial Intelligence</h4>
+            <div class="cred-org">Ecole polytechnique de Bruxelles (ULB) • 2017 – 2020</div>
+            <div class="cred-meta">Élaboration de solutions logicielles complexes & Intelligence artificielle (IA).</div>
+          </div>
+
+          <div class="cred-card">
+            <h4>Bachelor of Engineering — BE, Science de l'ingénierie</h4>
+            <div class="cred-org">Université libre de Bruxelles (ULB) • 2013 – 2017</div>
+            <div class="cred-meta">Vice-président Ressources Humaines BEST ULB (2016) & Coach de Gouvernance Biso N'a Bino.</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="cred-column-title"><i class="fa-solid fa-certificate"></i> Certifications Internationales PNL</div>
+
+          <div class="cred-card">
+            <h4>Maître-Praticien en PNL Systémique et Générative & Coach</h4>
+            <div class="cred-org">Spiral Academy — Affiliée NLPU (Robert Dilts) • Déc. 2022</div>
+            <div class="cred-meta">Certifications signées par Robert Dilts. Travail sur les croyances, l'identité, les méta-programmes et la modélisation.</div>
+          </div>
+
+          <div class="cred-card">
+            <h4>Praticien en PNL Systémique et Générative</h4>
+            <div class="cred-org">Spiral Academy • Févr. 2022</div>
+            <div class="cred-meta">Ancrages, lignes du temps, sous-modalités et stratégies cognitives avancées.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offer & Audit Booking Section -->
+  <section id="offre" class="section">
+    <div class="container">
+      <div class="offer-box">
+        <span class="offer-badge"><i class="fa-solid fa-gift"></i> Offre de Rentrée 2026</span>
+        <h2 style="font-size: 2.4rem; font-weight: 800; margin-bottom: 1rem;">Audit Diagnostic Offert – 20 min (Visio)</h2>
+        <p style="color: var(--text-muted); font-size: 1.15rem; max-width: 650px; margin: 0 auto 2rem auto;">
+          Recevez votre plan d'action personnalisé en 1 page pour transformer le stress en résultats concrets dès cette semaine.
+        </p>
+
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="#" class="btn btn-primary open-audit-modal" style="font-size: 1.1rem; padding: 1rem 2.2rem;">
+            <i class="fa-solid fa-calendar-plus"></i> Réserver mon Audit Gratuit
+          </a>
+          <a href="mailto:kasidi@stuflow.app" class="btn btn-secondary" style="font-size: 1.1rem; padding: 1rem 2.2rem;">
+            <i class="fa-solid fa-envelope"></i> Me contacter par e-mail
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Booking Form -->
+  <div id="auditModal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem;" class="gradient-text">Audit Diagnostic Offert (20 min)</h3>
+      <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">Remplissez ce mini formulaire pour réserver votre créneau individuel en visio avec Kasidi.</p>
+      
+      <form id="auditForm">
+        <div style="margin-bottom: 1.2rem;">
+          <label style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-bottom: 0.4rem;">Nom & Prénom</label>
+          <input type="text" required placeholder="Votre nom" style="width: 100%; padding: 0.8rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light); background: rgba(255, 255, 255, 0.05); color: #fff;">
+        </div>
+
+        <div style="margin-bottom: 1.2rem;">
+          <label style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-bottom: 0.4rem;">Adresse E-mail</label>
+          <input type="email" required placeholder="votre.email@exemple.com" style="width: 100%; padding: 0.8rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light); background: rgba(255, 255, 255, 0.05); color: #fff;">
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <label style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-bottom: 0.4rem;">Votre situation / Objectif académique</label>
+          <textarea rows="3" placeholder="Ex: Étudiant 1ère Master, recherche meilleure organisation et réduction du stress" style="width: 100%; padding: 0.8rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light); background: rgba(255, 255, 255, 0.05); color: #fff;"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          <i class="fa-solid fa-paper-plane"></i> Valider ma réservation d'audit
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-badge">KR</span>
+            <span>Kasidi Rodrigue Mwinyi</span>
+          </a>
+          <p>Ingénieur en informatique (ULB Polytech), Master Praticien PNL (NLPU Dilts), Cofondateur & CEO de StuFlow.app, Coach Académique & Réalisateur de film.</p>
+
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/kasidirodrigue" target="_blank" rel="noopener" class="social-icon" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://stuflow.app" target="_blank" rel="noopener" class="social-icon" title="StuFlow.app"><i class="fa-solid fa-bolt"></i></a>
+            <a href="https://cvb.be/fr/films/ce-bout-de-tissu" target="_blank" rel="noopener" class="social-icon" title="Film Documentaire CVB"><i class="fa-solid fa-film"></i></a>
+            <a href="https://psybru.be/fr/psychologue/je-developpe-mon-autonomie" target="_blank" rel="noopener" class="social-icon" title="Atelier PsyBru"><i class="fa-solid fa-hospital-user"></i></a>
+            <a href="mailto:kasidi@stuflow.app" class="social-icon" title="Email Direct"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 1.2rem;">Projets Majeurs</h4>
+          <ul style="list-style: none;">
+            <li style="margin-bottom: 0.6rem;"><a href="https://stuflow.app" target="_blank" style="color: var(--text-muted); text-decoration: none;">StuFlow.app</a></li>
+            <li style="margin-bottom: 0.6rem;"><a href="https://cvb.be/fr/films/ce-bout-de-tissu" target="_blank" style="color: var(--text-muted); text-decoration: none;">Film "Ce bout de tissu"</a></li>
+            <li style="margin-bottom: 0.6rem;"><a href="https://psybru.be/fr/psychologue/je-developpe-mon-autonomie" target="_blank" style="color: var(--text-muted); text-decoration: none;">BrainCair & PsyBru</a></li>
+            <li style="margin-bottom: 0.6rem;"><a href="#projets" style="color: var(--text-muted); text-decoration: none;">SMI Club</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 1.2rem;">Coordonnées</h4>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.6rem;"><i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> Bruxelles, Belgique</p>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.6rem;"><i class="fa-solid fa-envelope" style="color: var(--primary);"></i> kasidi@stuflow.app</p>
+          <p style="color: var(--text-muted); font-size: 0.9rem;"><i class="fa-solid fa-globe" style="color: var(--primary);"></i> stuflow.app</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Kasidi Rodrigue Mwinyi. Tous droits réservés. Designed for Next-Gen Excellence.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
-
