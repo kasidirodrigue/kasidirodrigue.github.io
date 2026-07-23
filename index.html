@@ -14,9 +14,9 @@
   <meta property="og:image" content="assets/images/kasidi_avatar.jpg">
   <meta property="og:type" content="website">
 
-  <!-- FontAwesome Icons & Design System CSS (Cache-Busting version ?v=2026_v4) -->
+  <!-- FontAwesome Icons & Design System CSS (Cache-Busting version ?v=2026_v5) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=2026_v4">
+  <link rel="stylesheet" href="assets/css/style.css?v=2026_v5">
 
   <!-- Elfsight Google Reviews Widget Script -->
   <script src="https://elfsightcdn.com/platform.js" async></script>
@@ -154,35 +154,57 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Projects Section (Strict Ordre Chronologique Décroissant / Présent en Premier) -->
   <section id="projets" class="section">
     <div class="container">
       <div class="section-header">
         <span class="section-subtitle">Réalisations & Projets Clés</span>
-        <h2 class="section-title">Succession des Projets</h2>
-        <p class="section-desc">Explorez les initiatives majeures créées et dirigées par Kasidi Rodrigue Mwinyi.</p>
+        <h2 class="section-title">Succession des Projets (Du plus récent au plus ancien)</h2>
+        <p class="section-desc">Explorez les initiatives créées et dirigées par Kasidi Rodrigue Mwinyi, classées chronologiquement du présent vers le passé.</p>
       </div>
 
       <!-- Category Filter Chips -->
       <div id="categoryFilters" class="category-filters">
         <button class="cat-chip active" data-filter="all">Tous les projets</button>
         <button class="cat-chip" data-filter="edtech">⚡ StuFlow & EdTech</button>
-        <button class="cat-chip" data-filter="ebooks">📚 Ebooks & Guides PDF</button>
         <button class="cat-chip" data-filter="cinema">Cinéma & CVB</button>
-        <button class="cat-chip" data-filter="coaching">Coaching & Séminaires</button>
+        <button class="cat-chip" data-filter="coaching">BrainCair & Coaching</button>
+        <button class="cat-chip" data-filter="ebooks">📚 Ebooks & Guides PDF</button>
       </div>
 
-      <!-- Projects Grid -->
+      <!-- Projects Grid (Ordre Chronologique Décroissant) -->
       <div id="projectsGrid" class="projects-grid">
 
-        <!-- Card 1: Film Documentaire CVB -->
+        <!-- 1. PRÉSENT / NOV 2025: StuFlow.app -->
+        <div class="project-card" data-category="edtech">
+          <div class="project-img-wrapper">
+            <img src="assets/images/stuflow_app.png" alt="StuFlow.app Website" class="project-img">
+            <span class="project-badge-tag">Nov 2025 – Présent</span>
+          </div>
+          <div class="project-body">
+            <span class="project-period">CEO & Co-Fondateur • Startup EdTech</span>
+            <h3 class="project-title">StuFlow.app — Learning Flow</h3>
+            <p class="project-desc">Plateforme EdTech d'apprentissage actif. Importer ses cours, reformuler de mémoire et mesurer l'évolution grâce à l'IA.</p>
+            <ul class="project-features">
+              <li><i class="fa-solid fa-circle-check"></i> Reformulation active guidée par IA</li>
+              <li><i class="fa-solid fa-circle-check"></i> Ancrage spatio-temporel & routines PNL</li>
+            </ul>
+            <div class="project-footer">
+              <a href="https://stuflow.app" target="_blank" rel="noopener" class="btn btn-sm btn-primary" style="width:100%;">
+                <i class="fa-solid fa-bolt"></i> stuflow.app →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. OCT 2025 - JANV 2026: Film Documentaire CVB -->
         <div class="project-card" data-category="cinema">
           <div class="project-img-wrapper">
             <img src="assets/images/ce_bout_de_tissu.png" alt="Film Ce bout de tissu CVB" class="project-img">
-            <span class="project-badge-tag">Cinéma · Réalisateur</span>
+            <span class="project-badge-tag">Oct 2025 – Janv 2026</span>
           </div>
           <div class="project-body">
-            <span class="project-period">Oct 2025 – Janv 2026 • CVB</span>
+            <span class="project-period">Réalisateur • Production CVB</span>
             <h3 class="project-title">« Ce bout de tissu »</h3>
             <p class="project-desc">Documentaire sur la mémoire collective et les récits humains profonds, produit avec le Centre Vidéo de Bruxelles.</p>
             <ul class="project-features">
@@ -197,36 +219,33 @@
           </div>
         </div>
 
-        <!-- Card 2: Ebook 1 -->
-        <div class="project-card" data-category="ebooks">
+        <!-- 3. SEPT 2024 - JUIL 2025: BrainCair & PsyBru -->
+        <div class="project-card" data-category="coaching">
           <div class="project-img-wrapper">
-            <img src="assets/images/ebook_defense_memoire.png" alt="Ebook Défense du Mémoire" class="project-img">
-            <span class="project-badge-tag">Ebook · 2023</span>
+            <img src="assets/images/braincair_psybru.png" alt="Atelier PsyBru Autonomie" class="project-img">
+            <span class="project-badge-tag">Sept 2024 – Juil 2025</span>
           </div>
           <div class="project-body">
-            <span class="project-period">Guide Académique & Oratoire</span>
-            <h3 class="project-title">Défense du mémoire : Réussi !</h3>
-            <p class="project-desc">Réussir sa présentation orale : la règle d'unité de contenu (1 min/slide), gestion du jury et préparation PNL.</p>
+            <span class="project-period">Responsable Coaching Académique & SMI Club</span>
+            <h3 class="project-title">BrainCair & Ateliers PsyBru</h3>
+            <p class="project-desc">150+ suivis individualisés pour élèves (8-23 ans), création du SMI Club (Science-Math-Info) et atelier autonomie PsyBru.</p>
             <ul class="project-features">
-              <li><i class="fa-solid fa-circle-check"></i> Règle de 1 min/slide & 10 commandements visuels</li>
-              <li><i class="fa-solid fa-circle-check"></i> Préparation aux questions du jury</li>
+              <li><i class="fa-solid fa-circle-check"></i> Suivi TDAH, HPI, DYS & remédiation</li>
+              <li><i class="fa-solid fa-circle-check"></i> Atelier « Je développe mon autonomie »</li>
             </ul>
-            <div class="project-footer" style="display:flex; gap:8px;">
-              <a href="assets/ebooks/defense-du-memoire-reussi.html" target="_blank" class="btn btn-sm btn-primary" style="flex:1;">
-                <i class="fa-solid fa-download"></i> PDF →
-              </a>
-              <a href="https://www.youtube.com/watch?v=cudhzky9SYU" target="_blank" rel="noopener" class="btn btn-sm btn-outline" style="border-color:#ff0000; color:#ff4d4d;">
-                <i class="fa-brands fa-youtube"></i> Tuto
+            <div class="project-footer">
+              <a href="https://psybru.be/fr/psychologue/je-developpe-mon-autonomie" target="_blank" rel="noopener" class="btn btn-sm btn-primary" style="width:100%;">
+                <i class="fa-solid fa-hospital-user"></i> Atelier PsyBru →
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Card 3: Ebook 2 -->
+        <!-- 4. 2024: Ebook Question de Recherche -->
         <div class="project-card" data-category="ebooks">
           <div class="project-img-wrapper">
             <img src="assets/images/ebook_question_recherche.png" alt="Ebook Question de recherche Study2Work" class="project-img">
-            <span class="project-badge-tag">Ebook · 2024</span>
+            <span class="project-badge-tag">2024</span>
           </div>
           <div class="project-body">
             <span class="project-period">Study2Work • Méthodologie</span>
@@ -247,58 +266,39 @@
           </div>
         </div>
 
-        <!-- Card 4: StuFlow.app -->
-        <div class="project-card" data-category="edtech">
+        <!-- 5. 2023: Ebook Défense du Mémoire -->
+        <div class="project-card" data-category="ebooks">
           <div class="project-img-wrapper">
-            <img src="assets/images/stuflow_app.png" alt="StuFlow.app Website" class="project-img">
-            <span class="project-badge-tag">Startup EdTech</span>
+            <img src="assets/images/ebook_defense_memoire.png" alt="Ebook Défense du Mémoire" class="project-img">
+            <span class="project-badge-tag">2023</span>
           </div>
           <div class="project-body">
-            <span class="project-period">Nov 2025 – Présent • CEO & Co-Fondateur</span>
-            <h3 class="project-title">StuFlow.app — Learning Flow</h3>
-            <p class="project-desc">Plateforme EdTech d'apprentissage actif. Importer ses cours, reformuler de mémoire et mesurer l'évolution grâce à l'IA.</p>
+            <span class="project-period">Guide Académique & Oratoire</span>
+            <h3 class="project-title">Défense du mémoire : Réussi !</h3>
+            <p class="project-desc">Réussir sa présentation orale : la règle d'unité de contenu (1 min/slide), gestion du jury et préparation PNL.</p>
             <ul class="project-features">
-              <li><i class="fa-solid fa-circle-check"></i> Reformulation active guidée par IA</li>
-              <li><i class="fa-solid fa-circle-check"></i> Ancrage spatio-temporel & routines PNL</li>
+              <li><i class="fa-solid fa-circle-check"></i> Règle de 1 min/slide & 10 commandements visuels</li>
+              <li><i class="fa-solid fa-circle-check"></i> Préparation aux questions du jury</li>
             </ul>
-            <div class="project-footer">
-              <a href="https://stuflow.app" target="_blank" rel="noopener" class="btn btn-sm btn-primary" style="width:100%;">
-                <i class="fa-solid fa-bolt"></i> stuflow.app →
+            <div class="project-footer" style="display:flex; gap:8px;">
+              <a href="assets/ebooks/defense-du-memoire-reussi.html" target="_blank" class="btn btn-sm btn-primary" style="flex:1;">
+                <i class="fa-solid fa-download"></i> PDF →
+              </a>
+              <a href="https://www.youtube.com/watch?v=cudhzky9SYU" target="_blank" rel="noopener" class="btn btn-sm btn-outline" style="border-color:#ff0000; color:#ff4d4d;">
+                <i class="fa-brands fa-youtube"></i> Tuto
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Card 5: BrainCair & PsyBru -->
-        <div class="project-card" data-category="coaching">
-          <div class="project-img-wrapper">
-            <img src="assets/images/braincair_psybru.png" alt="Atelier PsyBru Autonomie" class="project-img">
-            <span class="project-badge-tag">Coaching · BrainCair</span>
-          </div>
-          <div class="project-body">
-            <span class="project-period">Sept 2024 – Juil 2025</span>
-            <h3 class="project-title">BrainCair & Ateliers PsyBru</h3>
-            <p class="project-desc">150+ suivis individualisés pour élèves (8-23 ans), création du SMI Club (Science-Math-Info) et atelier autonomie PsyBru.</p>
-            <ul class="project-features">
-              <li><i class="fa-solid fa-circle-check"></i> Suivi TDAH, HPI, DYS & remédiation</li>
-              <li><i class="fa-solid fa-circle-check"></i> Atelier « Je développe mon autonomie »</li>
-            </ul>
-            <div class="project-footer">
-              <a href="https://psybru.be/fr/psychologue/je-developpe-mon-autonomie" target="_blank" rel="noopener" class="btn btn-sm btn-primary" style="width:100%;">
-                <i class="fa-solid fa-hospital-user"></i> Atelier PsyBru →
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 6: 20+ Séminaires & Coaching -->
+        <!-- 6. 2019 - 2024: 20+ Séminaires & Coaching -->
         <div class="project-card" data-category="coaching">
           <div class="project-img-wrapper">
             <img src="assets/images/seminaire_coaching.jpg" alt="Séminaire de coaching animé par Kasidi Rodrigue" class="project-img">
-            <span class="project-badge-tag">Coaching · PNL</span>
+            <span class="project-badge-tag">2019 – 2024 (5 ans)</span>
           </div>
           <div class="project-body">
-            <span class="project-period">2019 – 2024 (5 ans)</span>
+            <span class="project-period">Coach de Carrière & Praticien PNL</span>
             <h3 class="project-title">20+ séminaires & conférences</h3>
             <p class="project-desc">100+ professionnels accompagnés dans 37 métiers (santé, tech, éducation, immobilier) et conf. santé mentale (75 participants).</p>
             <ul class="project-features">
@@ -317,68 +317,46 @@
     </div>
   </section>
 
-  <!-- Chronological Timeline Section -->
+  <!-- Chronological Timeline Section (Strict Ordre Chronologique Décroissant / Du Présent au Passé) -->
   <section id="path" class="section" style="background: rgba(23, 20, 15, 0.3); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
     <div class="container">
       <div class="section-header">
-        <span class="section-subtitle">Du premier diplôme à aujourd'hui</span>
-        <h2 class="section-title">Parcours Chronologique</h2>
+        <span class="section-subtitle">Du présent aux origines de formation</span>
+        <h2 class="section-title">Parcours Chronologique Décroissant</h2>
       </div>
 
       <div class="timeline-container">
         
         <div class="timeline-item">
-          <div class="timeline-year">2013–2017</div>
+          <div class="timeline-year">2025 → Présent</div>
           <div class="timeline-content-wrapper">
             <div class="timeline-details">
-              <h3>Bachelor of Engineering — ULB</h3>
-              <p>Sciences de l'ingénieur à l'Université libre de Bruxelles. Vice-président RH BEST ULB & coach de gouvernance Biso N'a Bino.</p>
+              <h3>StuFlow.app — Lancement Startup EdTech</h3>
+              <p>Cofondateur & CEO de StuFlow.app, plateforme EdTech d'apprentissage actif fondée sur l'IA et la PNL.</p>
             </div>
-            <span class="timeline-tag">Diplôme</span>
+            <span class="timeline-tag">EdTech</span>
           </div>
         </div>
 
         <div class="timeline-item">
-          <div class="timeline-year">2017–2020</div>
+          <div class="timeline-year">2025–2026</div>
           <div class="timeline-content-wrapper">
             <div class="timeline-details">
-              <h3>Master en Informatique & IA — ULB Polytech</h3>
-              <p>Master d'Ingénieur Civil en informatique et Intelligence Artificielle à l'École polytechnique de Bruxelles.</p>
+              <h3>Film documentaire « Ce bout de tissu »</h3>
+              <p>Réalisation d'un film documentaire produit avec le Centre Vidéo de Bruxelles (CVB).</p>
             </div>
-            <span class="timeline-tag">Diplôme</span>
+            <span class="timeline-tag">Cinéma</span>
           </div>
         </div>
 
         <div class="timeline-item">
-          <div class="timeline-year">Févr. 2022</div>
+          <div class="timeline-year">2024–2025</div>
           <div class="timeline-content-wrapper">
             <div class="timeline-details">
-              <h3>Praticien PNL systémique & générative</h3>
-              <p>Spiral Academy — ancrages, sous-modalités et stratégies cognitives avancées.</p>
+              <h3>BrainCair & ateliers PsyBru</h3>
+              <p>Direction du coaching académique chez BrainCair : 150+ suivis, création du SMI Club, animation d'ateliers autonomie.</p>
             </div>
-            <span class="timeline-tag">Certification</span>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-year">Déc. 2022</div>
-          <div class="timeline-content-wrapper">
-            <div class="timeline-details">
-              <h3>Maître-Praticien PNL (signé par Robert Dilts)</h3>
-              <p>Spiral Academy, affiliée NLPU California. Certifications signées par Robert Dilts. Travail sur l'identité, les croyances et la modélisation.</p>
-            </div>
-            <span class="timeline-tag">Certification</span>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-year">2023</div>
-          <div class="timeline-content-wrapper">
-            <div class="timeline-details">
-              <h3>Ebook « Défense du mémoire : Réussi ! »</h3>
-              <p>Publication du guide complet de la soutenance orale avec la méthode 1 min/slide et tutoriel vidéo.</p>
-            </div>
-            <span class="timeline-tag">Publication</span>
+            <span class="timeline-tag">Direction</span>
           </div>
         </div>
 
@@ -388,6 +366,17 @@
             <div class="timeline-details">
               <h3>Ebook « Question de recherche optimale »</h3>
               <p>Méthode Study2Work pour formuler sa question de recherche avec la formule EI+VI+VE+VD+C et l'IA.</p>
+            </div>
+            <span class="timeline-tag">Publication</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2023</div>
+          <div class="timeline-content-wrapper">
+            <div class="timeline-details">
+              <h3>Ebook « Défense du mémoire : Réussi ! »</h3>
+              <p>Publication du guide complet de la soutenance orale avec la méthode 1 min/slide et tutoriel vidéo.</p>
             </div>
             <span class="timeline-tag">Publication</span>
           </div>
@@ -405,35 +394,46 @@
         </div>
 
         <div class="timeline-item">
-          <div class="timeline-year">2024–2025</div>
+          <div class="timeline-year">Déc. 2022</div>
           <div class="timeline-content-wrapper">
             <div class="timeline-details">
-              <h3>BrainCair & ateliers PsyBru</h3>
-              <p>Direction du coaching académique chez BrainCair : 150+ suivis, création du SMI Club, animation d'ateliers autonomie.</p>
+              <h3>Maître-Praticien PNL (signé par Robert Dilts)</h3>
+              <p>Spiral Academy, affiliée NLPU California. Certifications signées par Robert Dilts. Travail sur l'identité, les croyances et la modélisation.</p>
             </div>
-            <span class="timeline-tag">Direction</span>
+            <span class="timeline-tag">Certification</span>
           </div>
         </div>
 
         <div class="timeline-item">
-          <div class="timeline-year">2025–2026</div>
+          <div class="timeline-year">Févr. 2022</div>
           <div class="timeline-content-wrapper">
             <div class="timeline-details">
-              <h3>Film documentaire « Ce bout de tissu »</h3>
-              <p>Réalisation achevée d'un film documentaire produit avec le Centre Vidéo de Bruxelles (CVB).</p>
+              <h3>Praticien PNL systémique & générative</h3>
+              <p>Spiral Academy — ancrages, sous-modalités et stratégies cognitives avancées.</p>
             </div>
-            <span class="timeline-tag">Cinéma</span>
+            <span class="timeline-tag">Certification</span>
           </div>
         </div>
 
         <div class="timeline-item">
-          <div class="timeline-year">2025 →</div>
+          <div class="timeline-year">2017–2020</div>
           <div class="timeline-content-wrapper">
             <div class="timeline-details">
-              <h3>StuFlow.app — Lancement Startup</h3>
-              <p>Cofondateur & CEO de StuFlow.app, plateforme EdTech d'apprentissage actif fondée sur l'IA et la PNL.</p>
+              <h3>Master en Informatique & IA — ULB Polytech</h3>
+              <p>Master d'Ingénieur Civil en informatique et Intelligence Artificielle à l'École polytechnique de Bruxelles.</p>
             </div>
-            <span class="timeline-tag">EdTech</span>
+            <span class="timeline-tag">Diplôme</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2013–2017</div>
+          <div class="timeline-content-wrapper">
+            <div class="timeline-details">
+              <h3>Bachelor of Engineering — ULB</h3>
+              <p>Sciences de l'ingénieur à l'Université libre de Bruxelles. Vice-président RH BEST ULB & coach de gouvernance Biso N'a Bino.</p>
+            </div>
+            <span class="timeline-tag">Diplôme</span>
           </div>
         </div>
 
@@ -462,28 +462,7 @@
 
       <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));">
 
-        <!-- Showcase Ebook 1 -->
-        <div class="project-card">
-          <div class="project-img-wrapper" style="height: 250px;">
-            <img src="assets/images/ebook_defense_memoire.png" alt="Ebook Défense du Mémoire" class="project-img">
-            <span class="project-badge-tag">Édition 2023</span>
-          </div>
-          <div class="project-body">
-            <span class="project-period">Kasidi Rodrigue • Coach Carrière & PNL</span>
-            <h3 class="project-title">✅ Défense du mémoire : Réussi !</h3>
-            <p class="project-desc">Le guide indispensable pour réussir votre présentation de mémoire à tous les coups : 1 slide/min, gestion du jury et secrets d'éloquence.</p>
-            <div class="project-footer" style="display: flex; gap: 8px;">
-              <a href="assets/ebooks/defense-du-memoire-reussi.html" target="_blank" class="btn btn-primary" style="flex: 1;">
-                <i class="fa-solid fa-file-pdf"></i> Télécharger PDF
-              </a>
-              <a href="https://www.youtube.com/watch?v=cudhzky9SYU" target="_blank" rel="noopener" class="btn btn-outline" style="border-color: #ff0000; color: #ff4d4d;">
-                <i class="fa-brands fa-youtube"></i> Tuto
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Showcase Ebook 2 -->
+        <!-- Showcase Ebook 2 (2024) -->
         <div class="project-card">
           <div class="project-img-wrapper" style="height: 250px;">
             <img src="assets/images/ebook_question_recherche.png" alt="Ebook Question de recherche Study2Work" class="project-img">
@@ -495,6 +474,27 @@
             <p class="project-desc">Comment formuler une question de recherche irréprochable avec la formule EI+VI+VE+VD+C, choisir son promoteur mentor et booster son travail avec l'IA.</p>
             <div class="project-footer" style="display: flex; gap: 8px;">
               <a href="assets/ebooks/question-de-recherche-optimale.html" target="_blank" class="btn btn-primary" style="flex: 1;">
+                <i class="fa-solid fa-file-pdf"></i> Télécharger PDF
+              </a>
+              <a href="https://www.youtube.com/watch?v=cudhzky9SYU" target="_blank" rel="noopener" class="btn btn-outline" style="border-color: #ff0000; color: #ff4d4d;">
+                <i class="fa-brands fa-youtube"></i> Tuto
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Showcase Ebook 1 (2023) -->
+        <div class="project-card">
+          <div class="project-img-wrapper" style="height: 250px;">
+            <img src="assets/images/ebook_defense_memoire.png" alt="Ebook Défense du Mémoire" class="project-img">
+            <span class="project-badge-tag">Édition 2023</span>
+          </div>
+          <div class="project-body">
+            <span class="project-period">Kasidi Rodrigue • Coach Carrière & PNL</span>
+            <h3 class="project-title">✅ Défense du mémoire : Réussi !</h3>
+            <p class="project-desc">Le guide indispensable pour réussir votre présentation de mémoire à tous les coups : 1 slide/min, gestion du jury et secrets d'éloquence.</p>
+            <div class="project-footer" style="display: flex; gap: 8px;">
+              <a href="assets/ebooks/defense-du-memoire-reussi.html" target="_blank" class="btn btn-primary" style="flex: 1;">
                 <i class="fa-solid fa-file-pdf"></i> Télécharger PDF
               </a>
               <a href="https://www.youtube.com/watch?v=cudhzky9SYU" target="_blank" rel="noopener" class="btn btn-outline" style="border-color: #ff0000; color: #ff4d4d;">
@@ -679,7 +679,7 @@
     </div>
   </footer>
 
-  <!-- Main JavaScript File (Cache-Busting version ?v=2026_v4) -->
-  <script src="assets/js/main.js?v=2026_v4"></script>
+  <!-- Main JavaScript File (Cache-Busting version ?v=2026_v5) -->
+  <script src="assets/js/main.js?v=2026_v5"></script>
 </body>
 </html>
