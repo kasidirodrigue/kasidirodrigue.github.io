@@ -97,23 +97,44 @@ a:hover {
   left: 20px;
 }
 
+/* Top Banner Minimal */
+.top-banner {
+  background: linear-gradient(90deg, #17130d, #261f14, #17130d);
+  border-bottom: 1px solid var(--border-gold);
+  color: var(--text-main);
+  font-size: 0.85rem;
+  padding: 8px 16px;
+  text-align: center;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.top-banner a {
+  color: var(--accent-gold);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 /* Navigation Bar */
 .navbar {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: linear-gradient(var(--bg-dark), rgba(15, 14, 12, 0.85) 70%, transparent);
-  backdrop-filter: blur(12px);
-  padding: 20px 0;
-  border-bottom: 1px solid rgba(36, 31, 24, 0.5);
+  background: rgba(15, 14, 12, 0.92);
+  backdrop-filter: blur(16px);
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .logo {
