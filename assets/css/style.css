@@ -892,3 +892,22 @@ footer {
     margin: 0 auto;
   }
 }
+
+/* Elfsight Reviews Widget Container Styling */
+.reviews-widget-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: rgba(23, 20, 15, 0.85);
+  border: 1px solid var(--border-gold);
+  padding: 16px;
+}
+
+/* Force light card styling inside Elfsight widget if needed for readability */
+.reviews-widget-wrapper iframe {
+  width: 100% !important;
+  min-height: 450px !important;
+  border: none !important;
+}
+
