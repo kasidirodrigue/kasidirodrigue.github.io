@@ -7,22 +7,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@600;700;800&family=Archivo:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&display=swap');
 
 :root {
-  --bg-dark: #0f0e0c;
-  --bg-card: #17140f;
-  --bg-card-hover: #1f1b14;
-  --bg-subtle: #120f0b;
+  --bg-dark: #0b0a08;
+  --bg-card: #15120d;
+  --bg-card-hover: #1d1912;
+  --bg-subtle: #100e0a;
   
-  --text-main: #f2ede2;
-  --text-muted: #a89f8f;
-  --text-dim: #8f8676;
-  --text-dark: #6b6355;
+  --text-main: #f5f0e6;
+  --text-muted: #b0a696;
+  --text-dim: #8f8574;
+  --text-dark: #635b4d;
   
   --accent-gold: #e0ad4e;
-  --accent-gold-hover: #f0be5e;
-  --accent-gold-glow: rgba(224, 173, 78, 0.2);
+  --accent-gold-hover: #f3be5d;
+  --accent-gold-glow: rgba(224, 173, 78, 0.25);
   
-  --border-subtle: #241f18;
-  --border-gold: rgba(224, 173, 78, 0.3);
+  --border-subtle: #241e16;
+  --border-gold: rgba(224, 173, 78, 0.35);
   
   --font-serif: 'Newsreader', Georgia, serif;
   --font-sans: 'Archivo', -apple-system, BlinkMacSystemFont, sans-serif;
