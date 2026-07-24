@@ -929,6 +929,99 @@ footer {
     max-width: 320px;
     margin: 0 auto;
   }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .section {
+    padding: clamp(40px, 6vw, 72px) 0;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .hero-section {
+    padding: clamp(36px, 5vw, 64px) 0;
+  }
+
+  .hero-title {
+    font-size: clamp(28px, 8vw, 48px);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(15px, 3.5vw, 18px);
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .timeline-year {
+    font-size: 13px;
+  }
+
+  .method-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: clamp(24px, 7.5vw, 36px);
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .metric-number {
+    font-size: clamp(28px, 8vw, 40px);
+  }
+
+  .trust-logos {
+    gap: 16px;
+  }
+
+  .trust-logo {
+    font-size: 16px;
+  }
 }
 
 /* Elfsight Reviews Widget Container Styling - Pure White Background for Full Contrast */

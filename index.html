@@ -80,6 +80,121 @@
       border-color: oklch(0.5 0.08 210) !important;
       transform: translateY(-4px);
     }
+
+    /* ===== HAMBURGER MENU BUTTON ===== */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: oklch(0.9 0.01 260);
+      font-size: 24px;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 60;
+      line-height: 1;
+    }
+
+    /* ===== MOBILE RESPONSIVE OVERRIDES ===== */
+
+    /* --- Tablet: max-width 992px --- */
+    @media (max-width: 992px) {
+      .site-header { padding: 14px 24px !important; }
+      .site-header nav { gap: 18px !important; }
+      .section-pad { padding-left: 24px !important; padding-right: 24px !important; }
+      .bio-grid { grid-template-columns: 1fr 0.85fr !important; gap: 36px !important; }
+      .faq-layout { grid-template-columns: 1fr !important; gap: 32px !important; }
+      .timeline-row { grid-template-columns: 120px 1fr !important; gap: 20px !important; }
+    }
+
+    /* --- Mobile: max-width 768px --- */
+    @media (max-width: 768px) {
+      .mobile-menu-btn { display: flex; align-items: center; justify-content: center; }
+
+      .site-header { padding: 12px 16px !important; }
+      .site-header nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        height: 100dvh;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0 !important;
+        padding: 80px 28px 40px;
+        background: oklch(0.13 0.02 260 / 0.97) !important;
+        backdrop-filter: blur(20px);
+        border-left: 1px solid oklch(0.24 0.02 260);
+        transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 55;
+        overflow-y: auto;
+      }
+      .site-header nav.open { right: 0; }
+      .site-header nav a {
+        display: block;
+        width: 100%;
+        padding: 14px 0 !important;
+        font-size: 17px !important;
+        border-bottom: 1px solid oklch(0.2 0.02 260);
+      }
+      .site-header nav a:last-child {
+        margin-top: 16px;
+        border-bottom: none;
+        text-align: center;
+      }
+
+      /* Mobile overlay backdrop */
+      .nav-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: oklch(0.05 0.01 260 / 0.6);
+        z-index: 54;
+      }
+      .nav-overlay.open { display: block; }
+
+      .section-pad { padding-left: 16px !important; padding-right: 16px !important; }
+      .hero-section-custom { min-height: 70vh !important; }
+      .hero-inner { padding: 60px 16px !important; }
+      .hero-cta-row { flex-direction: column !important; align-items: stretch !important; }
+      .hero-cta-row a { justify-content: center !important; text-align: center; }
+
+      .metrics-section-custom { padding: 36px 16px !important; }
+      .metrics-grid-custom { grid-template-columns: repeat(2, 1fr) !important; gap: 20px !important; }
+      .metric-value { font-size: 36px !important; }
+
+      .coaching-section { padding: 60px 16px !important; }
+      .coaching-cards { grid-template-columns: 1fr !important; }
+
+      .trust-section { padding: 32px 16px !important; }
+
+      .bio-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+      .bio-section { padding: 60px 16px !important; }
+
+      .ebooks-section { padding: 60px 16px !important; }
+      .ebooks-cards { grid-template-columns: 1fr !important; }
+
+      .timeline-section { padding: 60px 16px !important; }
+      .timeline-row { grid-template-columns: 1fr !important; gap: 8px !important; }
+      .timeline-date { font-size: 13px !important; padding-top: 0 !important; padding-bottom: 4px !important; }
+
+      .faq-section { padding: 60px 16px !important; }
+      .faq-layout { grid-template-columns: 1fr !important; gap: 28px !important; }
+
+      .cta-section { padding: 80px 16px !important; }
+
+      .site-footer { padding: 40px 16px 32px !important; }
+      .footer-inner { flex-direction: column !important; gap: 28px !important; }
+    }
+
+    /* --- Small phone: max-width 480px --- */
+    @media (max-width: 480px) {
+      .metrics-grid-custom { grid-template-columns: 1fr 1fr !important; gap: 16px !important; }
+      .metric-value { font-size: 30px !important; }
+      .coaching-cta-box { padding: 28px 16px !important; }
+      .coaching-cta-box h3 { font-size: 20px !important; }
+      .ebook-card-img { height: 170px !important; }
+    }
   </style>
 
   <!-- Elfsight Google Reviews Platform Script -->
@@ -90,32 +205,38 @@
   <a href="#coaching" class="skip-link">Aller au contenu principal</a>
 
   <!-- TOP BANNER -->
-  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;padding:10px 24px;background:linear-gradient(90deg,oklch(0.2 0.03 265),oklch(0.19 0.04 300));font-size:14px;color:oklch(0.9 0.01 260);text-align:center;">
+  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;padding:10px 24px;background:linear-gradient(90deg,oklch(0.2 0.03 265),oklch(0.19 0.04 300));font-size:14px;color:oklch(0.9 0.01 260);text-align:center;" class="section-pad">
     <span><strong style="color:oklch(0.86 0.1 200);font-family:'Space Grotesk',sans-serif;">Seconde Session &amp; Rentrée 2026 :</strong> Session Stratégie offerte (15 min) en visio.</span>
     <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" style="font-family:'Space Grotesk',sans-serif;font-weight:600;color:oklch(0.82 0.13 200);">Réserver mon créneau →</a>
   </div>
 
   <!-- NAVIGATION HEADER -->
-  <header style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 48px;background:oklch(0.13 0.02 260 / 0.85);backdrop-filter:blur(12px);border-bottom:1px solid oklch(0.24 0.02 260);">
+  <!-- Mobile nav overlay backdrop -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <header class="site-header" style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 48px;background:oklch(0.13 0.02 260 / 0.85);backdrop-filter:blur(12px);border-bottom:1px solid oklch(0.24 0.02 260);">
     <a href="https://kasidirodrigue.github.io/" style="display:flex;align-items:center;gap:12px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:17px;color:oklch(0.97 0.005 260);">
       <span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,oklch(0.72 0.13 200),oklch(0.72 0.13 300));color:oklch(0.14 0.02 260);font-weight:700;font-size:14px;letter-spacing:0.02em;">KR</span>
       Kasidi Rodrigue
     </a>
-    <nav style="display:flex;align-items:center;gap:26px;font-family:'Space Grotesk',sans-serif;font-size:15px;">
-      <a href="#coaching" style="color:oklch(0.82 0.02 260);">Coaching</a>
-      <a href="#apropos" style="color:oklch(0.82 0.02 260);">À propos</a>
-      <a href="#ebooks" style="color:oklch(0.82 0.02 260);">Mémoire</a>
-      <a href="#parcours" style="color:oklch(0.82 0.02 260);">Parcours</a>
-      <a href="#faq" style="color:oklch(0.82 0.02 260);">FAQ</a>
-      <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:10px;background:oklch(0.72 0.13 200);color:oklch(0.14 0.02 260);font-weight:600;"><i class="fa-solid fa-calendar-check"></i> Session 15 min</a>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Ouvrir le menu de navigation">
+      <i class="fa-solid fa-bars" id="menuIcon"></i>
+    </button>
+    <nav id="mainNav" style="display:flex;align-items:center;gap:26px;font-family:'Space Grotesk',sans-serif;font-size:15px;">
+      <a href="#coaching" class="nav-link-mobile" style="color:oklch(0.82 0.02 260);">Coaching</a>
+      <a href="#apropos" class="nav-link-mobile" style="color:oklch(0.82 0.02 260);">À propos</a>
+      <a href="#ebooks" class="nav-link-mobile" style="color:oklch(0.82 0.02 260);">Mémoire</a>
+      <a href="#parcours" class="nav-link-mobile" style="color:oklch(0.82 0.02 260);">Parcours</a>
+      <a href="#faq" class="nav-link-mobile" style="color:oklch(0.82 0.02 260);">FAQ</a>
+      <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" class="nav-link-mobile" style="display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:10px;background:oklch(0.72 0.13 200);color:oklch(0.14 0.02 260);font-weight:600;"><i class="fa-solid fa-calendar-check"></i> Session 15 min</a>
     </nav>
   </header>
 
   <!-- HERO SECTION WITH PARTICLES CONSTELLATION CANVAS -->
-  <section id="accueil" style="position:relative;min-height:88vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(120% 120% at 50% 0%, oklch(0.21 0.03 265) 0%, oklch(0.13 0.02 260) 70%);">
+  <section id="accueil" class="hero-section-custom" style="position:relative;min-height:88vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(120% 120% at 50% 0%, oklch(0.21 0.03 265) 0%, oklch(0.13 0.02 260) 70%);">
     <canvas id="heroCanvas" style="position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0;"></canvas>
     
-    <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:26px;padding:80px 24px;max-width:960px;pointer-events:none;">
+    <div class="hero-inner" style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:26px;padding:80px 24px;max-width:960px;pointer-events:none;">
       
       <div style="display:flex;align-items:center;gap:10px;padding:9px 20px;border-radius:999px;border:1px solid oklch(0.4 0.04 260);background:oklch(0.18 0.02 260 / 0.5);backdrop-filter:blur(6px);animation:floatUp 0.7s ease both;pointer-events:auto;">
         <span style="width:8px;height:8px;border-radius:50%;background:oklch(0.72 0.13 200);box-shadow:0 0 12px oklch(0.72 0.16 200);"></span>
@@ -131,7 +252,7 @@
         Réussir ses études et examens universitaires à Bruxelles sans stress, grâce à la rigueur de l'ingénierie et la PNL systémique.
       </p>
 
-      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:6px;pointer-events:auto;animation:floatUp 0.7s ease 0.24s both;">
+      <div class="hero-cta-row" style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:6px;pointer-events:auto;animation:floatUp 0.7s ease 0.24s both;">
         <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:12px;background:oklch(0.72 0.13 200);color:oklch(0.14 0.02 260);font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;box-shadow:0 12px 30px -12px oklch(0.72 0.16 200 / 0.8);">
           <i class="fa-solid fa-calendar-check"></i> Session Stratégie Offerte (15 min)
         </a>
@@ -144,31 +265,31 @@
   </section>
 
   <!-- METRICS SECTION -->
-  <section style="padding:52px 48px;border-bottom:1px solid oklch(0.22 0.02 260);background:oklch(0.145 0.02 261);">
-    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:28px;">
+  <section class="metrics-section-custom" style="padding:52px 48px;border-bottom:1px solid oklch(0.22 0.02 260);background:oklch(0.145 0.02 261);">
+    <div class="metrics-grid-custom" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:28px;">
       
       <div style="display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;">
-        <span data-count="500" data-suffix="+" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:44px;background:linear-gradient(100deg,oklch(0.78 0.13 200),oklch(0.78 0.13 300));-webkit-background-clip:text;background-clip:text;color:transparent;">0+</span>
+        <span class="metric-value" data-count="500" data-suffix="+" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:44px;background:linear-gradient(100deg,oklch(0.78 0.13 200),oklch(0.78 0.13 300));-webkit-background-clip:text;background-clip:text;color:transparent;">0+</span>
         <span style="font-size:14px;line-height:1.4;color:oklch(0.7 0.02 260);max-width:170px;">Étudiants accompagnés</span>
       </div>
 
       <div style="display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;">
-        <span data-count="100" data-suffix="+" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:44px;background:linear-gradient(100deg,oklch(0.78 0.13 200),oklch(0.78 0.13 300));-webkit-background-clip:text;background-clip:text;color:transparent;">0+</span>
+        <span class="metric-value" data-count="100" data-suffix="+" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:44px;background:linear-gradient(100deg,oklch(0.78 0.13 200),oklch(0.78 0.13 300));-webkit-background-clip:text;background-clip:text;color:transparent;">0+</span>
         <span style="font-size:14px;line-height:1.4;color:oklch(0.7 0.02 260);max-width:170px;">Professionnels coachés</span>
       </div>
 
       <div style="display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;">
-        <span data-count="2" data-suffix="" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:44px;background:linear-gradient(100deg,oklch(0.78 0.13 200),oklch(0.78 0.13 300));-webkit-background-clip:text;background-clip:text;color:transparent;">0</span>
+        <span class="metric-value" data-count="2" data-suffix="" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:44px;background:linear-gradient(100deg,oklch(0.78 0.13 200),oklch(0.78 0.13 300));-webkit-background-clip:text;background-clip:text;color:transparent;">0</span>
         <span style="font-size:14px;line-height:1.4;color:oklch(0.7 0.02 260);max-width:170px;">Ebooks méthodologiques</span>
       </div>
 
       <div style="display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;">
-        <span data-count="20" data-suffix="+" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:44px;background:linear-gradient(100deg,oklch(0.78 0.13 200),oklch(0.78 0.13 300));-webkit-background-clip:text;background-clip:text;color:transparent;">0+</span>
+        <span class="metric-value" data-count="20" data-suffix="+" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:44px;background:linear-gradient(100deg,oklch(0.78 0.13 200),oklch(0.78 0.13 300));-webkit-background-clip:text;background-clip:text;color:transparent;">0+</span>
         <span style="font-size:14px;line-height:1.4;color:oklch(0.7 0.02 260);max-width:170px;">Séminaires animés</span>
       </div>
 
       <div style="display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;">
-        <span data-count="1" data-suffix="" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:44px;background:linear-gradient(100deg,oklch(0.78 0.13 200),oklch(0.78 0.13 300));-webkit-background-clip:text;background-clip:text;color:transparent;">0</span>
+        <span class="metric-value" data-count="1" data-suffix="" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:44px;background:linear-gradient(100deg,oklch(0.78 0.13 200),oklch(0.78 0.13 300));-webkit-background-clip:text;background-clip:text;color:transparent;">0</span>
         <span style="font-size:14px;line-height:1.4;color:oklch(0.7 0.02 260);max-width:170px;">Film réalisé (CVB)</span>
       </div>
 
@@ -176,14 +297,14 @@
   </section>
 
   <!-- COACHING SECTION -->
-  <section id="coaching" style="padding:110px 48px;max-width:1200px;margin:0 auto;">
+  <section id="coaching" class="coaching-section" style="padding:110px 48px;max-width:1200px;margin:0 auto;">
     <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;margin-bottom:52px;max-width:640px;margin-left:auto;margin-right:auto;">
       <span style="font-family:'Space Grotesk',sans-serif;font-size:14px;letter-spacing:0.16em;text-transform:uppercase;color:oklch(0.72 0.13 200);">Accompagnement Intensif</span>
       <h2 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(30px,4vw,46px);line-height:1.1;letter-spacing:-0.01em;color:oklch(0.97 0.005 260);">Sprint Seconde Session &amp; Blocus</h2>
       <p style="margin:0;font-size:17px;line-height:1.6;color:oklch(0.76 0.02 260);">Une méthode scientifique et sur-mesure pour débloquer tes révisions et réussir tes examens d'août.</p>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;">
+    <div class="coaching-cards" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;">
       
       <div class="hover-card" style="display:flex;flex-direction:column;gap:14px;padding:30px;border-radius:18px;background:oklch(0.16 0.02 262);border:1px solid oklch(0.24 0.02 260);">
         <span style="font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:oklch(0.7 0.09 250);">Étudiants &amp; Facultés</span>
@@ -216,7 +337,7 @@
 
     </div>
 
-    <div style="margin-top:36px;text-align:center;background:oklch(0.16 0.02 262);padding:40px 24px;border-radius:20px;border:1px solid oklch(0.3 0.06 250);">
+    <div class="coaching-cta-box" style="margin-top:36px;text-align:center;background:oklch(0.16 0.02 262);padding:40px 24px;border-radius:20px;border:1px solid oklch(0.3 0.06 250);">
       <h3 style="margin:0 0 12px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(22px,2.6vw,30px);color:oklch(0.97 0.005 260);">Revoyons ta stratégie d'étude pour les examens d'août</h3>
       <p style="margin:0 auto 24px;color:oklch(0.74 0.02 260);font-size:16px;max-width:540px;">15 minutes en visio pour analyser ta situation et repartir avec un plan d'action clair.</p>
       <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:16px 32px;border-radius:12px;background:oklch(0.72 0.13 200);color:oklch(0.14 0.02 260);font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;box-shadow:0 12px 30px -12px oklch(0.72 0.16 200 / 0.8);">
@@ -226,7 +347,7 @@
   </section>
 
   <!-- TRUST BAR -->
-  <section style="padding:44px 48px;background:oklch(0.15 0.02 262);border-top:1px solid oklch(0.22 0.02 260);border-bottom:1px solid oklch(0.22 0.02 260);">
+  <section class="trust-section" style="padding:44px 48px;background:oklch(0.15 0.02 262);border-top:1px solid oklch(0.22 0.02 260);border-bottom:1px solid oklch(0.22 0.02 260);">
     <div style="max-width:1100px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:22px;">
       <span style="font-family:'Space Grotesk',sans-serif;font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:oklch(0.58 0.02 260);">Affiliations &amp; Partenariats</span>
       <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px 30px;">
@@ -241,8 +362,8 @@
   </section>
 
   <!-- À PROPOS / BIOGRAPHIE SECTION -->
-  <section id="apropos" style="padding:110px 48px;max-width:1200px;margin:0 auto;">
-    <div style="display:grid;grid-template-columns:1fr 0.85fr;gap:60px;align-items:center;">
+  <section id="apropos" class="bio-section" style="padding:110px 48px;max-width:1200px;margin:0 auto;">
+    <div class="bio-grid" style="display:grid;grid-template-columns:1fr 0.85fr;gap:60px;align-items:center;">
       <div style="display:flex;flex-direction:column;gap:20px;">
         <span style="font-family:'Space Grotesk',sans-serif;font-size:14px;letter-spacing:0.16em;text-transform:uppercase;color:oklch(0.72 0.13 300);">Biographie &amp; Vision</span>
         <h2 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(28px,3.6vw,42px);line-height:1.12;letter-spacing:-0.01em;color:oklch(0.97 0.005 260);">Rigueur scientifique, stratégie EdTech &amp; accompagnement humain.</h2>
@@ -260,7 +381,7 @@
   </section>
 
   <!-- EBOOKS & MÉMOIRE SECTION -->
-  <section id="ebooks" style="padding:100px 48px;background:oklch(0.15 0.02 262);border-top:1px solid oklch(0.22 0.02 260);border-bottom:1px solid oklch(0.22 0.02 260);">
+  <section id="ebooks" class="ebooks-section" style="padding:100px 48px;background:oklch(0.15 0.02 262);border-top:1px solid oklch(0.22 0.02 260);border-bottom:1px solid oklch(0.22 0.02 260);">
     <div style="max-width:1200px;margin:0 auto;">
       <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;margin-bottom:44px;max-width:640px;margin-left:auto;margin-right:auto;">
         <span style="font-family:'Space Grotesk',sans-serif;font-size:14px;letter-spacing:0.16em;text-transform:uppercase;color:oklch(0.72 0.13 300);">Publications &amp; Guides</span>
@@ -272,10 +393,10 @@
         <iframe src="https://www.youtube.com/embed/cudhzky9SYU" title="Présentation accompagnement mémoire" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
       </div>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:900px;margin:0 auto;">
+      <div class="ebooks-cards" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:900px;margin:0 auto;">
         
         <div class="hover-card" style="display:flex;flex-direction:column;border-radius:18px;overflow:hidden;background:oklch(0.16 0.02 262);border:1px solid oklch(0.24 0.02 260);">
-          <div style="position:relative;height:210px;overflow:hidden;background:oklch(0.2 0.02 262);">
+          <div class="ebook-card-img" style="position:relative;height:210px;overflow:hidden;background:oklch(0.2 0.02 262);">
             <img src="assets/images/ebook_question_recherche.png" alt="Gagne 3 mois sur ton mémoire — Ebook Question de Recherche" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
             <span style="position:absolute;top:12px;right:12px;padding:5px 12px;border-radius:999px;background:oklch(0.13 0.02 260 / 0.82);backdrop-filter:blur(4px);font-family:'Space Grotesk',sans-serif;font-size:11px;color:oklch(0.86 0.02 260);">2024</span>
           </div>
@@ -287,7 +408,7 @@
         </div>
 
         <div class="hover-card" style="display:flex;flex-direction:column;border-radius:18px;overflow:hidden;background:oklch(0.16 0.02 262);border:1px solid oklch(0.24 0.02 260);">
-          <div style="position:relative;height:210px;overflow:hidden;background:oklch(0.2 0.02 262);">
+          <div class="ebook-card-img" style="position:relative;height:210px;overflow:hidden;background:oklch(0.2 0.02 262);">
             <img src="assets/images/ebook_defense_memoire.png" alt="Défense du mémoire : Réussi !" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
             <span style="position:absolute;top:12px;right:12px;padding:5px 12px;border-radius:999px;background:oklch(0.13 0.02 260 / 0.82);backdrop-filter:blur(4px);font-family:'Space Grotesk',sans-serif;font-size:11px;color:oklch(0.86 0.02 260);">2023</span>
           </div>
@@ -303,7 +424,7 @@
   </section>
 
   <!-- PARCOURS CHRONOLOGIQUE SECTION -->
-  <section id="parcours" style="padding:110px 48px;max-width:960px;margin:0 auto;">
+  <section id="parcours" class="timeline-section" style="padding:110px 48px;max-width:960px;margin:0 auto;">
     <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;margin-bottom:56px;">
       <span style="font-family:'Space Grotesk',sans-serif;font-size:14px;letter-spacing:0.16em;text-transform:uppercase;color:oklch(0.72 0.13 200);">Crédibilité &amp; Parcours</span>
       <h2 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(30px,4vw,46px);line-height:1.1;letter-spacing:-0.01em;color:oklch(0.97 0.005 260);">Parcours chronologique</h2>
@@ -312,8 +433,8 @@
 
     <div style="display:flex;flex-direction:column;gap:0;">
       
-      <div style="display:grid;grid-template-columns:150px 1fr;gap:28px;padding:26px 0;border-top:1px solid oklch(0.24 0.02 260);">
-        <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;color:oklch(0.72 0.13 200);padding-top:2px;">2025 → Présent</div>
+      <div class="timeline-row" style="display:grid;grid-template-columns:150px 1fr;gap:28px;padding:26px 0;border-top:1px solid oklch(0.24 0.02 260);">
+        <div class="timeline-date" style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;color:oklch(0.72 0.13 200);padding-top:2px;">2025 → Présent</div>
         <div style="display:flex;flex-direction:column;gap:8px;">
           <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;">
             <h3 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:19px;color:oklch(0.97 0.005 260);">StuFlow.app — Startup EdTech</h3>
@@ -324,8 +445,8 @@
         </div>
       </div>
 
-      <div style="display:grid;grid-template-columns:150px 1fr;gap:28px;padding:26px 0;border-top:1px solid oklch(0.24 0.02 260);">
-        <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;color:oklch(0.72 0.13 200);padding-top:2px;">2025–2026</div>
+      <div class="timeline-row" style="display:grid;grid-template-columns:150px 1fr;gap:28px;padding:26px 0;border-top:1px solid oklch(0.24 0.02 260);">
+        <div class="timeline-date" style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;color:oklch(0.72 0.13 200);padding-top:2px;">2025–2026</div>
         <div style="display:flex;flex-direction:column;gap:8px;">
           <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;">
             <h3 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:19px;color:oklch(0.97 0.005 260);">Film documentaire « Ce bout de tissu »</h3>
@@ -336,8 +457,8 @@
         </div>
       </div>
 
-      <div style="display:grid;grid-template-columns:150px 1fr;gap:28px;padding:26px 0;border-top:1px solid oklch(0.24 0.02 260);">
-        <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;color:oklch(0.72 0.13 200);padding-top:2px;">2024–2025</div>
+      <div class="timeline-row" style="display:grid;grid-template-columns:150px 1fr;gap:28px;padding:26px 0;border-top:1px solid oklch(0.24 0.02 260);">
+        <div class="timeline-date" style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;color:oklch(0.72 0.13 200);padding-top:2px;">2024–2025</div>
         <div style="display:flex;flex-direction:column;gap:8px;">
           <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;">
             <h3 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:19px;color:oklch(0.97 0.005 260);">BrainCair &amp; Ateliers PsyBru</h3>
@@ -348,8 +469,8 @@
         </div>
       </div>
 
-      <div style="display:grid;grid-template-columns:150px 1fr;gap:28px;padding:26px 0;border-top:1px solid oklch(0.24 0.02 260);">
-        <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;color:oklch(0.72 0.13 200);padding-top:2px;">2019–2024</div>
+      <div class="timeline-row" style="display:grid;grid-template-columns:150px 1fr;gap:28px;padding:26px 0;border-top:1px solid oklch(0.24 0.02 260);">
+        <div class="timeline-date" style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;color:oklch(0.72 0.13 200);padding-top:2px;">2019–2024</div>
         <div style="display:flex;flex-direction:column;gap:8px;">
           <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;">
             <h3 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:19px;color:oklch(0.97 0.005 260);">Coaching Professionnel &amp; 20+ Séminaires</h3>
@@ -360,8 +481,8 @@
         </div>
       </div>
 
-      <div style="display:grid;grid-template-columns:150px 1fr;gap:28px;padding:26px 0;border-top:1px solid oklch(0.24 0.02 260);">
-        <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;color:oklch(0.72 0.13 200);padding-top:2px;">2022</div>
+      <div class="timeline-row" style="display:grid;grid-template-columns:150px 1fr;gap:28px;padding:26px 0;border-top:1px solid oklch(0.24 0.02 260);">
+        <div class="timeline-date" style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;color:oklch(0.72 0.13 200);padding-top:2px;">2022</div>
         <div style="display:flex;flex-direction:column;gap:8px;">
           <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;">
             <h3 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:19px;color:oklch(0.97 0.005 260);">Maître-Praticien PNL (NLPU Dilts)</h3>
@@ -372,8 +493,8 @@
         </div>
       </div>
 
-      <div style="display:grid;grid-template-columns:150px 1fr;gap:28px;padding:26px 0;border-top:1px solid oklch(0.24 0.02 260);">
-        <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;color:oklch(0.72 0.13 200);padding-top:2px;">2017–2020</div>
+      <div class="timeline-row" style="display:grid;grid-template-columns:150px 1fr;gap:28px;padding:26px 0;border-top:1px solid oklch(0.24 0.02 260);">
+        <div class="timeline-date" style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;color:oklch(0.72 0.13 200);padding-top:2px;">2017–2020</div>
         <div style="display:flex;flex-direction:column;gap:8px;">
           <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;">
             <h3 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:19px;color:oklch(0.97 0.005 260);">Master en Informatique &amp; IA — ULB Polytech</h3>
@@ -388,8 +509,8 @@
   </section>
 
   <!-- FAQ SECTION -->
-  <section id="faq" style="padding:100px 48px;background:oklch(0.15 0.02 262);border-top:1px solid oklch(0.22 0.02 260);">
-    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:0.8fr 1.2fr;gap:56px;align-items:start;">
+  <section id="faq" class="faq-section" style="padding:100px 48px;background:oklch(0.15 0.02 262);border-top:1px solid oklch(0.22 0.02 260);">
+    <div class="faq-layout" style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:0.8fr 1.2fr;gap:56px;align-items:start;">
       
       <div style="display:flex;flex-direction:column;gap:14px;">
         <span style="font-family:'Space Grotesk',sans-serif;font-size:14px;letter-spacing:0.16em;text-transform:uppercase;color:oklch(0.72 0.13 200);">FAQ</span>
@@ -437,7 +558,7 @@
   </section>
 
   <!-- CTA FINAL SECTION -->
-  <section id="book" style="position:relative;padding:120px 48px;overflow:hidden;background:radial-gradient(100% 140% at 50% 100%, oklch(0.2 0.03 265) 0%, oklch(0.13 0.02 260) 70%);">
+  <section id="book" class="cta-section" style="position:relative;padding:120px 48px;overflow:hidden;background:radial-gradient(100% 140% at 50% 100%, oklch(0.2 0.03 265) 0%, oklch(0.13 0.02 260) 70%);">
     <div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px;">
       <span style="font-family:'Space Grotesk',sans-serif;font-size:14px;letter-spacing:0.16em;text-transform:uppercase;color:oklch(0.72 0.13 200);">Seconde Session &amp; Rentrée 2026</span>
       <h2 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(30px,4.4vw,52px);line-height:1.07;letter-spacing:-0.02em;color:oklch(0.98 0.005 260);">
@@ -458,8 +579,8 @@
   </section>
 
   <!-- FOOTER -->
-  <footer style="padding:52px 48px 40px;border-top:1px solid oklch(0.24 0.02 260);">
-    <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:36px;">
+  <footer class="site-footer" style="padding:52px 48px 40px;border-top:1px solid oklch(0.24 0.02 260);">
+    <div class="footer-inner" style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:36px;">
       
       <div style="display:flex;flex-direction:column;gap:12px;max-width:400px;">
         <div style="display:flex;align-items:center;gap:12px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:17px;color:oklch(0.97 0.005 260);">

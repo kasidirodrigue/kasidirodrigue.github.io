@@ -6,12 +6,78 @@
   <title>À propos — Kasidi Rodrigue Mwinyi</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Mobile menu button */
+    .mobile-menu-btn-about {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-main);
+      font-size: 24px;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 60;
+      line-height: 1;
+    }
+    .nav-overlay-about {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(11, 10, 8, 0.6);
+      z-index: 54;
+    }
+    .nav-overlay-about.open { display: block; }
+
+    @media (max-width: 768px) {
+      .mobile-menu-btn-about { display: flex; align-items: center; justify-content: center; }
+      .nav-container { flex-wrap: wrap; }
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        height: 100dvh;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 80px 28px 40px;
+        background: rgba(15, 14, 12, 0.97);
+        backdrop-filter: blur(20px);
+        border-left: 1px solid var(--border-subtle);
+        transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 55;
+        overflow-y: auto;
+      }
+      .nav-links.open { right: 0; }
+      .nav-links li { width: 100%; }
+      .nav-links .nav-link {
+        display: block;
+        width: 100%;
+        padding: 14px 0;
+        font-size: 17px;
+        border-bottom: 1px solid var(--border-subtle);
+      }
+      .status-badge { display: none; }
+      .about-bio-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+      }
+      .about-section-top {
+        padding-top: 6rem !important;
+      }
+      .section { padding-left: 16px; padding-right: 16px; }
+    }
+  </style>
 </head>
 <body>
 
   <!-- Ambient Glowing Orbs -->
   <div class="bg-orb bg-orb-1"></div>
   <div class="bg-orb bg-orb-2"></div>
+
+  <!-- Mobile nav overlay -->
+  <div class="nav-overlay-about" id="navOverlayAbout"></div>
 
   <!-- Navigation Bar -->
   <nav class="navbar scrolled">
@@ -21,7 +87,11 @@
         <span>Kasidi Rodrigue</span>
       </a>
 
-      <ul class="nav-links">
+      <button class="mobile-menu-btn-about" id="mobileMenuBtnAbout" aria-label="Ouvrir le menu de navigation">
+        <i class="fa-solid fa-bars" id="menuIconAbout"></i>
+      </button>
+
+      <ul class="nav-links" id="mainNavAbout">
         <li><a href="index.html#accueil" class="nav-link">Accueil</a></li>
         <li><a href="index.html#projets" class="nav-link">Projets</a></li>
         <li><a href="index.html#methode" class="nav-link">Méthode PNL</a></li>
@@ -36,7 +106,7 @@
     </div>
   </nav>
 
-  <section class="section" style="padding-top: 10rem;">
+  <section class="section about-section-top" style="padding-top: 10rem;">
     <div class="container">
       <div class="section-header">
         <div class="section-subtitle">Biographie & Vision</div>
@@ -44,7 +114,7 @@
         <p class="section-desc">Ingénieur IA, Master Praticien PNL, Cofondateur de StuFlow.app, Coach Académique & Réalisateur.</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 5rem;">
+      <div class="about-bio-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 5rem;">
         <div>
           <h2 style="font-size: 2rem; margin-bottom: 1.5rem;" class="gradient-text">Rigueur scientifique, stratégie EdTech & accompagnement humain.</h2>
           <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.2rem;">
@@ -77,5 +147,44 @@
     </div>
   </footer>
 
+  <script>
+    // Mobile menu for about.html
+    const btn = document.getElementById('mobileMenuBtnAbout');
+    const nav = document.getElementById('mainNavAbout');
+    const overlay = document.getElementById('navOverlayAbout');
+    const icon = document.getElementById('menuIconAbout');
+
+    function toggleMenu() {
+      const isOpen = nav && nav.classList.contains('open');
+      if (isOpen) {
+        nav.classList.remove('open');
+        overlay.classList.remove('open');
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+        document.body.style.overflow = '';
+      } else {
+        nav.classList.add('open');
+        overlay.classList.add('open');
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    if (btn) btn.addEventListener('click', toggleMenu);
+    if (overlay) overlay.addEventListener('click', toggleMenu);
+
+    document.querySelectorAll('#mainNavAbout .nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768 && nav.classList.contains('open')) toggleMenu();
+      });
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && nav && nav.classList.contains('open')) toggleMenu();
+    });
+  </script>
+
 </body>
 </html>
+

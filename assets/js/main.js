@@ -5,6 +5,67 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* -------------------------------------------------------------------------- */
+  /* 0. Mobile Hamburger Menu Toggle                                            */
+  /* -------------------------------------------------------------------------- */
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mainNav = document.getElementById('mainNav');
+  const navOverlay = document.getElementById('navOverlay');
+  const menuIcon = document.getElementById('menuIcon');
+
+  function openMobileMenu() {
+    if (mainNav) mainNav.classList.add('open');
+    if (navOverlay) navOverlay.classList.add('open');
+    if (menuIcon) {
+      menuIcon.classList.remove('fa-bars');
+      menuIcon.classList.add('fa-xmark');
+    }
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobileMenu() {
+    if (mainNav) mainNav.classList.remove('open');
+    if (navOverlay) navOverlay.classList.remove('open');
+    if (menuIcon) {
+      menuIcon.classList.remove('fa-xmark');
+      menuIcon.classList.add('fa-bars');
+    }
+    document.body.style.overflow = '';
+  }
+
+  if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', () => {
+      const isOpen = mainNav && mainNav.classList.contains('open');
+      if (isOpen) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    });
+  }
+
+  // Close mobile menu when clicking overlay
+  if (navOverlay) {
+    navOverlay.addEventListener('click', closeMobileMenu);
+  }
+
+  // Close mobile menu when clicking a nav link
+  const mobileNavLinks = document.querySelectorAll('.nav-link-mobile');
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        closeMobileMenu();
+      }
+    });
+  });
+
+  // Close mobile menu on resize to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      closeMobileMenu();
+    }
+  });
+
+  /* -------------------------------------------------------------------------- */
   /* 1. Animated Metrics Counter (IntersectionObserver)                         */
   /* -------------------------------------------------------------------------- */
   const metricEls = document.querySelectorAll('.metric-number');
