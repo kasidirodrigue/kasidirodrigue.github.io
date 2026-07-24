@@ -37,20 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
   /* 0. Mobile Hamburger Menu Event Bindings                                    */
   /* -------------------------------------------------------------------------- */
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-  const drawerCloseBtn = document.getElementById('drawerCloseBtn');
   const navOverlay = document.getElementById('navOverlay');
 
   if (mobileMenuBtn) {
     mobileMenuBtn.addEventListener('click', (e) => {
       e.preventDefault();
       window.toggleMobileMenu();
-    });
-  }
-
-  if (drawerCloseBtn) {
-    drawerCloseBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.closeMobileMenu();
     });
   }
 
