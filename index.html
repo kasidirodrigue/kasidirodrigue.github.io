@@ -174,6 +174,9 @@
         font-size: 18px;
         cursor: pointer;
         transition: background 0.2s ease;
+        position: relative;
+        z-index: 70;
+        pointer-events: auto;
       }
       .mobile-nav-close:hover {
         background: oklch(0.28 0.03 260);
@@ -271,20 +274,20 @@
 
   <!-- NAVIGATION HEADER -->
   <!-- Mobile nav overlay backdrop -->
-  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="nav-overlay" id="navOverlay" onclick="if(window.closeMobileMenu) window.closeMobileMenu();"></div>
 
   <header class="site-header" style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 48px;background:oklch(0.13 0.02 260 / 0.85);backdrop-filter:blur(12px);border-bottom:1px solid oklch(0.24 0.02 260);">
     <a href="https://kasidirodrigue.github.io/" style="display:flex;align-items:center;gap:12px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:17px;color:oklch(0.97 0.005 260);">
       <span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,oklch(0.72 0.13 200),oklch(0.72 0.13 300));color:oklch(0.14 0.02 260);font-weight:700;font-size:14px;letter-spacing:0.02em;">KR</span>
       Kasidi Rodrigue
     </a>
-    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Ouvrir le menu de navigation">
+    <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="if(window.toggleMobileMenu) window.toggleMobileMenu();" aria-label="Ouvrir le menu de navigation">
       <i class="fa-solid fa-bars" id="menuIcon"></i>
     </button>
     <nav id="mainNav" style="display:flex;align-items:center;gap:26px;font-family:'Space Grotesk',sans-serif;font-size:15px;">
       <div class="mobile-nav-header">
         <span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:17px;color:oklch(0.97 0.005 260);">Menu</span>
-        <button class="mobile-nav-close" id="mobileNavCloseBtn" aria-label="Fermer le menu">
+        <button class="mobile-nav-close" id="mobileNavCloseBtn" onclick="if(window.closeMobileMenu) window.closeMobileMenu();" aria-label="Fermer le menu">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
