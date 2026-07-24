@@ -148,8 +148,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // Palette harmonisée : Gold (#e0ad4e) et Cyan (#60cedc)
-    const A1 = [224, 173, 78], A2 = [96, 206, 220];
+    // Palette harmonisée de Landing.dc.html : Cyan (#60cedc) et Violet (#ac9ef0)
+    const A1 = [96, 206, 220], A2 = [172, 158, 240];
     let W = 0, H = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
     let nodes = [];
     const mouse = { x: -9999, y: -9999, active: false };
