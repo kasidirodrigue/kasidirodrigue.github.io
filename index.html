@@ -19,7 +19,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=2026_landing_v2">
+  
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: oklch(0.13 0.02 260);
+      font-family: 'IBM Plex Sans', sans-serif;
+      color: oklch(0.9 0.01 260);
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; transition: all 0.2s ease; }
+    a:hover { color: rgb(96,206,220); }
+    ::selection { background: oklch(0.72 0.13 200 / 0.35); }
+    @keyframes floatUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    
+    .skip-link {
+      position: absolute; left: -9999px; top: 12px;
+      background: oklch(0.72 0.13 200); color: oklch(0.14 0.02 260);
+      padding: 10px 18px; border-radius: 8px; font-weight: 600; z-index: 100;
+    }
+    .skip-link:focus { left: 12px; }
+
+    .hover-card {
+      transition: all 0.3s ease;
+    }
+    .hover-card:hover {
+      border-color: oklch(0.5 0.08 210) !important;
+      transform: translateY(-4px);
+    }
+  </style>
 
   <!-- Elfsight Google Reviews Platform Script -->
   <script src="https://elfsightcdn.com/platform.js" async></script>
@@ -28,59 +58,53 @@
 
   <a href="#coaching" class="skip-link">Aller au contenu principal</a>
 
-  <!-- Top Banner -->
-  <div class="top-banner">
-    <span>🚨 <strong>Seconde Session & Rentrée 2026 :</strong> Session Stratégie offerte (15 min) en visio.</span>
-    <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener">Réserver mon créneau →</a>
+  <!-- TOP BANNER -->
+  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;padding:10px 24px;background:linear-gradient(90deg,oklch(0.2 0.03 265),oklch(0.19 0.04 300));font-size:14px;color:oklch(0.9 0.01 260);text-align:center;">
+    <span><strong style="color:oklch(0.86 0.1 200);font-family:'Space Grotesk',sans-serif;">Seconde Session &amp; Rentrée 2026 :</strong> Session Stratégie offerte (15 min) en visio.</span>
+    <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" style="font-family:'Space Grotesk',sans-serif;font-weight:600;color:oklch(0.82 0.13 200);">Réserver mon créneau →</a>
   </div>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="container nav-container">
-      <a href="https://kasidirodrigue.github.io/" class="logo">
-        <span class="logo-monogram">KR</span>
-        <span>Kasidi Rodrigue</span>
-      </a>
+  <!-- NAVIGATION HEADER -->
+  <header style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 48px;background:oklch(0.13 0.02 260 / 0.85);backdrop-filter:blur(12px);border-bottom:1px solid oklch(0.24 0.02 260);">
+    <a href="https://kasidirodrigue.github.io/" style="display:flex;align-items:center;gap:12px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:17px;color:oklch(0.97 0.005 260);">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,oklch(0.72 0.13 200),oklch(0.72 0.13 300));color:oklch(0.14 0.02 260);font-weight:700;font-size:14px;letter-spacing:0.02em;">KR</span>
+      Kasidi Rodrigue
+    </a>
+    <nav style="display:flex;align-items:center;gap:26px;font-family:'Space Grotesk',sans-serif;font-size:15px;">
+      <a href="#coaching" style="color:oklch(0.82 0.02 260);">Coaching</a>
+      <a href="#apropos" style="color:oklch(0.82 0.02 260);">À propos</a>
+      <a href="#ebooks" style="color:oklch(0.82 0.02 260);">Mémoire</a>
+      <a href="#parcours" style="color:oklch(0.82 0.02 260);">Parcours</a>
+      <a href="#faq" style="color:oklch(0.82 0.02 260);">FAQ</a>
+      <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:10px;background:oklch(0.72 0.13 200);color:oklch(0.14 0.02 260);font-weight:600;"><i class="fa-solid fa-calendar-check"></i> Session 15 min</a>
+    </nav>
+  </header>
 
-      <ul class="nav-links">
-        <li><a href="#accueil" class="nav-link active">Accueil</a></li>
-        <li><a href="#coaching" class="nav-link">Coaching</a></li>
-        <li><a href="#apropos" class="nav-link">À propos</a></li>
-        <li><a href="#ebooks" class="nav-link">Mémoire</a></li>
-        <li><a href="#parcours" class="nav-link">Parcours</a></li>
-        <li><a href="#faq" class="nav-link">FAQ</a></li>
-      </ul>
-
-      <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
-        <i class="fa-solid fa-calendar-check"></i> Session Stratégie 15 min
-      </a>
-    </div>
-  </nav>
-
-  <!-- Hero Section avec Animation Constellation Cyan/Violet (Landing.dc.html) -->
-  <section id="accueil" class="hero-section" style="position: relative; overflow: hidden; min-height: 88vh; display: flex; align-items: center; justify-content: center; background: radial-gradient(120% 120% at 50% 0%, #1e2238 0%, #11131f 70%);">
-    <canvas id="heroCanvas" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: auto; z-index: 0;"></canvas>
+  <!-- HERO SECTION WITH PARTICLES CONSTELLATION CANVAS -->
+  <section id="accueil" style="position:relative;min-height:88vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(120% 120% at 50% 0%, oklch(0.21 0.03 265) 0%, oklch(0.13 0.02 260) 70%);">
+    <canvas id="heroCanvas" style="position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0;"></canvas>
     
-    <div class="container hero-grid" style="position: relative; z-index: 1; pointer-events: none; max-width: 960px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 26px; padding: 80px 24px;">
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:26px;padding:80px 24px;max-width:960px;pointer-events:none;">
       
-      <div style="pointer-events: auto; display: flex; align-items: center; gap: 10px; padding: 9px 20px; border-radius: 999px; border: 1px solid rgba(96, 206, 220, 0.35); background: rgba(17, 19, 31, 0.65); backdrop-filter: blur(8px);">
-        <span style="width: 8px; height: 8px; border-radius: 50%; background: #60cedc; box-shadow: 0 0 12px #60cedc;"></span>
-        <span style="font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #b8cbe0;">Ingénieur Polytech ULB · Maître-Praticien PNL</span>
+      <div style="display:flex;align-items:center;gap:10px;padding:9px 20px;border-radius:999px;border:1px solid oklch(0.4 0.04 260);background:oklch(0.18 0.02 260 / 0.5);backdrop-filter:blur(6px);animation:floatUp 0.7s ease both;pointer-events:auto;">
+        <span style="width:8px;height:8px;border-radius:50%;background:oklch(0.72 0.13 200);box-shadow:0 0 12px oklch(0.72 0.16 200);"></span>
+        <span style="color:oklch(0.84 0.02 260);font-size:14px;letter-spacing:0.08em;">Ingénieur Polytech ULB · Maître-Praticien PNL</span>
       </div>
 
-      <h1 class="hero-title" style="pointer-events: auto; margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(38px, 6.4vw, 78px); line-height: 1.03; letter-spacing: -0.02em; color: #ffffff;">
-        Coach Académique &<br><span style="background: linear-gradient(100deg, #60cedc, #ac9ef0); -webkit-background-clip: text; background-clip: text; color: transparent; font-style: italic;">Méthodologique.</span>
+      <h1 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(40px,6.4vw,80px);line-height:1.03;letter-spacing:-0.02em;color:oklch(0.98 0.005 260);animation:floatUp 0.7s ease 0.08s both;pointer-events:auto;">
+        Coach Académique &amp;<br>
+        <span style="background:linear-gradient(100deg, oklch(0.78 0.13 200), oklch(0.78 0.13 300));-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic;">Méthodologique.</span>
       </h1>
 
-      <p class="hero-subtitle" style="pointer-events: auto; margin: 0; max-width: 660px; font-size: clamp(16px, 2.1vw, 20px); line-height: 1.6; color: #a4b3c6;">
+      <p style="margin:0;max-width:660px;font-size:clamp(16px,2.1vw,20px);line-height:1.6;color:oklch(0.82 0.02 260);animation:floatUp 0.7s ease 0.16s both;pointer-events:auto;">
         Réussir ses études et examens universitaires à Bruxelles sans stress, grâce à la rigueur de l'ingénierie et la PNL systémique.
       </p>
 
-      <div class="hero-cta-group" style="pointer-events: auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 6px;">
-        <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" class="btn" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; border-radius: 12px; background: #60cedc; color: #0b1120; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 16px; box-shadow: 0 12px 30px -12px rgba(96, 206, 220, 0.8);">
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:6px;pointer-events:auto;animation:floatUp 0.7s ease 0.24s both;">
+        <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:12px;background:oklch(0.72 0.13 200);color:oklch(0.14 0.02 260);font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;box-shadow:0 12px 30px -12px oklch(0.72 0.16 200 / 0.8);">
           <i class="fa-solid fa-calendar-check"></i> Session Stratégie Offerte (15 min)
         </a>
-        <a href="https://stuflow.app" target="_blank" rel="noopener" class="btn" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.25); color: #e2e8f0; font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 16px; background: rgba(255,255,255,0.05);">
+        <a href="https://stuflow.app" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:12px;border:1px solid oklch(0.42 0.03 260);color:oklch(0.9 0.01 260);font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;background:oklch(0.18 0.02 260 / 0.4);">
           <i class="fa-solid fa-bolt"></i> Découvrir StuFlow.app
         </a>
       </div>
@@ -88,181 +112,158 @@
     </div>
   </section>
 
-  <!-- Metrics Section (Compteurs Animés avec Dégradé Cyan/Violet) -->
-  <section class="metrics-section" style="padding: 52px 24px; border-bottom: 1px solid rgba(255,255,255,0.1); background: #131627;">
-    <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 28px; text-align: center;">
-      <div class="metric-item">
-        <span class="metric-number" data-count="500" data-suffix="+" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 44px; background: linear-gradient(100deg, #60cedc, #ac9ef0); -webkit-background-clip: text; background-clip: text; color: transparent; display: block;">0+</span>
-        <span class="metric-label" style="font-size: 14px; color: #94a3b8;">Étudiants accompagnés</span>
+  <!-- METRICS SECTION -->
+  <section style="padding:52px 48px;border-bottom:1px solid oklch(0.22 0.02 260);background:oklch(0.145 0.02 261);">
+    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:28px;">
+      
+      <div style="display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;">
+        <span data-count="500" data-suffix="+" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:44px;background:linear-gradient(100deg,oklch(0.78 0.13 200),oklch(0.78 0.13 300));-webkit-background-clip:text;background-clip:text;color:transparent;">0+</span>
+        <span style="font-size:14px;line-height:1.4;color:oklch(0.7 0.02 260);max-width:170px;">Étudiants accompagnés</span>
       </div>
-      <div class="metric-item">
-        <span class="metric-number" data-count="100" data-suffix="+" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 44px; background: linear-gradient(100deg, #60cedc, #ac9ef0); -webkit-background-clip: text; background-clip: text; color: transparent; display: block;">0+</span>
-        <span class="metric-label" style="font-size: 14px; color: #94a3b8;">Professionnels coachés</span>
+
+      <div style="display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;">
+        <span data-count="100" data-suffix="+" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:44px;background:linear-gradient(100deg,oklch(0.78 0.13 200),oklch(0.78 0.13 300));-webkit-background-clip:text;background-clip:text;color:transparent;">0+</span>
+        <span style="font-size:14px;line-height:1.4;color:oklch(0.7 0.02 260);max-width:170px;">Professionnels coachés</span>
       </div>
-      <div class="metric-item">
-        <span class="metric-number" data-count="2" data-suffix="" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 44px; background: linear-gradient(100deg, #60cedc, #ac9ef0); -webkit-background-clip: text; background-clip: text; color: transparent; display: block;">0</span>
-        <span class="metric-label" style="font-size: 14px; color: #94a3b8;">Ebooks méthodologiques</span>
+
+      <div style="display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;">
+        <span data-count="2" data-suffix="" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:44px;background:linear-gradient(100deg,oklch(0.78 0.13 200),oklch(0.78 0.13 300));-webkit-background-clip:text;background-clip:text;color:transparent;">0</span>
+        <span style="font-size:14px;line-height:1.4;color:oklch(0.7 0.02 260);max-width:170px;">Ebooks méthodologiques</span>
       </div>
-      <div class="metric-item">
-        <span class="metric-number" data-count="20" data-suffix="+" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 44px; background: linear-gradient(100deg, #60cedc, #ac9ef0); -webkit-background-clip: text; background-clip: text; color: transparent; display: block;">0+</span>
-        <span class="metric-label" style="font-size: 14px; color: #94a3b8;">Séminaires animés</span>
+
+      <div style="display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;">
+        <span data-count="20" data-suffix="+" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:44px;background:linear-gradient(100deg,oklch(0.78 0.13 200),oklch(0.78 0.13 300));-webkit-background-clip:text;background-clip:text;color:transparent;">0+</span>
+        <span style="font-size:14px;line-height:1.4;color:oklch(0.7 0.02 260);max-width:170px;">Séminaires animés</span>
       </div>
-      <div class="metric-item">
-        <span class="metric-number" data-count="1" data-suffix="" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 44px; background: linear-gradient(100deg, #60cedc, #ac9ef0); -webkit-background-clip: text; background-clip: text; color: transparent; display: block;">0</span>
-        <span class="metric-label" style="font-size: 14px; color: #94a3b8;">Film réalisé (CVB)</span>
+
+      <div style="display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;">
+        <span data-count="1" data-suffix="" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:44px;background:linear-gradient(100deg,oklch(0.78 0.13 200),oklch(0.78 0.13 300));-webkit-background-clip:text;background-clip:text;color:transparent;">0</span>
+        <span style="font-size:14px;line-height:1.4;color:oklch(0.7 0.02 260);max-width:170px;">Film réalisé (CVB)</span>
       </div>
+
     </div>
   </section>
 
-  <!-- Coaching Section -->
-  <section id="coaching" class="section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-subtitle">Accompagnement Intensif</span>
-        <h2 class="section-title">Sprint Seconde Session & Blocus</h2>
-        <p class="section-desc">Une méthode scientifique et sur-mesure pour débloquer tes révisions et réussir tes examens d'août.</p>
+  <!-- COACHING SECTION -->
+  <section id="coaching" style="padding:110px 48px;max-width:1200px;margin:0 auto;">
+    <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;margin-bottom:52px;max-width:640px;margin-left:auto;margin-right:auto;">
+      <span style="font-family:'Space Grotesk',sans-serif;font-size:14px;letter-spacing:0.16em;text-transform:uppercase;color:oklch(0.72 0.13 200);">Accompagnement Intensif</span>
+      <h2 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(30px,4vw,46px);line-height:1.1;letter-spacing:-0.01em;color:oklch(0.97 0.005 260);">Sprint Seconde Session &amp; Blocus</h2>
+      <p style="margin:0;font-size:17px;line-height:1.6;color:oklch(0.76 0.02 260);">Une méthode scientifique et sur-mesure pour débloquer tes révisions et réussir tes examens d'août.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;">
+      
+      <div class="hover-card" style="display:flex;flex-direction:column;gap:14px;padding:30px;border-radius:18px;background:oklch(0.16 0.02 262);border:1px solid oklch(0.24 0.02 260);">
+        <span style="font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:oklch(0.7 0.09 250);">Étudiants &amp; Facultés</span>
+        <h3 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:22px;color:oklch(0.97 0.005 260);">Pour Qui ?</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:oklch(0.74 0.02 260);">Polytech, Droit, Solvay, Médecine, Sciences &amp; Hautes Écoles. Du BAC 1 au Master et rédaction de mémoire.</p>
+        <ul style="margin:4px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;">
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:oklch(0.8 0.02 260);"><i class="fa-solid fa-check" style="color:oklch(0.72 0.13 200);margin-top:3px;"></i> Cursus scientifiques &amp; littéraires</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:oklch(0.8 0.02 260);"><i class="fa-solid fa-check" style="color:oklch(0.72 0.13 200);margin-top:3px;"></i> Gestion du retard &amp; de la surcharge</li>
+        </ul>
       </div>
 
-      <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
-        
-        <div class="project-card">
-          <div class="project-body">
-            <span class="project-period" style="color: var(--accent-gold); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;">Étudiants & Facultés</span>
-            <h3 class="project-title" style="margin-top: 8px;">Pour Qui ?</h3>
-            <p class="project-desc">Polytech, Droit, Solvay, Médecine, Sciences & Hautes Écoles. Du BAC 1 au Master et rédaction de mémoire.</p>
-            <ul style="margin: 16px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px;">
-              <li style="display: flex; gap: 10px; align-items: center; font-size: 14.5px; color: var(--text-main);"><i class="fa-solid fa-check" style="color: var(--accent-gold);"></i> Cursus scientifiques & littéraires</li>
-              <li style="display: flex; gap: 10px; align-items: center; font-size: 14.5px; color: var(--text-main);"><i class="fa-solid fa-check" style="color: var(--accent-gold);"></i> Gestion du retard & de la surcharge</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-body">
-            <span class="project-period" style="color: var(--accent-gold); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;">Méthodes cognitives</span>
-            <h3 class="project-title" style="margin-top: 8px;">Active Recall & PNL</h3>
-            <p class="project-desc">Rétro-planning inversé, rappel actif et élimination du stress pour une mémorisation rapide et durable.</p>
-            <ul style="margin: 16px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px;">
-              <li style="display: flex; gap: 10px; align-items: center; font-size: 14.5px; color: var(--text-main);"><i class="fa-solid fa-check" style="color: var(--accent-gold);"></i> Planning rétroactif jour par jour</li>
-              <li style="display: flex; gap: 10px; align-items: center; font-size: 14.5px; color: var(--text-main);"><i class="fa-solid fa-check" style="color: var(--accent-gold);"></i> Préparation mentale aux oraux & écrits</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-body">
-            <span class="project-period" style="color: var(--accent-gold); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;">Suivi exclusif</span>
-            <h3 class="project-title" style="margin-top: 8px;">Technologie StuFlow.app</h3>
-            <p class="project-desc">Plateforme EdTech de reformulation active pour suivre ton niveau de maîtrise réel entre les séances de coaching.</p>
-            <div style="margin-top: 24px;">
-              <a href="https://stuflow.app" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
-                <i class="fa-solid fa-bolt"></i> Découvrir StuFlow.app →
-              </a>
-            </div>
-          </div>
-        </div>
-
+      <div class="hover-card" style="display:flex;flex-direction:column;gap:14px;padding:30px;border-radius:18px;background:oklch(0.16 0.02 262);border:1px solid oklch(0.24 0.02 260);">
+        <span style="font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:oklch(0.7 0.09 250);">Méthodes cognitives</span>
+        <h3 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:22px;color:oklch(0.97 0.005 260);">Active Recall &amp; PNL</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:oklch(0.74 0.02 260);">Rétro-planning inversé, rappel actif et élimination du stress pour une mémorisation rapide et durable.</p>
+        <ul style="margin:4px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;">
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:oklch(0.8 0.02 260);"><i class="fa-solid fa-check" style="color:oklch(0.72 0.13 200);margin-top:3px;"></i> Planning rétroactif jour par jour</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:oklch(0.8 0.02 260);"><i class="fa-solid fa-check" style="color:oklch(0.72 0.13 200);margin-top:3px;"></i> Préparation mentale aux oraux &amp; écrits</li>
+        </ul>
       </div>
 
-      <div style="margin-top: 40px; text-align: center; background: var(--bg-card); padding: 40px 24px; border-radius: var(--radius-lg); border: 1px solid var(--border-subtle);">
-        <h3 style="margin: 0 0 12px; font-size: clamp(22px, 2.6vw, 30px); color: var(--text-main);">Revoyons ta stratégie d'étude pour les examens d'août</h3>
-        <p style="margin: 0 auto 24px; color: var(--text-muted); font-size: 16px; max-width: 540px;">15 minutes en visio pour analyser ta situation et repartir avec un plan d'action clair.</p>
-        <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" class="btn btn-primary">
-          <i class="fa-solid fa-calendar-check"></i> Réserver ma Session Stratégie Offerte →
+      <div class="hover-card" style="display:flex;flex-direction:column;gap:14px;padding:30px;border-radius:18px;background:oklch(0.16 0.02 262);border:1px solid oklch(0.24 0.02 260);">
+        <span style="font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:oklch(0.7 0.09 250);">Suivi exclusif</span>
+        <h3 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:22px;color:oklch(0.97 0.005 260);">Technologie StuFlow.app</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:oklch(0.74 0.02 260);">Plateforme EdTech de reformulation active pour suivre ton niveau de maîtrise réel entre les séances de coaching.</p>
+        <a href="https://stuflow.app" target="_blank" rel="noopener" style="margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px;border-radius:10px;border:1px solid oklch(0.42 0.03 260);color:oklch(0.9 0.01 260);font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;">
+          <i class="fa-solid fa-bolt"></i> Découvrir StuFlow.app →
         </a>
       </div>
+
+    </div>
+
+    <div style="margin-top:36px;text-align:center;background:oklch(0.16 0.02 262);padding:40px 24px;border-radius:20px;border:1px solid oklch(0.3 0.06 250);">
+      <h3 style="margin:0 0 12px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(22px,2.6vw,30px);color:oklch(0.97 0.005 260);">Revoyons ta stratégie d'étude pour les examens d'août</h3>
+      <p style="margin:0 auto 24px;color:oklch(0.74 0.02 260);font-size:16px;max-width:540px;">15 minutes en visio pour analyser ta situation et repartir avec un plan d'action clair.</p>
+      <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:16px 32px;border-radius:12px;background:oklch(0.72 0.13 200);color:oklch(0.14 0.02 260);font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;box-shadow:0 12px 30px -12px oklch(0.72 0.16 200 / 0.8);">
+        <i class="fa-solid fa-calendar-check"></i> Réserver ma Session Stratégie Offerte →
+      </a>
     </div>
   </section>
 
-  <!-- Trust Bar -->
-  <section style="padding: 44px 24px; background: var(--bg-card); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
-    <div class="container" style="display: flex; flex-direction: column; align-items: center; gap: 22px;">
-      <span style="font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-muted);">Affiliations & Partenariats</span>
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 32px; font-weight: 500; font-size: 16px; color: var(--text-main);">
-        <span>ULB Polytech</span>
-        <span>·</span>
-        <span>NLPU Dilts</span>
-        <span>·</span>
-        <span>Spiral Academy</span>
-        <span>·</span>
-        <span>BrainCair</span>
-        <span>·</span>
-        <span>Study2Work</span>
-        <span>·</span>
-        <span>CVB Bruxelles</span>
+  <!-- TRUST BAR -->
+  <section style="padding:44px 48px;background:oklch(0.15 0.02 262);border-top:1px solid oklch(0.22 0.02 260);border-bottom:1px solid oklch(0.22 0.02 260);">
+    <div style="max-width:1100px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:22px;">
+      <span style="font-family:'Space Grotesk',sans-serif;font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:oklch(0.58 0.02 260);">Affiliations &amp; Partenariats</span>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px 30px;">
+        <span style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;color:oklch(0.78 0.02 260);">ULB Polytech</span>
+        <span style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;color:oklch(0.78 0.02 260);">NLPU Dilts</span>
+        <span style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;color:oklch(0.78 0.02 260);">Spiral Academy</span>
+        <span style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;color:oklch(0.78 0.02 260);">BrainCair</span>
+        <span style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;color:oklch(0.78 0.02 260);">Study2Work</span>
+        <span style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;color:oklch(0.78 0.02 260);">CVB Bruxelles</span>
       </div>
     </div>
   </section>
 
-  <!-- À Propos -->
-  <section id="apropos" class="section">
-    <div class="container">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 60px; align-items: center;">
-        <div style="display: flex; flex-direction: column; gap: 20px;">
-          <span class="section-subtitle">Biographie & Vision</span>
-          <h2 class="section-title" style="text-align: left;">Rigueur scientifique, stratégie EdTech & accompagnement humain.</h2>
-          <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7;">
-            Ingénieur en informatique issu de l'Université Libre de Bruxelles (ULB Polytech), je suis également certifié Maître-Praticien en PNL Systémique & Générative à la Spiral Academy — formation signée par Robert Dilts (NLPU).
-          </p>
-          <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7;">
-            J'ai créé <strong style="color: var(--accent-gold);">StuFlow.app</strong> pour mes propres coachés : un outil digital d'apprentissage actif qui transforme les bonnes intentions en routines et résultats probants. En parallèle, j'explore le storytelling humain à travers le cinéma, avec le film documentaire <em>« Ce bout de tissu »</em> réalisé avec le Centre Vidéo de Bruxelles (CVB).
-          </p>
-        </div>
-        <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: 0 30px 70px -40px rgba(0,0,0,0.9);">
-          <img src="assets/images/kasidi_avatar.jpg" alt="Kasidi Rodrigue Mwinyi" style="width: 100%; display: block; aspect-ratio: 4/5; object-fit: cover;">
-          <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: linear-gradient(transparent, rgba(11, 10, 8, 0.95));">
-            <h3 style="margin: 0; font-size: 18px; color: var(--text-main);">Kasidi Rodrigue Mwinyi</h3>
-            <p style="margin: 2px 0 0; font-size: 14px; color: var(--text-muted);">Bruxelles, Belgique</p>
-          </div>
+  <!-- À PROPOS / BIOGRAPHIE SECTION -->
+  <section id="apropos" style="padding:110px 48px;max-width:1200px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:1fr 0.85fr;gap:60px;align-items:center;">
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <span style="font-family:'Space Grotesk',sans-serif;font-size:14px;letter-spacing:0.16em;text-transform:uppercase;color:oklch(0.72 0.13 300);">Biographie &amp; Vision</span>
+        <h2 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(28px,3.6vw,42px);line-height:1.12;letter-spacing:-0.01em;color:oklch(0.97 0.005 260);">Rigueur scientifique, stratégie EdTech &amp; accompagnement humain.</h2>
+        <p style="margin:0;font-size:17px;line-height:1.7;color:oklch(0.78 0.02 260);">Ingénieur en informatique issu de l'Université Libre de Bruxelles (ULB Polytech), je suis également certifié Maître-Praticien en PNL Systémique &amp; Générative à la Spiral Academy — formation signée par Robert Dilts (NLPU).</p>
+        <p style="margin:0;font-size:17px;line-height:1.7;color:oklch(0.78 0.02 260);">J'ai créé <strong style="color:oklch(0.9 0.02 260);">StuFlow.app</strong> pour mes propres coachés : un outil digital d'apprentissage actif qui transforme les bonnes intentions en routines et résultats probants. En parallèle, j'explore le storytelling humain à travers le cinéma, avec le film documentaire <em>« Ce bout de tissu »</em> réalisé avec le Centre Vidéo de Bruxelles (CVB).</p>
+      </div>
+      <div style="position:relative;border-radius:20px;overflow:hidden;border:1px solid oklch(0.28 0.02 260);box-shadow:0 30px 70px -40px oklch(0.05 0.02 260 / 0.9);">
+        <img src="assets/images/kasidi_avatar.jpg" alt="Kasidi Rodrigue Mwinyi — Coach Académique & Ingénieur Polytech ULB" style="width:100%;display:block;aspect-ratio:4/5;object-fit:cover;">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:20px;background:linear-gradient(transparent,oklch(0.1 0.02 260 / 0.92));">
+          <h3 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:18px;color:oklch(0.98 0.005 260);">Kasidi Rodrigue Mwinyi</h3>
+          <p style="margin:2px 0 0;font-size:14px;color:oklch(0.76 0.02 260);">Bruxelles, Belgique</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Ebooks -->
-  <section id="ebooks" class="section" style="background: var(--bg-card); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-subtitle">Publications & Guides</span>
-        <h2 class="section-title">Offre d'Assistance & Guides Mémoire</h2>
-        <p class="section-desc">Des ressources méthodologiques concrètes pour formuler sa question de recherche et réussir sa soutenance.</p>
+  <!-- EBOOKS & MÉMOIRE SECTION -->
+  <section id="ebooks" style="padding:100px 48px;background:oklch(0.15 0.02 262);border-top:1px solid oklch(0.22 0.02 260);border-bottom:1px solid oklch(0.22 0.02 260);">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;margin-bottom:44px;max-width:640px;margin-left:auto;margin-right:auto;">
+        <span style="font-family:'Space Grotesk',sans-serif;font-size:14px;letter-spacing:0.16em;text-transform:uppercase;color:oklch(0.72 0.13 300);">Publications &amp; Guides</span>
+        <h2 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(28px,3.6vw,42px);line-height:1.12;letter-spacing:-0.01em;color:oklch(0.97 0.005 260);">Offre d'Assistance &amp; Guides Mémoire</h2>
+        <p style="margin:0;font-size:16px;line-height:1.6;color:oklch(0.76 0.02 260);">Des ressources méthodologiques concrètes pour formuler sa question de recherche et réussir sa soutenance.</p>
+      </div>
+      
+      <div style="position:relative;border-radius:18px;overflow:hidden;border:1px solid oklch(0.24 0.02 260);background:#000;aspect-ratio:16/9;max-width:900px;margin:0 auto 40px;">
+        <iframe src="https://www.youtube.com/embed/cudhzky9SYU" title="Présentation accompagnement mémoire" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
       </div>
 
-      <div style="position: relative; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-subtle); background: #000; aspect-ratio: 16/9; max-width: 900px; margin: 0 auto 40px;">
-        <iframe src="https://www.youtube.com/embed/cudhzky9SYU" title="Présentation accompagnement mémoire" allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
-      </div>
-
-      <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); max-width: 900px; margin: 0 auto;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:900px;margin:0 auto;">
         
-        <div class="project-card">
-          <div class="project-img-wrapper" style="height: 220px;">
-            <img src="assets/images/ebook_question_recherche.png" alt="Ebook Question de recherche" class="project-img">
-            <span class="project-badge-tag">2024</span>
+        <div class="hover-card" style="display:flex;flex-direction:column;border-radius:18px;overflow:hidden;background:oklch(0.16 0.02 262);border:1px solid oklch(0.24 0.02 260);">
+          <div style="position:relative;height:210px;overflow:hidden;background:oklch(0.2 0.02 262);">
+            <img src="assets/images/ebook_question_recherche.png" alt="Gagne 3 mois sur ton mémoire — Ebook Question de Recherche" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+            <span style="position:absolute;top:12px;right:12px;padding:5px 12px;border-radius:999px;background:oklch(0.13 0.02 260 / 0.82);backdrop-filter:blur(4px);font-family:'Space Grotesk',sans-serif;font-size:11px;color:oklch(0.86 0.02 260);">2024</span>
           </div>
-          <div class="project-body">
-            <h3 class="project-title">Gagne 3 mois sur ton mémoire</h3>
-            <p class="project-desc">Formuler la meilleure question de recherche (EI+VI+VE+VD+C) et utiliser l'IA comme assistant scientifique.</p>
-            <div class="project-footer">
-              <a href="assets/ebooks/question-de-recherche-optimale.html" target="_blank" class="btn btn-primary btn-sm" style="width: 100%;">
-                <i class="fa-solid fa-download"></i> Télécharger PDF →
-              </a>
-            </div>
+          <div style="display:flex;flex-direction:column;gap:12px;padding:24px;flex:1;">
+            <h3 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:20px;line-height:1.2;color:oklch(0.97 0.005 260);">Gagne 3 mois sur ton mémoire</h3>
+            <p style="margin:0;font-size:14.5px;line-height:1.6;color:oklch(0.74 0.02 260);">Formuler la meilleure question de recherche (EI+VI+VE+VD+C) et utiliser l'IA comme assistant scientifique.</p>
+            <a href="assets/ebooks/question-de-recherche-optimale.html" target="_blank" style="margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px;border-radius:10px;background:oklch(0.72 0.13 200);color:oklch(0.14 0.02 260);font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;"><i class="fa-solid fa-download"></i> Télécharger PDF →</a>
           </div>
         </div>
 
-        <div class="project-card">
-          <div class="project-img-wrapper" style="height: 220px;">
-            <img src="assets/images/ebook_defense_memoire.png" alt="Ebook Défense du mémoire" class="project-img">
-            <span class="project-badge-tag">2023</span>
+        <div class="hover-card" style="display:flex;flex-direction:column;border-radius:18px;overflow:hidden;background:oklch(0.16 0.02 262);border:1px solid oklch(0.24 0.02 260);">
+          <div style="position:relative;height:210px;overflow:hidden;background:oklch(0.2 0.02 262);">
+            <img src="assets/images/ebook_defense_memoire.png" alt="Défense du mémoire : Réussi !" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+            <span style="position:absolute;top:12px;right:12px;padding:5px 12px;border-radius:999px;background:oklch(0.13 0.02 260 / 0.82);backdrop-filter:blur(4px);font-family:'Space Grotesk',sans-serif;font-size:11px;color:oklch(0.86 0.02 260);">2023</span>
           </div>
-          <div class="project-body">
-            <h3 class="project-title">Défense du mémoire : Réussi !</h3>
-            <p class="project-desc">Réussir la présentation orale devant le jury : règle d'unité de contenu (1 min/slide) et gestion du stress.</p>
-            <div class="project-footer">
-              <a href="assets/ebooks/defense-du-memoire-reussi.html" target="_blank" class="btn btn-primary btn-sm" style="width: 100%;">
-                <i class="fa-solid fa-download"></i> Télécharger PDF →
-              </a>
-            </div>
+          <div style="display:flex;flex-direction:column;gap:12px;padding:24px;flex:1;">
+            <h3 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:20px;line-height:1.2;color:oklch(0.97 0.005 260);">Défense du mémoire : Réussi !</h3>
+            <p style="margin:0;font-size:14.5px;line-height:1.6;color:oklch(0.74 0.02 260);">Réussir la présentation orale devant le jury : règle d'unité de contenu (1 min/slide) et gestion du stress.</p>
+            <a href="assets/ebooks/defense-du-memoire-reussi.html" target="_blank" style="margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px;border-radius:10px;background:oklch(0.72 0.13 200);color:oklch(0.14 0.02 260);font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;"><i class="fa-solid fa-download"></i> Télécharger PDF →</a>
           </div>
         </div>
 
@@ -270,197 +271,194 @@
     </div>
   </section>
 
-  <!-- Parcours -->
-  <section id="parcours" class="section">
-    <div class="container" style="max-width: 960px;">
-      <div class="section-header">
-        <span class="section-subtitle">Crédibilité & Parcours</span>
-        <h2 class="section-title">Parcours Chronologique</h2>
-        <p class="section-desc">Un profil complet alliant ingénierie de pointe, PNL systémique et projets créatifs.</p>
+  <!-- PARCOURS CHRONOLOGIQUE SECTION -->
+  <section id="parcours" style="padding:110px 48px;max-width:960px;margin:0 auto;">
+    <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;margin-bottom:56px;">
+      <span style="font-family:'Space Grotesk',sans-serif;font-size:14px;letter-spacing:0.16em;text-transform:uppercase;color:oklch(0.72 0.13 200);">Crédibilité &amp; Parcours</span>
+      <h2 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(30px,4vw,46px);line-height:1.1;letter-spacing:-0.01em;color:oklch(0.97 0.005 260);">Parcours chronologique</h2>
+      <p style="margin:0;font-size:16px;line-height:1.6;color:oklch(0.76 0.02 260);max-width:560px;">Un profil complet alliant ingénierie de pointe, PNL systémique et projets créatifs.</p>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:0;">
+      
+      <div style="display:grid;grid-template-columns:150px 1fr;gap:28px;padding:26px 0;border-top:1px solid oklch(0.24 0.02 260);">
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;color:oklch(0.72 0.13 200);padding-top:2px;">2025 → Présent</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;">
+            <h3 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:19px;color:oklch(0.97 0.005 260);">StuFlow.app — Startup EdTech</h3>
+            <span style="padding:3px 11px;border-radius:999px;background:oklch(0.72 0.13 300 / 0.15);color:oklch(0.8 0.1 300);font-family:'Space Grotesk',sans-serif;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;">EdTech</span>
+          </div>
+          <p style="margin:0;font-size:15px;line-height:1.6;color:oklch(0.74 0.02 260);">CEO &amp; Cofondateur de StuFlow.app, plateforme d'apprentissage actif fondée sur l'IA et la PNL.</p>
+          <a href="https://stuflow.app" target="_blank" rel="noopener" style="margin-top:4px;display:inline-flex;align-items:center;gap:8px;font-family:'Space Grotesk',sans-serif;font-size:14px;color:oklch(0.78 0.13 200);width:fit-content;">Visiter StuFlow.app →</a>
+        </div>
       </div>
 
-      <div class="timeline-container visual-timeline">
+      <div style="display:grid;grid-template-columns:150px 1fr;gap:28px;padding:26px 0;border-top:1px solid oklch(0.24 0.02 260);">
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;color:oklch(0.72 0.13 200);padding-top:2px;">2025–2026</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;">
+            <h3 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:19px;color:oklch(0.97 0.005 260);">Film documentaire « Ce bout de tissu »</h3>
+            <span style="padding:3px 11px;border-radius:999px;background:oklch(0.72 0.13 300 / 0.15);color:oklch(0.8 0.1 300);font-family:'Space Grotesk',sans-serif;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;">Cinéma</span>
+          </div>
+          <p style="margin:0;font-size:15px;line-height:1.6;color:oklch(0.74 0.02 260);">Réalisation du film documentaire produit avec le Centre Vidéo de Bruxelles (CVB) — 17 min, l'histoire de Lila.</p>
+          <a href="https://cvb.be/fr/films/ce-bout-de-tissu" target="_blank" rel="noopener" style="margin-top:4px;display:inline-flex;align-items:center;gap:8px;font-family:'Space Grotesk',sans-serif;font-size:14px;color:oklch(0.78 0.13 200);width:fit-content;">Fiche du film (CVB) →</a>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:150px 1fr;gap:28px;padding:26px 0;border-top:1px solid oklch(0.24 0.02 260);">
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;color:oklch(0.72 0.13 200);padding-top:2px;">2024–2025</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;">
+            <h3 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:19px;color:oklch(0.97 0.005 260);">BrainCair &amp; Ateliers PsyBru</h3>
+            <span style="padding:3px 11px;border-radius:999px;background:oklch(0.72 0.13 300 / 0.15);color:oklch(0.8 0.1 300);font-family:'Space Grotesk',sans-serif;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;">Coaching</span>
+          </div>
+          <p style="margin:0;font-size:15px;line-height:1.6;color:oklch(0.74 0.02 260);">Direction du coaching académique chez BrainCair : 150+ suivis, SMI Club et programme « Je développe mon autonomie » (PsyBru).</p>
+          <a href="https://psybru.be/fr/psychologue/je-developpe-mon-autonomie" target="_blank" rel="noopener" style="margin-top:4px;display:inline-flex;align-items:center;gap:8px;font-family:'Space Grotesk',sans-serif;font-size:14px;color:oklch(0.78 0.13 200);width:fit-content;">Programme PsyBru →</a>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:150px 1fr;gap:28px;padding:26px 0;border-top:1px solid oklch(0.24 0.02 260);">
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;color:oklch(0.72 0.13 200);padding-top:2px;">2019–2024</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;">
+            <h3 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:19px;color:oklch(0.97 0.005 260);">Coaching Professionnel &amp; 20+ Séminaires</h3>
+            <span style="padding:3px 11px;border-radius:999px;background:oklch(0.72 0.13 300 / 0.15);color:oklch(0.8 0.1 300);font-family:'Space Grotesk',sans-serif;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;">Coaching</span>
+          </div>
+          <p style="margin:0;font-size:15px;line-height:1.6;color:oklch(0.74 0.02 260);">5 ans d'accompagnement : 100+ professionnels coachés dans 37 métiers.</p>
+          <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" style="margin-top:4px;display:inline-flex;align-items:center;gap:8px;font-family:'Space Grotesk',sans-serif;font-size:14px;color:oklch(0.78 0.13 200);width:fit-content;">Study2Work Meeting →</a>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:150px 1fr;gap:28px;padding:26px 0;border-top:1px solid oklch(0.24 0.02 260);">
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;color:oklch(0.72 0.13 200);padding-top:2px;">2022</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;">
+            <h3 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:19px;color:oklch(0.97 0.005 260);">Maître-Praticien PNL (NLPU Dilts)</h3>
+            <span style="padding:3px 11px;border-radius:999px;background:oklch(0.72 0.13 300 / 0.15);color:oklch(0.8 0.1 300);font-family:'Space Grotesk',sans-serif;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;">Certification</span>
+          </div>
+          <p style="margin:0;font-size:15px;line-height:1.6;color:oklch(0.74 0.02 260);">Spiral Academy / NLPU California. Certifications signées par Robert Dilts.</p>
+          <a href="https://www.spiral.academy/" target="_blank" rel="noopener" style="margin-top:4px;display:inline-flex;align-items:center;gap:8px;font-family:'Space Grotesk',sans-serif;font-size:14px;color:oklch(0.78 0.13 200);width:fit-content;">Certification Spiral Academy →</a>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:150px 1fr;gap:28px;padding:26px 0;border-top:1px solid oklch(0.24 0.02 260);">
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;color:oklch(0.72 0.13 200);padding-top:2px;">2017–2020</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;">
+            <h3 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:19px;color:oklch(0.97 0.005 260);">Master en Informatique &amp; IA — ULB Polytech</h3>
+            <span style="padding:3px 11px;border-radius:999px;background:oklch(0.72 0.13 300 / 0.15);color:oklch(0.8 0.1 300);font-family:'Space Grotesk',sans-serif;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;">Diplôme</span>
+          </div>
+          <p style="margin:0;font-size:15px;line-height:1.6;color:oklch(0.74 0.02 260);">Master d'Ingénieur Civil en IA à l'École polytechnique de Bruxelles et préparation aux examens d'admission d'ingénieur.</p>
+          <a href="https://polytech.ulb.be" target="_blank" rel="noopener" style="margin-top:4px;display:inline-flex;align-items:center;gap:8px;font-family:'Space Grotesk',sans-serif;font-size:14px;color:oklch(0.78 0.13 200);width:fit-content;">ULB Polytech →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" style="padding:100px 48px;background:oklch(0.15 0.02 262);border-top:1px solid oklch(0.22 0.02 260);">
+    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:0.8fr 1.2fr;gap:56px;align-items:start;">
+      
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <span style="font-family:'Space Grotesk',sans-serif;font-size:14px;letter-spacing:0.16em;text-transform:uppercase;color:oklch(0.72 0.13 200);">FAQ</span>
+        <h2 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(28px,3.6vw,40px);line-height:1.12;letter-spacing:-0.01em;color:oklch(0.97 0.005 260);">Questions fréquentes.</h2>
+        <a href="https://www.google.com/search?q=Kasidi+Rodrigue+Reviews" target="_blank" rel="noopener" style="margin-top:8px;display:inline-flex;align-items:center;gap:10px;padding:12px 22px;border-radius:10px;border:1px solid oklch(0.5 0.08 250);color:oklch(0.82 0.08 250);font-family:'Space Grotesk',sans-serif;font-size:14px;width:fit-content;">
+          <i class="fa-brands fa-google"></i> Voir les Avis Google (5.0 ★)
+        </a>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px;">
         
-        <div class="timeline-item">
-          <div class="timeline-year">2025 → Présent</div>
-          <div class="timeline-content-wrapper">
-            <div class="timeline-details">
-              <h3>StuFlow.app — Startup EdTech</h3>
-              <p>CEO & Cofondateur de StuFlow.app, plateforme d'apprentissage actif fondée sur l'IA et la PNL.</p>
-              <div style="margin-top: 10px;">
-                <a href="https://stuflow.app" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                  <i class="fa-solid fa-bolt"></i> Visiter StuFlow.app →
-                </a>
-              </div>
-            </div>
-            <span class="timeline-tag">EdTech</span>
-          </div>
-        </div>
+        <details style="border:1px solid oklch(0.24 0.02 260);border-radius:14px;background:oklch(0.16 0.02 262);padding:0 20px;">
+          <summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 0;cursor:pointer;list-style:none;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16.5px;color:oklch(0.94 0.005 260);">
+            Est-il trop tard pour la seconde session d'août ?
+            <span style="color:oklch(0.72 0.13 200);font-size:20px;">+</span>
+          </summary>
+          <p style="margin:0;padding:0 0 20px;font-size:15px;line-height:1.65;color:oklch(0.74 0.02 260);">
+            Non. En ciblant prioritairement les matières clés avec le rétro-planning inversé et le rappel actif, nous réorganisons tes révisions en un sprint efficace.
+          </p>
+        </details>
 
-        <div class="timeline-item">
-          <div class="timeline-year">2025–2026</div>
-          <div class="timeline-content-wrapper">
-            <div class="timeline-details">
-              <h3>Film documentaire « Ce bout de tissu »</h3>
-              <p>Réalisation du film documentaire produit avec le Centre Vidéo de Bruxelles (CVB) — 17 min, l'histoire de Lila.</p>
-              <div style="margin-top: 10px;">
-                <a href="https://cvb.be/fr/films/ce-bout-de-tissu" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                  <i class="fa-solid fa-film"></i> Fiche du film (CVB) →
-                </a>
-              </div>
-            </div>
-            <span class="timeline-tag">Cinéma</span>
-          </div>
-        </div>
+        <details style="border:1px solid oklch(0.24 0.02 260);border-radius:14px;background:oklch(0.16 0.02 262);padding:0 20px;">
+          <summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 0;cursor:pointer;list-style:none;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16.5px;color:oklch(0.94 0.005 260);">
+            Pourquoi l'approche Ingénieur + PNL fonctionne-t-elle ?
+            <span style="color:oklch(0.72 0.13 200);font-size:20px;">+</span>
+          </summary>
+          <p style="margin:0;padding:0 0 20px;font-size:15px;line-height:1.65;color:oklch(0.74 0.02 260);">
+            L'ingénierie apporte la structure et les méthodes scientifiques. La PNL élimine l'anxiété du blocus et la procrastination pour maintenir une régularité sereine.
+          </p>
+        </details>
 
-        <div class="timeline-item">
-          <div class="timeline-year">2024–2025</div>
-          <div class="timeline-content-wrapper">
-            <div class="timeline-details">
-              <h3>BrainCair & Ateliers PsyBru</h3>
-              <p>Direction du coaching académique chez BrainCair : 150+ suivis, SMI Club et programme « Je développe mon autonomie » (PsyBru).</p>
-              <div style="margin-top: 10px;">
-                <a href="https://psybru.be/fr/psychologue/je-developpe-mon-autonomie" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Programme PsyBru →
-                </a>
-              </div>
-            </div>
-            <span class="timeline-tag">Coaching</span>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-year">2019–2024</div>
-          <div class="timeline-content-wrapper">
-            <div class="timeline-details">
-              <h3>Coaching Professionnel & 20+ Séminaires</h3>
-              <p>5 ans d'accompagnement : 100+ professionnels coachés dans 37 métiers.</p>
-              <div style="margin-top: 10px;">
-                <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                  <i class="fa-solid fa-calendar-check"></i> Study2Work Meeting →
-                </a>
-              </div>
-            </div>
-            <span class="timeline-tag">Coaching</span>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-year">2022</div>
-          <div class="timeline-content-wrapper">
-            <div class="timeline-details">
-              <h3>Maître-Praticien PNL (NLPU Dilts)</h3>
-              <p>Spiral Academy / NLPU California. Certifications signées par Robert Dilts.</p>
-              <div style="margin-top: 10px;">
-                <a href="https://www.spiral.academy/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                  <i class="fa-solid fa-certificate"></i> Certification Spiral Academy →
-                </a>
-              </div>
-            </div>
-            <span class="timeline-tag">Certification</span>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-year">2017–2020</div>
-          <div class="timeline-content-wrapper">
-            <div class="timeline-details">
-              <h3>Master en Informatique & IA — ULB Polytech</h3>
-              <p>Master d'Ingénieur Civil en IA à l'École polytechnique de Bruxelles et préparation aux examens d'admission d'ingénieur.</p>
-              <div style="margin-top: 10px;">
-                <a href="https://polytech.ulb.be" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                  <i class="fa-solid fa-graduation-cap"></i> ULB Polytech →
-                </a>
-              </div>
-            </div>
-            <span class="timeline-tag">Diplôme</span>
-          </div>
-        </div>
+        <details style="border:1px solid oklch(0.24 0.02 260);border-radius:14px;background:oklch(0.16 0.02 262);padding:0 20px;">
+          <summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 0;cursor:pointer;list-style:none;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16.5px;color:oklch(0.94 0.005 260);">
+            Comment se déroule le diagnostic de 15 minutes ?
+            <span style="color:oklch(0.72 0.13 200);font-size:20px;">+</span>
+          </summary>
+          <p style="margin:0;padding:0 0 20px;font-size:15px;line-height:1.65;color:oklch(0.74 0.02 260);">
+            Un échange individuel en visio de 15 minutes pour évaluer ta situation, tes matières à repasser et définir tes priorités d'action immédiatement.
+          </p>
+        </details>
 
       </div>
+
     </div>
   </section>
 
-  <!-- FAQ Section -->
-  <section id="faq" class="section" style="background: var(--bg-card); border-top: 1px solid var(--border-subtle);">
-    <div class="container">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px; align-items: start;">
-        <div style="display: flex; flex-direction: column; gap: 14px;">
-          <span class="section-subtitle">FAQ</span>
-          <h2 class="section-title" style="text-align: left;">Questions fréquentes.</h2>
-          <a href="https://www.google.com/search?q=Kasidi+Rodrigue+Reviews" target="_blank" rel="noopener" class="btn btn-secondary" style="width: fit-content; margin-top: 12px;">
-            <i class="fa-brands fa-google"></i> Voir les Avis Google (5.0 ★)
-          </a>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 16px;">
-          <details style="border: 1px solid var(--border-subtle); border-radius: var(--radius-md); background: var(--bg-dark); padding: 20px;">
-            <summary style="cursor: pointer; font-weight: 600; font-size: 1.1rem; color: var(--text-main);">Est-il trop tard pour la seconde session d'août ?</summary>
-            <p style="margin-top: 12px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
-              Non. En ciblant prioritairement les matières clés avec le rétro-planning inversé et le rappel actif, nous réorganisons tes révisions en un sprint efficace.
-            </p>
-          </details>
-          <details style="border: 1px solid var(--border-subtle); border-radius: var(--radius-md); background: var(--bg-dark); padding: 20px;">
-            <summary style="cursor: pointer; font-weight: 600; font-size: 1.1rem; color: var(--text-main);">Pourquoi l'approche Ingénieur + PNL fonctionne-t-elle ?</summary>
-            <p style="margin-top: 12px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
-              L'ingénierie apporte la structure et les méthodes scientifiques. La PNL élimine l'anxiété du blocus et la procrastination pour maintenir une régularité sereine.
-            </p>
-          </details>
-          <details style="border: 1px solid var(--border-subtle); border-radius: var(--radius-md); background: var(--bg-dark); padding: 20px;">
-            <summary style="cursor: pointer; font-weight: 600; font-size: 1.1rem; color: var(--text-main);">Comment se déroule le diagnostic de 15 minutes ?</summary>
-            <p style="margin-top: 12px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
-              Un échange individuel en visio de 15 minutes pour évaluer ta situation, tes matières à repasser et définir tes priorités d'action immédiatement.
-            </p>
-          </details>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Final CTA -->
-  <section id="book" class="section" style="background: linear-gradient(180deg, var(--bg-dark) 0%, #15120d 100%);">
-    <div class="container" style="max-width: 760px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 24px;">
-      <span class="section-subtitle">Seconde Session & Rentrée 2026</span>
-      <h2 class="section-title">Réserver ma Session Stratégie <span style="color: var(--accent-gold); font-style: italic;">Offerte (15 min).</span></h2>
-      <p class="section-desc">Rends-toi sur Calendly pour fixer notre visioconférence individuelle, sans engagement.</p>
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 8px;">
-        <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" class="btn btn-primary">
+  <!-- CTA FINAL SECTION -->
+  <section id="book" style="position:relative;padding:120px 48px;overflow:hidden;background:radial-gradient(100% 140% at 50% 100%, oklch(0.2 0.03 265) 0%, oklch(0.13 0.02 260) 70%);">
+    <div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px;">
+      <span style="font-family:'Space Grotesk',sans-serif;font-size:14px;letter-spacing:0.16em;text-transform:uppercase;color:oklch(0.72 0.13 200);">Seconde Session &amp; Rentrée 2026</span>
+      <h2 style="margin:0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(30px,4.4vw,52px);line-height:1.07;letter-spacing:-0.02em;color:oklch(0.98 0.005 260);">
+        Réserver ma Session Stratégie<br>
+        <span style="background:linear-gradient(100deg,oklch(0.78 0.13 200),oklch(0.78 0.13 300));-webkit-background-clip:text;background-clip:text;color:transparent;">Offerte (15 min).</span>
+      </h2>
+      <p style="margin:0;max-width:520px;font-size:18px;line-height:1.6;color:oklch(0.8 0.02 260);">Rends-toi sur Calendly pour fixer notre visioconférence individuelle, sans engagement.</p>
+      
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:8px;">
+        <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:17px 34px;border-radius:12px;background:oklch(0.72 0.13 200);color:oklch(0.14 0.02 260);font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:17px;box-shadow:0 12px 30px -12px oklch(0.72 0.16 200 / 0.8);">
           <i class="fa-solid fa-calendar-check"></i> Choisir mon créneau →
         </a>
-        <a href="mailto:kasidi@stuflow.app" class="btn btn-secondary">
+        <a href="mailto:kasidi@stuflow.app" style="display:inline-flex;align-items:center;gap:10px;padding:17px 34px;border-radius:12px;border:1px solid oklch(0.42 0.03 260);color:oklch(0.9 0.01 260);font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:17px;">
           <i class="fa-solid fa-envelope"></i> kasidi@stuflow.app
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 24px; align-items: center; width: 100%;">
-      <div class="footer-brand">
-        <h4>Kasidi Rodrigue Mwinyi</h4>
-        <p>Coach Académique & Méthodologique · Ingénieur Polytech ULB · Maître-Praticien PNL · CEO StuFlow.app · Réalisateur. Bruxelles, Belgique.</p>
+  <!-- FOOTER -->
+  <footer style="padding:52px 48px 40px;border-top:1px solid oklch(0.24 0.02 260);">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:36px;">
+      
+      <div style="display:flex;flex-direction:column;gap:12px;max-width:400px;">
+        <div style="display:flex;align-items:center;gap:12px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:17px;color:oklch(0.97 0.005 260);">
+          <span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,oklch(0.72 0.13 200),oklch(0.72 0.13 300));color:oklch(0.14 0.02 260);font-weight:700;font-size:13px;">KR</span>
+          Kasidi Rodrigue Mwinyi
+        </div>
+        <p style="margin:0;font-size:14px;line-height:1.6;color:oklch(0.66 0.02 260);">Coach Académique &amp; Méthodologique · Ingénieur Polytech ULB · Maître-Praticien PNL · CEO StuFlow.app · Réalisateur. Bruxelles, Belgique.</p>
       </div>
 
-      <div class="footer-links">
-        <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener"><i class="fa-solid fa-calendar-check"></i> Calendly</a>
-        <a href="https://www.linkedin.com/in/kasidirodrigue" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-        <a href="https://instagram.com/kasidirodrigue" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a>
-        <a href="https://www.tiktok.com/@kasidirodrigue" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i> TikTok</a>
-        <a href="https://www.youtube.com/watch?v=cudhzky9SYU" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> YouTube</a>
-        <a href="https://www.facebook.com/profile.php?id=61562872513826" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
-        <a href="https://www.google.com/search?q=Kasidi+Rodrigue+Reviews#lkt=LocalPoiReviews" target="_blank" rel="noopener"><i class="fa-brands fa-google"></i> Avis Google</a>
-        <a href="https://share.google/L4fBKPJrOMc7O63gw" target="_blank" rel="noopener"><i class="fa-brands fa-google"></i> Google Profile</a>
-        <a href="https://stuflow.app" target="_blank" rel="noopener"><i class="fa-solid fa-bolt"></i> StuFlow.app</a>
-        <a href="mailto:kasidi@stuflow.app"><i class="fa-solid fa-envelope"></i> E-mail</a>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <span style="font-family:'Space Grotesk',sans-serif;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:oklch(0.6 0.02 260);">Communauté &amp; Médias</span>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;max-width:420px;">
+          <a href="https://www.linkedin.com/in/kasidirodrigue" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:10px;border:1px solid oklch(0.28 0.02 260);background:oklch(0.16 0.02 262);font-family:'Space Grotesk',sans-serif;font-size:13.5px;color:oklch(0.82 0.02 260);"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a href="https://instagram.com/kasidirodrigue" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:10px;border:1px solid oklch(0.28 0.02 260);background:oklch(0.16 0.02 262);font-family:'Space Grotesk',sans-serif;font-size:13.5px;color:oklch(0.82 0.02 260);"><i class="fa-brands fa-instagram"></i> Instagram</a>
+          <a href="https://www.tiktok.com/@kasidirodrigue" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:10px;border:1px solid oklch(0.28 0.02 260);background:oklch(0.16 0.02 262);font-family:'Space Grotesk',sans-serif;font-size:13.5px;color:oklch(0.82 0.02 260);"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+          <a href="https://www.youtube.com/watch?v=cudhzky9SYU" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:10px;border:1px solid oklch(0.28 0.02 260);background:oklch(0.16 0.02 262);font-family:'Space Grotesk',sans-serif;font-size:13.5px;color:oklch(0.82 0.02 260);"><i class="fa-brands fa-youtube"></i> YouTube</a>
+          <a href="https://www.facebook.com/profile.php?id=61562872513826" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:10px;border:1px solid oklch(0.28 0.02 260);background:oklch(0.16 0.02 262);font-family:'Space Grotesk',sans-serif;font-size:13.5px;color:oklch(0.82 0.02 260);"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+          <a href="https://www.google.com/search?q=Kasidi+Rodrigue+Reviews" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:10px;border:1px solid oklch(0.28 0.02 260);background:oklch(0.16 0.02 262);font-family:'Space Grotesk',sans-serif;font-size:13.5px;color:oklch(0.82 0.02 260);"><i class="fa-brands fa-google"></i> Avis Google</a>
+          <a href="https://stuflow.app" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:10px;border:1px solid oklch(0.28 0.02 260);background:oklch(0.16 0.02 262);font-family:'Space Grotesk',sans-serif;font-size:13.5px;color:oklch(0.82 0.02 260);"><i class="fa-solid fa-bolt"></i> StuFlow.app</a>
+        </div>
       </div>
 
-      <div class="footer-copy">
-        © 2026 Kasidi Rodrigue Mwinyi. Tous droits réservés.
-      </div>
+    </div>
+
+    <div style="max-width:1200px;margin:36px auto 0;padding-top:24px;border-top:1px solid oklch(0.2 0.02 260);font-size:13px;color:oklch(0.55 0.02 260);">
+      © 2026 Kasidi Rodrigue Mwinyi. Tous droits réservés.
     </div>
   </footer>
 
   <!-- Main JavaScript File -->
-  <script src="assets/js/main.js?v=landing_dc_2026_v2"></script>
+  <script src="assets/js/main.js?v=landing_dc_full_2026"></script>
 </body>
 </html>
