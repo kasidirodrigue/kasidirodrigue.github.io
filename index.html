@@ -149,38 +149,29 @@
         from { transform: translateX(100%); }
         to { transform: translateX(0); }
       }
-      .mobile-nav-header {
+      /* Standalone close button - lives OUTSIDE the nav to avoid stacking issues */
+      #mobileCloseBtn {
         display: none;
-      }
-      .site-header nav.open .mobile-nav-header {
-        display: flex !important;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        padding-bottom: 16px;
-        margin-bottom: 12px;
-        border-bottom: 1px solid oklch(0.24 0.02 260);
-      }
-      .mobile-nav-close {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
         background: oklch(0.22 0.02 260);
-        border: 1px solid oklch(0.35 0.04 260);
+        border: 1px solid oklch(0.4 0.04 260);
         color: oklch(0.95 0.005 260);
-        width: 36px;
-        height: 36px;
         border-radius: 10px;
-        display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 18px;
+        font-size: 20px;
         cursor: pointer;
-        transition: background 0.2s ease;
-        position: relative;
-        z-index: 70;
+        z-index: 65;
         pointer-events: auto;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
       }
-      .mobile-nav-close:hover {
-        background: oklch(0.28 0.03 260);
-      }
+      #mobileCloseBtn.open { display: flex; }
+      #mobileCloseBtn i { pointer-events: none; }
       .site-header nav a {
         display: block;
         width: 100%;
@@ -275,6 +266,10 @@
   <!-- NAVIGATION HEADER -->
   <!-- Mobile nav overlay backdrop -->
   <div class="nav-overlay" id="navOverlay" onclick="if(window.closeMobileMenu) window.closeMobileMenu();"></div>
+  <!-- Standalone close button (outside nav to avoid stacking issues on Samsung) -->
+  <button id="mobileCloseBtn" onclick="if(window.closeMobileMenu) window.closeMobileMenu();" aria-label="Fermer le menu">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
 
   <header class="site-header" style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 48px;background:oklch(0.13 0.02 260 / 0.85);backdrop-filter:blur(12px);border-bottom:1px solid oklch(0.24 0.02 260);">
     <a href="https://kasidirodrigue.github.io/" style="display:flex;align-items:center;gap:12px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:17px;color:oklch(0.97 0.005 260);">
@@ -285,12 +280,6 @@
       <i class="fa-solid fa-bars" id="menuIcon"></i>
     </button>
     <nav id="mainNav" style="display:flex;align-items:center;gap:26px;font-family:'Space Grotesk',sans-serif;font-size:15px;">
-      <div class="mobile-nav-header">
-        <span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:17px;color:oklch(0.97 0.005 260);">Menu</span>
-        <button class="mobile-nav-close" id="mobileNavCloseBtn" onclick="if(window.closeMobileMenu) window.closeMobileMenu();" aria-label="Fermer le menu">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
       <a href="#coaching" class="nav-link-mobile" style="color:oklch(0.82 0.02 260);">Coaching</a>
       <a href="#apropos" class="nav-link-mobile" style="color:oklch(0.82 0.02 260);">À propos</a>
       <a href="#ebooks" class="nav-link-mobile" style="color:oklch(0.82 0.02 260);">Mémoire</a>

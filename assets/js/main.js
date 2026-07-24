@@ -11,8 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainNav = document.getElementById('mainNav');
     const navOverlay = document.getElementById('navOverlay');
     const menuIcon = document.getElementById('menuIcon');
+    const closeBtn = document.getElementById('mobileCloseBtn');
     if (mainNav) mainNav.classList.add('open');
     if (navOverlay) navOverlay.classList.add('open');
+    if (closeBtn) closeBtn.classList.add('open');
     if (menuIcon) {
       menuIcon.classList.remove('fa-bars');
       menuIcon.classList.add('fa-xmark');
@@ -24,8 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainNav = document.getElementById('mainNav');
     const navOverlay = document.getElementById('navOverlay');
     const menuIcon = document.getElementById('menuIcon');
+    const closeBtn = document.getElementById('mobileCloseBtn');
     if (mainNav) mainNav.classList.remove('open');
     if (navOverlay) navOverlay.classList.remove('open');
+    if (closeBtn) closeBtn.classList.remove('open');
     if (menuIcon) {
       menuIcon.classList.remove('fa-xmark');
       menuIcon.classList.add('fa-bars');
@@ -44,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-  const mobileNavCloseBtn = document.getElementById('mobileNavCloseBtn');
+  const mobileCloseBtn = document.getElementById('mobileCloseBtn');
   const navOverlay = document.getElementById('navOverlay');
 
   if (mobileMenuBtn) {
@@ -54,8 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (mobileNavCloseBtn) {
-    mobileNavCloseBtn.addEventListener('click', (e) => {
+  if (mobileCloseBtn) {
+    mobileCloseBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       window.closeMobileMenu();
     });
