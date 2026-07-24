@@ -48,10 +48,12 @@
     </div>
   </nav>
 
-  <!-- Hero Section Ultra Épurée & Design Pro -->
-  <section id="accueil" class="hero-section">
-    <div class="container hero-grid">
-      <div class="hero-content">
+  <!-- Hero Section Ultra Épurée & Design Pro avec Animation de Constellation Interactive -->
+  <section id="accueil" class="hero-section" style="position: relative; overflow: hidden;">
+    <canvas id="heroCanvas" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: auto; z-index: 0;"></canvas>
+    
+    <div class="container hero-grid" style="position: relative; z-index: 1; pointer-events: none;">
+      <div class="hero-content" style="pointer-events: auto;">
         
         <div class="hero-badge-row">
           <div class="status-badge">
@@ -79,7 +81,7 @@
 
       </div>
 
-      <div class="hero-avatar-wrapper">
+      <div class="hero-avatar-wrapper" style="pointer-events: auto;">
         <div class="avatar-card">
           <img src="assets/images/kasidi_avatar.jpg" alt="Kasidi Rodrigue Mwinyi — Coach Académique & Ingénieur Polytech ULB">
           <div class="avatar-card-info">
