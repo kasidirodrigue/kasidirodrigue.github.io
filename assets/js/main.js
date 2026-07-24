@@ -134,6 +134,8 @@ document.addEventListener('DOMContentLoaded', () => {
         link.classList.add('active');
       }
     });
+  });
+
   /* -------------------------------------------------------------------------- */
   /* 5. Interactive Particle Constellation Hero Canvas (De Landing.dc.html)     */
   /* -------------------------------------------------------------------------- */
