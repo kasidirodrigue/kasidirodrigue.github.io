@@ -256,5 +256,39 @@ document.addEventListener('DOMContentLoaded', () => {
     animId = requestAnimationFrame(frame);
   }
 
+  /* -------------------------------------------------------------------------- */
+  /* 6. Metric Counters Animation                                               */
+  /* -------------------------------------------------------------------------- */
+  startCounters();
+
+  function startCounters() {
+    const els = document.querySelectorAll('[data-count]');
+    if (!els.length) return;
+
+    const run = (el) => {
+      const target = parseFloat(el.getAttribute('data-count')) || 0;
+      const suffix = el.getAttribute('data-suffix') || '';
+      const dur = 1400, t0 = performance.now();
+      const tick = (now) => {
+        const p = Math.min(1, (now - t0) / dur);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          run(e.target);
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    els.forEach((el) => io.observe(el));
+  }
+
 });
 

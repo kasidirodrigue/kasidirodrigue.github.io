@@ -14,9 +14,12 @@
   <meta property="og:description" content="Coaching académique et méthodologique à Bruxelles. Ingénieur Civil Polytech ULB & Maître-Praticien PNL Dilts. Réussite universitaire et seconde session.">
   <meta property="og:site_name" content="Kasidi Rodrigue Mwinyi">
   
-  <!-- FontAwesome Icons & Design System CSS -->
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=hero_v2">
+  <link rel="stylesheet" href="assets/css/style.css?v=2026_landing_v2">
 
   <!-- Elfsight Google Reviews Platform Script -->
   <script src="https://elfsightcdn.com/platform.js" async></script>
@@ -25,13 +28,13 @@
 
   <a href="#coaching" class="skip-link">Aller au contenu principal</a>
 
-  <!-- Top Banner Minimal -->
+  <!-- Top Banner -->
   <div class="top-banner">
     <span>🚨 <strong>Seconde Session & Rentrée 2026 :</strong> Session Stratégie offerte (15 min) en visio.</span>
     <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener">Réserver mon créneau →</a>
   </div>
 
-  <!-- Navigation Bar Minimal (No wrapping, clean alignment) -->
+  <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="container nav-container">
       <a href="https://kasidirodrigue.github.io/" class="logo">
@@ -42,9 +45,9 @@
       <ul class="nav-links">
         <li><a href="#accueil" class="nav-link active">Accueil</a></li>
         <li><a href="#coaching" class="nav-link">Coaching</a></li>
+        <li><a href="#apropos" class="nav-link">À propos</a></li>
         <li><a href="#ebooks" class="nav-link">Mémoire</a></li>
         <li><a href="#parcours" class="nav-link">Parcours</a></li>
-        <li><a href="#reviews" class="nav-link">Avis Google</a></li>
         <li><a href="#faq" class="nav-link">FAQ</a></li>
       </ul>
 
@@ -54,80 +57,64 @@
     </div>
   </nav>
 
-  <!-- Hero Section Ultra Épurée & Design Pro avec Animation de Constellation Interactive -->
-  <section id="accueil" class="hero-section" style="position: relative; overflow: hidden;">
+  <!-- Hero Section avec Animation Constellation -->
+  <section id="accueil" class="hero-section" style="position: relative; overflow: hidden; min-height: 85vh; display: flex; align-items: center; justify-content: center;">
     <canvas id="heroCanvas" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: auto; z-index: 0;"></canvas>
     
-    <div class="container hero-grid" style="position: relative; z-index: 1; pointer-events: none;">
-      <div class="hero-content" style="pointer-events: auto;">
-        
-        <div class="hero-badge-row">
-          <div class="status-badge">
-            <span class="status-dot"></span>
-            <span>Ingénieur Polytech ULB · Maître-Praticien PNL</span>
-          </div>
-        </div>
-
-        <h1 class="hero-title">
-          Coach Académique & <span class="hero-title-italic">Méthodologique</span>.
-        </h1>
-
-        <p class="hero-subtitle">
-          Réussir ses études et examens universitaires à Bruxelles sans stress grâce à la rigueur de l'ingénierie et la PNL systémique.
-        </p>
-
-        <div class="hero-cta-group">
-          <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" class="btn btn-primary">
-            <i class="fa-solid fa-calendar-check"></i> Session Stratégie Offerte (15 min)
-          </a>
-          <a href="https://stuflow.app" target="_blank" rel="noopener" class="btn btn-secondary">
-            <i class="fa-solid fa-bolt"></i> Découvrir StuFlow.app
-          </a>
-        </div>
-
+    <div class="container hero-grid" style="position: relative; z-index: 1; pointer-events: none; max-width: 960px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 26px; padding: 80px 24px;">
+      
+      <div style="pointer-events: auto; display: flex; align-items: center; gap: 10px; padding: 9px 20px; border-radius: 999px; border: 1px solid var(--border-subtle); background: rgba(18, 15, 11, 0.65); backdrop-filter: blur(8px);">
+        <span class="status-dot"></span>
+        <span style="font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-gold);">Ingénieur Polytech ULB · Maître-Praticien PNL</span>
       </div>
 
-      <div class="hero-avatar-wrapper" style="pointer-events: auto;">
-        <div class="avatar-card">
-          <img src="assets/images/kasidi_avatar.jpg" alt="Kasidi Rodrigue Mwinyi — Coach Académique & Ingénieur Polytech ULB">
-          <div class="avatar-card-info">
-            <h3>Kasidi Rodrigue Mwinyi</h3>
-            <p>Bruxelles, Belgique</p>
-          </div>
-        </div>
+      <h1 class="hero-title" style="pointer-events: auto; margin: 0; font-size: clamp(38px, 6vw, 76px); line-height: 1.05; letter-spacing: -0.02em;">
+        Coach Académique & <span class="hero-title-italic" style="color: var(--accent-gold); font-style: italic;">Méthodologique.</span>
+      </h1>
+
+      <p class="hero-subtitle" style="pointer-events: auto; margin: 0; max-width: 660px; font-size: clamp(16px, 2.1vw, 20px); line-height: 1.6; color: var(--text-muted);">
+        Réussir ses études et examens universitaires à Bruxelles sans stress, grâce à la rigueur de l'ingénierie et la PNL systémique.
+      </p>
+
+      <div class="hero-cta-group" style="pointer-events: auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 6px;">
+        <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fa-solid fa-calendar-check"></i> Session Stratégie Offerte (15 min)
+        </a>
+        <a href="https://stuflow.app" target="_blank" rel="noopener" class="btn btn-secondary">
+          <i class="fa-solid fa-bolt"></i> Découvrir StuFlow.app
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Metrics Section (Compteurs Animés) -->
+  <section class="metrics-section" style="padding: 52px 24px; border-bottom: 1px solid var(--border-subtle); background: var(--bg-card);">
+    <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 28px; text-align: center;">
+      <div class="metric-item">
+        <span class="metric-number" data-count="500" data-suffix="+" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 44px; color: var(--accent-gold); display: block;">0+</span>
+        <span class="metric-label" style="font-size: 14px; color: var(--text-muted);">Étudiants accompagnés</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-number" data-count="100" data-suffix="+" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 44px; color: var(--accent-gold); display: block;">0+</span>
+        <span class="metric-label" style="font-size: 14px; color: var(--text-muted);">Professionnels coachés</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-number" data-count="2" data-suffix="" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 44px; color: var(--accent-gold); display: block;">0</span>
+        <span class="metric-label" style="font-size: 14px; color: var(--text-muted);">Ebooks méthodologiques</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-number" data-count="20" data-suffix="+" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 44px; color: var(--accent-gold); display: block;">0+</span>
+        <span class="metric-label" style="font-size: 14px; color: var(--text-muted);">Séminaires animés</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-number" data-count="1" data-suffix="" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 44px; color: var(--accent-gold); display: block;">0</span>
+        <span class="metric-label" style="font-size: 14px; color: var(--text-muted);">Film réalisé (CVB)</span>
       </div>
     </div>
   </section>
 
-  <!-- Impact Metrics Section -->
-  <section class="metrics-section">
-    <div class="container">
-      <div class="metrics-grid">
-        <div class="metric-card">
-          <div class="metric-number" data-target="500" data-suffix="+">0</div>
-          <div class="metric-label">Étudiants accompagnés</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-number" data-target="100" data-suffix="+">0</div>
-          <div class="metric-label">Professionnels coachés</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-number" data-target="2" data-suffix="">0</div>
-          <div class="metric-label">Ebooks méthodologiques</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-number" data-target="20" data-suffix="+">0</div>
-          <div class="metric-label">Séminaires animés</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-number" data-target="1" data-suffix="">0</div>
-          <div class="metric-label">Film réalisé (CVB)</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 1. L'OFFRE PRINCIPALE : COACHING ACADÉMIQUE -->
+  <!-- Coaching Section -->
   <section id="coaching" class="section">
     <div class="container">
       <div class="section-header">
@@ -136,39 +123,39 @@
         <p class="section-desc">Une méthode scientifique et sur-mesure pour débloquer tes révisions et réussir tes examens d'août.</p>
       </div>
 
-      <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+      <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
         
         <div class="project-card">
           <div class="project-body">
-            <span class="project-period">Étudiants & Facultés</span>
-            <h3 class="project-title">Pour Qui ?</h3>
+            <span class="project-period" style="color: var(--accent-gold); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;">Étudiants & Facultés</span>
+            <h3 class="project-title" style="margin-top: 8px;">Pour Qui ?</h3>
             <p class="project-desc">Polytech, Droit, Solvay, Médecine, Sciences & Hautes Écoles. Du BAC 1 au Master et rédaction de mémoire.</p>
-            <ul class="project-features">
-              <li><i class="fa-solid fa-check"></i> Cursus scientifiques & littéraires</li>
-              <li><i class="fa-solid fa-check"></i> Gestion du retard & surcharge</li>
+            <ul style="margin: 16px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px;">
+              <li style="display: flex; gap: 10px; align-items: center; font-size: 14.5px; color: var(--text-main);"><i class="fa-solid fa-check" style="color: var(--accent-gold);"></i> Cursus scientifiques & littéraires</li>
+              <li style="display: flex; gap: 10px; align-items: center; font-size: 14.5px; color: var(--text-main);"><i class="fa-solid fa-check" style="color: var(--accent-gold);"></i> Gestion du retard & de la surcharge</li>
             </ul>
           </div>
         </div>
 
         <div class="project-card">
           <div class="project-body">
-            <span class="project-period">Méthode Cognitives</span>
-            <h3 class="project-title">Active Recall & PNL</h3>
+            <span class="project-period" style="color: var(--accent-gold); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;">Méthodes cognitives</span>
+            <h3 class="project-title" style="margin-top: 8px;">Active Recall & PNL</h3>
             <p class="project-desc">Rétro-planning inversé, rappel actif et élimination du stress pour une mémorisation rapide et durable.</p>
-            <ul class="project-features">
-              <li><i class="fa-solid fa-check"></i> Planning rétroactif jour par jour</li>
-              <li><i class="fa-solid fa-check"></i> Préparation mentale aux oraux & écrits</li>
+            <ul style="margin: 16px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px;">
+              <li style="display: flex; gap: 10px; align-items: center; font-size: 14.5px; color: var(--text-main);"><i class="fa-solid fa-check" style="color: var(--accent-gold);"></i> Planning rétroactif jour par jour</li>
+              <li style="display: flex; gap: 10px; align-items: center; font-size: 14.5px; color: var(--text-main);"><i class="fa-solid fa-check" style="color: var(--accent-gold);"></i> Préparation mentale aux oraux & écrits</li>
             </ul>
           </div>
         </div>
 
         <div class="project-card">
           <div class="project-body">
-            <span class="project-period">Suivi Exclusif</span>
-            <h3 class="project-title">Technologie StuFlow.app</h3>
+            <span class="project-period" style="color: var(--accent-gold); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;">Suivi exclusif</span>
+            <h3 class="project-title" style="margin-top: 8px;">Technologie StuFlow.app</h3>
             <p class="project-desc">Plateforme EdTech de reformulation active pour suivre ton niveau de maîtrise réel entre les séances de coaching.</p>
-            <div class="project-footer">
-              <a href="https://stuflow.app" target="_blank" rel="noopener" class="btn btn-sm btn-secondary" style="width: 100%;">
+            <div style="margin-top: 24px;">
+              <a href="https://stuflow.app" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
                 <i class="fa-solid fa-bolt"></i> Découvrir StuFlow.app →
               </a>
             </div>
@@ -177,35 +164,63 @@
 
       </div>
 
-      <!-- Main Action Callout -->
-      <div style="margin-top: 40px; text-align: center; background: var(--bg-card); padding: 36px 24px; border-radius: var(--radius-md); border: 1px solid var(--border-gold);">
-        <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 12px;">Revoyons ta stratégie d'étude pour les examens d'août</h3>
-        <p style="color: var(--text-muted); font-size: 1rem; max-width: 540px; margin: 0 auto 24px auto;">15 minutes en visio pour analyser ta situation et repartir avec un plan d'action clair.</p>
-        <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" class="btn btn-primary" style="font-size: 1.05rem; padding: 16px 32px;">
-          <i class="fa-solid fa-calendar-check"></i> Réserver ma Session Stratégie Offerte (15 min) →
+      <div style="margin-top: 40px; text-align: center; background: var(--bg-card); padding: 40px 24px; border-radius: var(--radius-lg); border: 1px solid var(--border-subtle);">
+        <h3 style="margin: 0 0 12px; font-size: clamp(22px, 2.6vw, 30px); color: var(--text-main);">Revoyons ta stratégie d'étude pour les examens d'août</h3>
+        <p style="margin: 0 auto 24px; color: var(--text-muted); font-size: 16px; max-width: 540px;">15 minutes en visio pour analyser ta situation et repartir avec un plan d'action clair.</p>
+        <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fa-solid fa-calendar-check"></i> Réserver ma Session Stratégie Offerte →
         </a>
       </div>
-
     </div>
   </section>
 
-  <!-- Trust Bar (Positionnée élégamment entre 2 grandes sections) -->
-  <section class="trust-bar" style="background: rgba(23, 20, 15, 0.6);">
-    <div class="container">
-      <div class="trust-title">Affiliations & Partenariats</div>
-      <div class="trust-logos">
-        <span class="trust-logo">ULB Polytech</span>
-        <span class="trust-logo">NLPU Dilts</span>
-        <span class="trust-logo">Spiral Academy</span>
-        <span class="trust-logo">BrainCair</span>
-        <span class="trust-logo">Study2Work</span>
-        <span class="trust-logo">CVB Bruxelles</span>
+  <!-- Trust Bar -->
+  <section style="padding: 44px 24px; background: var(--bg-card); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; gap: 22px;">
+      <span style="font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-muted);">Affiliations & Partenariats</span>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 32px; font-weight: 500; font-size: 16px; color: var(--text-main);">
+        <span>ULB Polytech</span>
+        <span>·</span>
+        <span>NLPU Dilts</span>
+        <span>·</span>
+        <span>Spiral Academy</span>
+        <span>·</span>
+        <span>BrainCair</span>
+        <span>·</span>
+        <span>Study2Work</span>
+        <span>·</span>
+        <span>CVB Bruxelles</span>
       </div>
     </div>
   </section>
 
-  <!-- 2. EBOOKS & ACCOMPAGNEMENT MÉMOIRE -->
-  <section id="ebooks" class="section" style="background: rgba(23, 20, 15, 0.4); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+  <!-- À Propos -->
+  <section id="apropos" class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 60px; align-items: center;">
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <span class="section-subtitle">Biographie & Vision</span>
+          <h2 class="section-title" style="text-align: left;">Rigueur scientifique, stratégie EdTech & accompagnement humain.</h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7;">
+            Ingénieur en informatique issu de l'Université Libre de Bruxelles (ULB Polytech), je suis également certifié Maître-Praticien en PNL Systémique & Générative à la Spiral Academy — formation signée par Robert Dilts (NLPU).
+          </p>
+          <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7;">
+            J'ai créé <strong style="color: var(--accent-gold);">StuFlow.app</strong> pour mes propres coachés : un outil digital d'apprentissage actif qui transforme les bonnes intentions en routines et résultats probants. En parallèle, j'explore le storytelling humain à travers le cinéma, avec le film documentaire <em>« Ce bout de tissu »</em> réalisé avec le Centre Vidéo de Bruxelles (CVB).
+          </p>
+        </div>
+        <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: 0 30px 70px -40px rgba(0,0,0,0.9);">
+          <img src="assets/images/kasidi_avatar.jpg" alt="Kasidi Rodrigue Mwinyi" style="width: 100%; display: block; aspect-ratio: 4/5; object-fit: cover;">
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: linear-gradient(transparent, rgba(11, 10, 8, 0.95));">
+            <h3 style="margin: 0; font-size: 18px; color: var(--text-main);">Kasidi Rodrigue Mwinyi</h3>
+            <p style="margin: 2px 0 0; font-size: 14px; color: var(--text-muted);">Bruxelles, Belgique</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ebooks -->
+  <section id="ebooks" class="section" style="background: var(--bg-card); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
     <div class="container">
       <div class="section-header">
         <span class="section-subtitle">Publications & Guides</span>
@@ -213,13 +228,11 @@
         <p class="section-desc">Des ressources méthodologiques concrètes pour formuler sa question de recherche et réussir sa soutenance.</p>
       </div>
 
-      <div class="video-wrapper" style="margin-bottom: 40px;">
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/cudhzky9SYU" title="Présentation accompagnement mémoire" allowfullscreen></iframe>
-        </div>
+      <div style="position: relative; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-subtle); background: #000; aspect-ratio: 16/9; max-width: 900px; margin: 0 auto 40px;">
+        <iframe src="https://www.youtube.com/embed/cudhzky9SYU" title="Présentation accompagnement mémoire" allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
       </div>
 
-      <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+      <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); max-width: 900px; margin: 0 auto;">
         
         <div class="project-card">
           <div class="project-img-wrapper" style="height: 220px;">
@@ -257,9 +270,9 @@
     </div>
   </section>
 
-  <!-- 3. PARCOURS & AUTORITÉ (Synthétique & Clair) -->
+  <!-- Parcours -->
   <section id="parcours" class="section">
-    <div class="container">
+    <div class="container" style="max-width: 960px;">
       <div class="section-header">
         <span class="section-subtitle">Crédibilité & Parcours</span>
         <h2 class="section-title">Parcours Chronologique</h2>
@@ -275,7 +288,7 @@
               <h3>StuFlow.app — Startup EdTech</h3>
               <p>CEO & Cofondateur de StuFlow.app, plateforme d'apprentissage actif fondée sur l'IA et la PNL.</p>
               <div style="margin-top: 10px;">
-                <a href="https://stuflow.app" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="display: inline-flex; gap: 6px; align-items: center; padding: 6px 14px; font-size: 0.8rem;">
+                <a href="https://stuflow.app" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
                   <i class="fa-solid fa-bolt"></i> Visiter StuFlow.app →
                 </a>
               </div>
@@ -288,11 +301,11 @@
           <div class="timeline-year">2025–2026</div>
           <div class="timeline-content-wrapper">
             <div class="timeline-details">
-              <h3>Film Documentaire « Ce bout de tissu »</h3>
-              <p>Réalisation du film documentaire produit avec le Centre Vidéo de Bruxelles (CVB) (17 min, histoire de Lila).</p>
+              <h3>Film documentaire « Ce bout de tissu »</h3>
+              <p>Réalisation du film documentaire produit avec le Centre Vidéo de Bruxelles (CVB) — 17 min, l'histoire de Lila.</p>
               <div style="margin-top: 10px;">
-                <a href="https://cvb.be/fr/films/ce-bout-de-tissu" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="display: inline-flex; gap: 6px; align-items: center; padding: 6px 14px; font-size: 0.8rem; border-color: var(--border-subtle);">
-                  <i class="fa-solid fa-film"></i> Fiche du film « Ce bout de tissu » (CVB) →
+                <a href="https://cvb.be/fr/films/ce-bout-de-tissu" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+                  <i class="fa-solid fa-film"></i> Fiche du film (CVB) →
                 </a>
               </div>
             </div>
@@ -305,10 +318,10 @@
           <div class="timeline-content-wrapper">
             <div class="timeline-details">
               <h3>BrainCair & Ateliers PsyBru</h3>
-              <p>Direction du coaching académique chez BrainCair : 150+ suivis, SMI Club et programme <em>« Je développe mon autonomie »</em> (PsyBru).</p>
+              <p>Direction du coaching académique chez BrainCair : 150+ suivis, SMI Club et programme « Je développe mon autonomie » (PsyBru).</p>
               <div style="margin-top: 10px;">
-                <a href="https://psybru.be/fr/psychologue/je-developpe-mon-autonomie" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="display: inline-flex; gap: 6px; align-items: center; padding: 6px 14px; font-size: 0.8rem; border-color: var(--border-subtle);">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Programme PsyBru « Je développe mon autonomie » →
+                <a href="https://psybru.be/fr/psychologue/je-developpe-mon-autonomie" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Programme PsyBru →
                 </a>
               </div>
             </div>
@@ -323,7 +336,7 @@
               <h3>Coaching Professionnel & 20+ Séminaires</h3>
               <p>5 ans d'accompagnement : 100+ professionnels coachés dans 37 métiers.</p>
               <div style="margin-top: 10px;">
-                <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="display: inline-flex; gap: 6px; align-items: center; padding: 6px 14px; font-size: 0.8rem; border-color: var(--border-subtle);">
+                <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
                   <i class="fa-solid fa-calendar-check"></i> Study2Work Meeting →
                 </a>
               </div>
@@ -339,8 +352,8 @@
               <h3>Maître-Praticien PNL (NLPU Dilts)</h3>
               <p>Spiral Academy / NLPU California. Certifications signées par Robert Dilts.</p>
               <div style="margin-top: 10px;">
-                <a href="https://www.spiral.academy/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="display: inline-flex; gap: 6px; align-items: center; padding: 6px 14px; font-size: 0.8rem; border-color: var(--border-subtle);">
-                  <i class="fa-solid fa-certificate"></i> Certification Spiral Academy (NLPU) →
+                <a href="https://www.spiral.academy/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+                  <i class="fa-solid fa-certificate"></i> Certification Spiral Academy →
                 </a>
               </div>
             </div>
@@ -355,8 +368,8 @@
               <h3>Master en Informatique & IA — ULB Polytech</h3>
               <p>Master d'Ingénieur Civil en IA à l'École polytechnique de Bruxelles et préparation aux examens d'admission d'ingénieur.</p>
               <div style="margin-top: 10px;">
-                <a href="https://polytech.ulb.be" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="display: inline-flex; gap: 6px; align-items: center; padding: 6px 14px; font-size: 0.8rem; border-color: var(--border-subtle);">
-                  <i class="fa-solid fa-graduation-cap"></i> ULB Polytech & Examen d'admission →
+                <a href="https://polytech.ulb.be" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+                  <i class="fa-solid fa-graduation-cap"></i> ULB Polytech →
                 </a>
               </div>
             </div>
@@ -368,75 +381,50 @@
     </div>
   </section>
 
-  <!-- 4. AVIS GOOGLE (Widget Elfsight Propre & Lisible) -->
-  <section id="reviews" class="section" style="background: rgba(23, 20, 15, 0.4); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+  <!-- FAQ Section -->
+  <section id="faq" class="section" style="background: var(--bg-card); border-top: 1px solid var(--border-subtle);">
     <div class="container">
-      <div class="section-header" style="text-align: center; max-width: 600px; margin: 0 auto 36px auto;">
-        <span class="section-subtitle">Témoignages</span>
-        <h2 class="section-title">Avis Google Vérifiés (5.0 ★)</h2>
-        <p class="section-desc">Ce que disent les étudiants et familles accompagnés à Bruxelles.</p>
-      </div>
-
-      <!-- Widget Elfsight Officiel d'Avis Google avec Fond Blanc Pur Garanti pour Lisibilité Totale -->
-      <div class="reviews-widget-card" style="background: #ffffff !important; border-radius: var(--radius-md); padding: 24px; border: 2px solid var(--accent-gold); box-shadow: 0 16px 48px rgba(0,0,0,0.7); min-height: 480px;">
-        <div class="elfsight-app-d2b53de6-4579-41d8-8a24-7206e2b63f2d"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. FAQ -->
-  <section id="faq" class="section">
-    <div class="container">
-      <div class="faq-grid">
-        <div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px; align-items: start;">
+        <div style="display: flex; flex-direction: column; gap: 14px;">
           <span class="section-subtitle">FAQ</span>
-          <h2 class="section-title" style="line-height: 1.1;">Questions fréquentes.</h2>
-          <div style="margin-top: 20px;">
-            <a href="https://www.google.com/search?q=Kasidi+Rodrigue+Reviews#lkt=LocalPoiReviews" target="_blank" rel="noopener" class="btn btn-outline" style="border-color: #4285f4; color: #60a5fa;">
-              <i class="fa-brands fa-google"></i> Voir les Avis Google
-            </a>
-          </div>
+          <h2 class="section-title" style="text-align: left;">Questions fréquentes.</h2>
+          <a href="https://www.google.com/search?q=Kasidi+Rodrigue+Reviews" target="_blank" rel="noopener" class="btn btn-secondary" style="width: fit-content; margin-top: 12px;">
+            <i class="fa-brands fa-google"></i> Voir les Avis Google (5.0 ★)
+          </a>
         </div>
-
-        <div>
-          <details class="faq-item">
-            <summary class="faq-summary">
-              <span>Est-il trop tard pour la seconde session d'août ?</span>
-              <span class="faq-icon">+</span>
-            </summary>
-            <p class="faq-answer">Non. En ciblant prioritairement les matières clés avec le rétro-planning inversé et le rappel actif, nous réorganisons tes révisions en sprint efficace.</p>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <details style="border: 1px solid var(--border-subtle); border-radius: var(--radius-md); background: var(--bg-dark); padding: 20px;">
+            <summary style="cursor: pointer; font-weight: 600; font-size: 1.1rem; color: var(--text-main);">Est-il trop tard pour la seconde session d'août ?</summary>
+            <p style="margin-top: 12px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+              Non. En ciblant prioritairement les matières clés avec le rétro-planning inversé et le rappel actif, nous réorganisons tes révisions en un sprint efficace.
+            </p>
           </details>
-
-          <details class="faq-item">
-            <summary class="faq-summary">
-              <span>Pourquoi l'approche Ingénieur + PNL fonctionne-t-elle ?</span>
-              <span class="faq-icon">+</span>
-            </summary>
-            <p class="faq-answer">L'ingénierie apporte la structure et les méthodes scientifiques. La PNL élimine l'anxiété du blocus et la procrastination pour maintenir une régularité sereine.</p>
+          <details style="border: 1px solid var(--border-subtle); border-radius: var(--radius-md); background: var(--bg-dark); padding: 20px;">
+            <summary style="cursor: pointer; font-weight: 600; font-size: 1.1rem; color: var(--text-main);">Pourquoi l'approche Ingénieur + PNL fonctionne-t-elle ?</summary>
+            <p style="margin-top: 12px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+              L'ingénierie apporte la structure et les méthodes scientifiques. La PNL élimine l'anxiété du blocus et la procrastination pour maintenir une régularité sereine.
+            </p>
           </details>
-
-          <details class="faq-item">
-            <summary class="faq-summary">
-              <span>Comment se déroule le diagnostic de 15 minutes ?</span>
-              <span class="faq-icon">+</span>
-            </summary>
-            <p class="faq-answer">Un échange individuel en visio de 15 minutes pour évaluer ta situation, tes matières à repasser et définir tes priorités d'action immédiatement.</p>
+          <details style="border: 1px solid var(--border-subtle); border-radius: var(--radius-md); background: var(--bg-dark); padding: 20px;">
+            <summary style="cursor: pointer; font-weight: 600; font-size: 1.1rem; color: var(--text-main);">Comment se déroule le diagnostic de 15 minutes ?</summary>
+            <p style="margin-top: 12px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+              Un échange individuel en visio de 15 minutes pour évaluer ta situation, tes matières à repasser et définir tes priorités d'action immédiatement.
+            </p>
           </details>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 6. CONVERSION FINALE -->
-  <section id="book" class="container">
-    <div class="cta-box">
-      <span class="cta-tag">Seconde Session & Rentrée 2026</span>
-      <h2 class="cta-title">Réserver ma Session Stratégie Offerte (15 min)</h2>
-      <p class="cta-desc">Rends-toi sur Calendly pour fixer notre visioconférence individuelle sans engagement.</p>
-      
-      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 24px;">
-        <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" class="btn btn-primary" style="font-size: 1.1rem; padding: 18px 36px;">
-          <i class="fa-solid fa-calendar-check"></i> Choisir mon créneau sur Calendly →
+  <!-- Final CTA -->
+  <section id="book" class="section" style="background: linear-gradient(180deg, var(--bg-dark) 0%, #15120d 100%);">
+    <div class="container" style="max-width: 760px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 24px;">
+      <span class="section-subtitle">Seconde Session & Rentrée 2026</span>
+      <h2 class="section-title">Réserver ma Session Stratégie <span style="color: var(--accent-gold); font-style: italic;">Offerte (15 min).</span></h2>
+      <p class="section-desc">Rends-toi sur Calendly pour fixer notre visioconférence individuelle, sans engagement.</p>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 8px;">
+        <a href="https://calendly.com/kasidirodrigue-coaching/study-to-work-meeting" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fa-solid fa-calendar-check"></i> Choisir mon créneau →
         </a>
         <a href="mailto:kasidi@stuflow.app" class="btn btn-secondary">
           <i class="fa-solid fa-envelope"></i> kasidi@stuflow.app
@@ -445,42 +433,7 @@
     </div>
   </section>
 
-  <!-- 7. RÉSEAUX SOCIAUX & CONTACTS OFFICIELS -->
-  <section class="container" style="margin-top: 48px; margin-bottom: 24px;">
-    <div style="background: rgba(23, 20, 15, 0.7); border: 1px solid var(--border-gold); border-radius: var(--radius-md); padding: 32px 24px; text-align: center;">
-      <span class="section-subtitle" style="margin-bottom: 8px;">Communauté & Médias</span>
-      <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 20px;">Retrouvez Kasidi Rodrigue sur les Réseaux</h3>
-      
-      <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
-        <a href="https://www.linkedin.com/in/kasidirodrigue" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="background: rgba(10, 102, 194, 0.15); border-color: #0a66c2; color: #60a5fa;">
-          <i class="fa-brands fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="https://instagram.com/kasidirodrigue" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="background: rgba(225, 48, 108, 0.15); border-color: #e1306c; color: #ff758c;">
-          <i class="fa-brands fa-instagram"></i> Instagram
-        </a>
-        <a href="https://www.tiktok.com/@kasidirodrigue" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="background: rgba(255, 255, 255, 0.1); border-color: #fff; color: #fff;">
-          <i class="fa-brands fa-tiktok"></i> TikTok
-        </a>
-        <a href="https://www.youtube.com/watch?v=cudhzky9SYU" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="background: rgba(255, 0, 0, 0.15); border-color: #ff0000; color: #ff4d4d;">
-          <i class="fa-brands fa-youtube"></i> YouTube
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=61562872513826" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="background: rgba(24, 119, 242, 0.15); border-color: #1877f2; color: #60a5fa;">
-          <i class="fa-brands fa-facebook-f"></i> Facebook
-        </a>
-        <a href="https://www.google.com/search?q=Kasidi+Rodrigue+Reviews#lkt=LocalPoiReviews" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="background: rgba(66, 133, 244, 0.15); border-color: #4285f4; color: #60a5fa;">
-          <i class="fa-brands fa-google"></i> Avis Google (5.0 ★)
-        </a>
-        <a href="https://share.google/L4fBKPJrOMc7O63gw" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="background: rgba(234, 67, 53, 0.15); border-color: #ea4335; color: #ff758c;">
-          <i class="fa-brands fa-google"></i> Google Profile
-        </a>
-        <a href="https://stuflow.app" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-          <i class="fa-solid fa-bolt"></i> StuFlow.app
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer Exhaustif -->
+  <!-- Footer -->
   <footer>
     <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 24px; align-items: center; width: 100%;">
       <div class="footer-brand">
@@ -508,6 +461,6 @@
   </footer>
 
   <!-- Main JavaScript File -->
-  <script src="assets/js/main.js?v=constellation_v1"></script>
+  <script src="assets/js/main.js?v=landing_dc_2026_v2"></script>
 </body>
 </html>
