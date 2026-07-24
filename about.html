@@ -21,12 +21,12 @@
     }
     .nav-overlay-about {
       display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(11, 10, 8, 0.7);
-      z-index: 40;
+      position: fixed !important;
+      inset: 0 !important;
+      background: rgba(11, 10, 8, 0.75);
+      z-index: 80 !important;
     }
-    .nav-overlay-about.open { display: block; }
+    .nav-overlay-about.open { display: block !important; }
 
     @media (max-width: 768px) {
       .mobile-menu-btn-about { display: flex; align-items: center; justify-content: center; }
@@ -36,22 +36,22 @@
       }
       .nav-links.open {
         display: flex !important;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 280px;
-        max-width: 85vw;
-        height: 100vh;
-        height: 100dvh;
+        position: fixed !important;
+        top: 0 !important;
+        right: 0 !important;
+        width: 280px !important;
+        max-width: 85vw !important;
+        height: 100vh !important;
+        height: 100dvh !important;
         flex-direction: column;
         align-items: flex-start;
         gap: 0;
-        padding: 24px 24px 40px;
+        padding: 72px 24px 40px !important;
         background: rgba(21, 18, 13, 0.98);
         backdrop-filter: blur(20px);
         border-left: 1px solid var(--border-subtle);
         box-shadow: -10px 0 40px rgba(0, 0, 0, 0.9);
-        z-index: 60;
+        z-index: 90 !important;
         overflow-y: auto;
         animation: slideInNav 0.25s ease-out;
       }

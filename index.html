@@ -126,22 +126,22 @@
       }
       .site-header nav.open {
         display: flex !important;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 280px;
-        max-width: 85vw;
-        height: 100vh;
-        height: 100dvh;
+        position: fixed !important;
+        top: 0 !important;
+        right: 0 !important;
+        width: 280px !important;
+        max-width: 85vw !important;
+        height: 100vh !important;
+        height: 100dvh !important;
         flex-direction: column !important;
         align-items: flex-start !important;
         gap: 0 !important;
-        padding: 24px 24px 40px;
-        background: oklch(0.16 0.02 262) !important;
+        padding: 72px 24px 40px !important;
+        background: oklch(0.14 0.02 260) !important;
         backdrop-filter: blur(20px);
-        border-left: 1px solid oklch(0.3 0.04 260);
+        border-left: 1px solid oklch(0.28 0.04 260);
         box-shadow: -10px 0 40px rgba(0, 0, 0, 0.9);
-        z-index: 60;
+        z-index: 90 !important;
         overflow-y: auto;
         animation: slideInNav 0.25s ease-out;
       }
@@ -149,12 +149,12 @@
         from { transform: translateX(100%); }
         to { transform: translateX(0); }
       }
-      /* Standalone close button - lives OUTSIDE the nav to avoid stacking issues */
+      /* Standalone close button - lives OUTSIDE the nav, elevated above all elements */
       #mobileCloseBtn {
         display: none;
-        position: fixed;
-        top: 20px;
-        right: 20px;
+        position: fixed !important;
+        top: 16px !important;
+        right: 16px !important;
         width: 40px;
         height: 40px;
         background: oklch(0.22 0.02 260);
@@ -165,12 +165,12 @@
         justify-content: center;
         font-size: 20px;
         cursor: pointer;
-        z-index: 65;
+        z-index: 100 !important;
         pointer-events: auto;
         -webkit-tap-highlight-color: transparent;
         touch-action: manipulation;
       }
-      #mobileCloseBtn.open { display: flex; }
+      #mobileCloseBtn.open { display: flex !important; }
       #mobileCloseBtn i { pointer-events: none; }
       .site-header nav a {
         display: block;
@@ -185,15 +185,15 @@
         text-align: center;
       }
 
-      /* Mobile overlay backdrop */
+      /* Mobile overlay backdrop - covers top banner, header, and entire body */
       .nav-overlay {
         display: none;
-        position: fixed;
-        inset: 0;
-        background: oklch(0.05 0.01 260 / 0.7);
-        z-index: 40;
+        position: fixed !important;
+        inset: 0 !important;
+        background: oklch(0.05 0.01 260 / 0.75);
+        z-index: 80 !important;
       }
-      .nav-overlay.open { display: block; }
+      .nav-overlay.open { display: block !important; }
 
       /* Prevent overflow on cards and titles */
       h1, h2, h3, p, span, a {
