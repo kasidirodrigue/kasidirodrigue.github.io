@@ -23,8 +23,8 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(11, 10, 8, 0.6);
-      z-index: 54;
+      background: rgba(11, 10, 8, 0.7);
+      z-index: 40;
     }
     .nav-overlay-about.open { display: block; }
 
@@ -47,10 +47,11 @@
         align-items: flex-start;
         gap: 0;
         padding: 80px 28px 40px;
-        background: rgba(15, 14, 12, 0.98);
+        background: rgba(21, 18, 13, 0.98);
         backdrop-filter: blur(20px);
         border-left: 1px solid var(--border-subtle);
-        z-index: 55;
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.9);
+        z-index: 60;
         overflow-y: auto;
         animation: slideInNav 0.25s ease-out;
       }

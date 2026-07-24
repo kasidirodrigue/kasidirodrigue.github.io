@@ -137,10 +137,11 @@
         align-items: flex-start !important;
         gap: 0 !important;
         padding: 80px 24px 40px;
-        background: oklch(0.13 0.02 260 / 0.98) !important;
+        background: oklch(0.16 0.02 262) !important;
         backdrop-filter: blur(20px);
-        border-left: 1px solid oklch(0.24 0.02 260);
-        z-index: 55;
+        border-left: 1px solid oklch(0.3 0.04 260);
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.9);
+        z-index: 60;
         overflow-y: auto;
         animation: slideInNav 0.25s ease-out;
       }
@@ -166,8 +167,8 @@
         display: none;
         position: fixed;
         inset: 0;
-        background: oklch(0.05 0.01 260 / 0.6);
-        z-index: 54;
+        background: oklch(0.05 0.01 260 / 0.7);
+        z-index: 40;
       }
       .nav-overlay.open { display: block; }
 
