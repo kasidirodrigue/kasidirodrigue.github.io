@@ -19,6 +19,9 @@
       z-index: 60;
       line-height: 1;
     }
+    .mobile-nav-header-about {
+      display: none !important;
+    }
     .nav-overlay-about {
       display: none;
       position: fixed !important;
@@ -29,7 +32,7 @@
     .nav-overlay-about.open { display: block !important; }
 
     @media (max-width: 768px) {
-      .mobile-menu-btn-about { display: flex; align-items: center; justify-content: center; }
+      .mobile-menu-btn-about { display: flex !important; align-items: center; justify-content: center; }
       .nav-container { flex-wrap: wrap; }
       .nav-links {
         display: none !important;
@@ -54,9 +57,6 @@
         z-index: 90 !important;
         overflow-y: auto;
         animation: slideInNav 0.25s ease-out;
-      }
-      .mobile-nav-header-about {
-        display: none;
       }
       .nav-links.open .mobile-nav-header-about {
         display: flex !important;
@@ -121,7 +121,11 @@
       </a>
 
       <button class="mobile-menu-btn-about" id="mobileMenuBtnAbout" aria-label="Ouvrir le menu de navigation">
-        <i class="fa-solid fa-bars" id="menuIconAbout"></i>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:block;">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
       </button>
 
       <ul class="nav-links" id="mainNavAbout">

@@ -90,8 +90,11 @@
     }
 
     /* ===== MOBILE ELEMENTS (HIDDEN ON DESKTOP) ===== */
-    .mobile-menu-btn, .mobile-nav-header {
+    .mobile-menu-btn {
       display: none;
+    }
+    .mobile-nav-header {
+      display: none !important;
     }
 
     /* ===== MOBILE RESPONSIVE OVERRIDES ===== */
@@ -152,9 +155,6 @@
       @keyframes slideInNav {
         from { transform: translateX(100%); }
         to { transform: translateX(0); }
-      }
-      .mobile-nav-header {
-        display: none !important;
       }
       .site-header nav.open .mobile-nav-header {
         display: flex !important;
@@ -282,7 +282,11 @@
       Kasidi Rodrigue
     </a>
     <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Ouvrir le menu de navigation">
-      <i class="fa-solid fa-bars" id="menuIcon"></i>
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:block;">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
     </button>
     <nav id="mainNav" style="display:flex;align-items:center;gap:26px;font-family:'Space Grotesk',sans-serif;font-size:15px;">
       <div class="mobile-nav-header">
