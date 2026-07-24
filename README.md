@@ -38,7 +38,7 @@ Cette landing page a été entièrement construite et déployée via une synergi
   - [5. Déploiement CI/CD Multi-Branches sur GitHub Pages](#5-déploiement-cicd-multi-branches-sur-github-pages)
 - [✨ Fonctionnalités Clés du Site](#-fonctionnalités-clés-du-site)
 - [📂 Structure des Fichiers](#-structure-des-fichiers)
-- [📜 Historique des Commits & Jalons Majeurs](#-historique-des-commits--jalons-majeurs)
+- [📜 Historique Intégral des Commits (23 et 24 Juillet 2026)](#-historique-intégral-des-commits-23-et-24-juillet-2026)
 - [👤 Auteur & Contact](#-auteur--contact)
 
 ---
@@ -137,17 +137,63 @@ kasidirodrigue.github.io/
 
 ---
 
-## 📜 Historique des Commits & Jalons Majeurs
+## 📜 Historique Intégral des Commits (23 et 24 Juillet 2026)
 
-- `970e515` — Add detailed README.md documenting the full creation process, Claude Design integration, git milestones, and GitHub Pages deployment.
-- `13e80f5` — Completely reconstruct landing page from `Landing.dc.html` with OKLCH design system, connected links, images, animated counters, particle canvas, ebooks, timeline, and FAQ.
-- `0ae252b` — Apply exact Cyan (`#60cedc`) to Violet (`#ac9ef0`) color palette and particle animation from `Landing.dc.html`.
-- `9dd1a0b` — Fix closing syntax error in `main.js` scroll event listener.
-- `93b05b9` — Set explicit canonical URL, OG URL metadata, and logo link.
-- `274d67f` — Integrate interactive Canvas Constellation particle animation into Hero section.
-- `ad924ec` — Apply UI/UX Engineering & WCAG Accessibility standards.
-- `ee4cf50` — Add all official social media profiles in dedicated section and full footer.
-- `db1406d` — Implement UX Copywriting Conversion architecture for Brussels Education & Coaching market.
+Voici la chronologie complète de tous les commits effectués sur le dépôt durant les 24 et 23 juillet 2026 :
+
+| Hash | Date & Heure | Description du Commit |
+| :---: | :---: | :--- |
+| `e1b761b` | 2026-07-24 02:45 | Update README.md with explicit credits for Gemini 3.6 Flash (High) on Antigravity and Claude Design with Claude Opus 4.8 (High) |
+| `970e515` | 2026-07-24 02:41 | Add detailed README.md documenting the full creation process, Claude Design integration, git milestones, and GitHub Pages deployment |
+| `13e80f5` | 2026-07-24 02:38 | Completely reconstruct landing page from Landing.dc.html with OKLCH design system, connected links, images, animated counters, particle canvas, ebooks, timeline, and FAQ |
+| `0ae252b` | 2026-07-24 02:37 | Apply exact Cyan (`#60cedc`) to Violet (`#ac9ef0`) color palette and particle animation from Landing.dc.html |
+| `9dd1a0b` | 2026-07-24 02:36 | Fix closing syntax error in main.js scroll event listener |
+| `c05567b` | 2026-07-24 02:35 | Publish complete Landing.dc.html landing page layout with particle constellation canvas, animated metrics counters, trust bar, ebooks, timeline, and FAQ |
+| `93b05b9` | 2026-07-24 02:31 | Set explicit canonical URL, OG URL metadata, and logo link pointing to `https://kasidirodrigue.github.io/` |
+| `787ddcb` | 2026-07-24 02:29 | Force cache refresh for main.js constellation canvas integration |
+| `274d67f` | 2026-07-24 02:25 | Integrate interactive Canvas Constellation particle animation into Hero section from Landing.dc.html |
+| `ad924ec` | 2026-07-24 01:56 | Apply UI/UX Engineering & WCAG Accessibility standards based on Snyk Claude Skills guide |
+| `bbf09ef` | 2026-07-24 01:53 | Update exact URL `https://www.spiral.academy/` for Spiral Academy certification item |
+| `7a3e800` | 2026-07-24 01:50 | Update exact URL `https://psybru.be/fr/psychologue/je-developpe-mon-autonomie` on timeline |
+| `de0784b` | 2026-07-24 01:49 | Update exact descriptive links for Ce bout de tissu CVB and PsyBru Je développe mon autonomie program |
+| `995c49a` | 2026-07-24 01:47 | Enrich Parcours timeline with direct reference links for StuFlow, CVB, PsyBru, Spiral Academy, and ULB Polytech |
+| `f4fe224` | 2026-07-24 01:45 | Replace wording Diagnostic with Session Stratégie across site buttons and headers |
+| `9e45f0c` | 2026-07-24 01:43 | Force GitHub Pages CDN refresh with `?v=hero_v2` tag |
+| `ceb492e` | 2026-07-24 01:41 | Streamline Hero section: shorten subtitle, replace Google Reviews with StuFlow button, polish portrait card framing |
+| `50186cd` | 2026-07-24 01:38 | Refine visual identity design tokens for Imperial Gold & Deep Obsidian theme |
+| `16e35e3` | 2026-07-24 01:34 | Remove all `?v=...` query parameters for clean direct URLs pointing directly to current site version |
+| `ee4cf50` | 2026-07-24 01:15 | Add all official social media profiles (LinkedIn, Instagram, TikTok, YouTube, Facebook, Google Profile, Google Reviews, StuFlow, E-mail) in dedicated section and full footer |
+| `fa8b689` | 2026-07-24 01:12 | Set pure white background (`#ffffff`) for Elfsight Google Reviews widget container to make all review texts 100% readable |
+| `bdb9822` | 2026-07-24 01:11 | Restore official Elfsight Google Reviews widget inside clean white container for maximum readability |
+| `4e1d13d` | 2026-07-24 01:08 | Move Affiliations & Partenariats trust bar to sit elegantly between Coaching section and Ebooks section |
+| `22c4db6` | 2026-07-24 01:07 | Replace broken/buggy Elfsight widget with custom luxury native Google Review cards + direct link to Google Business 5.0 stars |
+| `13b05ec` | 2026-07-24 01:06 | Ultra-clean and minimal design refresh: remove visual clutter, streamline Hero section, clean up navbar |
+| `188e042` | 2026-07-24 01:02 | Fix double Google Reviews widget glitch and wrap Elfsight widget in styled container |
+| `db1406d` | 2026-07-24 01:00 | Implement UX Copywriting Conversion architecture for Brussels Education & Coaching market |
+| `05d74c5` | 2026-07-24 00:55 | Apply Steve Krug's Don't Make Me Think usability principles: zero friction, direct action buttons |
+| `7b7272b` | 2026-07-24 00:48 | Replace 'Audit' with 'Revoyons ta stratégie d'étude pour les examens de seconde session d'août' and update booking link to Calendly |
+| `419f621` | 2026-07-24 00:46 | Embed direct Elfsight widget AND direct standalone iframe for `elf.site` |
+| `25a0854` | 2026-07-24 00:45 | Update video label and section title to reflect Master Thesis Assistance Offer instead of tutorial |
+| `180717b` | 2026-07-24 00:43 | Reorder all projects and timeline items in strict descending chronological order (most recent/present first) |
+| `fef08a1` | 2026-07-24 00:40 | Embed official Elfsight Google Reviews widget before CTA section |
+| `1e7ada7` | 2026-07-24 00:37 | Add official Google Reviews link and badge (LocalPoiReviews) to Hero, Trust bar, CTA, and Footer |
+| `b07de84` | 2026-07-24 00:35 | Add cache-busting `v=2026_v2` query string to force browser cache refresh |
+| `4b73ef5` | 2026-07-24 00:32 | Major design update inspired by Portfolio Kasidi Rodrigue.html: warm gold dark theme, Newsreader serif typography, trust bar, FAQ accordion, chronological timeline |
+| `d3970c7` | 2026-07-24 00:13 | Remove requested metric card (+2.0 Points de Moyenne) |
+| `a54b10a` | 2026-07-24 00:11 | Update Hero avatar with Kasidi Rodrigue Mwinyi's official portrait photo |
+| `d3baff0` | 2026-07-24 00:09 | Add real seminar lecture photo to Coaching & Seminars project card |
+| `2a0334a` | 2026-07-24 00:06 | Associate YouTube video with the 2 Ebooks guides and restore StuFlow homepage image |
+| `a3c73f3` | 2026-07-24 00:03 | Embed StuFlow YouTube video (`cudhzky9SYU`) in projects matrix and ebooks section |
+| `65abab7` | 2026-07-24 00:00 | Add 2 downloadable Ebooks (Defense du mémoire 2023 & Question de recherche 2024) |
+| `58fb34c` | 2026-07-23 23:39 | Add official Google Knowledge Graph / Search card link to hero and footer |
+| `b51fdb7` | 2026-07-23 23:37 | Add Facebook profile link to hero and footer |
+| `3dfefdd` | 2026-07-23 23:36 | Add Instagram and TikTok profile links to hero and footer |
+| `1ecc3d5` | 2026-07-23 23:32 | Replace hero avatar with Kasidi Rodrigue Mwinyi profile photo |
+| `16f179c` | 2026-07-23 23:29 | Enhance UX contrast, readability, layout scannability and text density |
+| `141cb0c` | 2026-07-23 23:25 | Replace mockups with real live website screenshots for StuFlow, CVB, and PsyBru |
+| `9ed556b` | 2026-07-23 23:19 | Clean up repository: remove legacy 2023 files and streamline 2026 portfolio |
+| `37439c3` | 2026-07-23 23:18 | Bypass Jekyll with `.nojekyll` and force rebuild GitHub Pages |
+| `4be08c5` | 2026-07-23 23:13 | Update portfolio Next-Gen 2026 for Kasidi Rodrigue Mwinyi |
 
 ---
 
