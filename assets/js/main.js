@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* 0. Mobile Hamburger Menu Toggle                                            */
   /* -------------------------------------------------------------------------- */
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileNavCloseBtn = document.getElementById('mobileNavCloseBtn');
   const mainNav = document.getElementById('mainNav');
   const navOverlay = document.getElementById('navOverlay');
   const menuIcon = document.getElementById('menuIcon');
@@ -41,6 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
         openMobileMenu();
       }
     });
+  }
+
+  if (mobileNavCloseBtn) {
+    mobileNavCloseBtn.addEventListener('click', closeMobileMenu);
   }
 
   // Close mobile menu when clicking overlay
