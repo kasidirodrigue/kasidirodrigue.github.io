@@ -265,9 +265,9 @@
 
   <!-- NAVIGATION HEADER -->
   <!-- Mobile nav overlay backdrop -->
-  <div class="nav-overlay" id="navOverlay" onclick="if(window.closeMobileMenu) window.closeMobileMenu();"></div>
+  <div class="nav-overlay" id="navOverlay"></div>
   <!-- Standalone close button (outside nav to avoid stacking issues on Samsung) -->
-  <button id="mobileCloseBtn" onclick="if(window.closeMobileMenu) window.closeMobileMenu();" aria-label="Fermer le menu">
+  <button id="mobileCloseBtn" aria-label="Fermer le menu">
     <i class="fa-solid fa-xmark"></i>
   </button>
 
@@ -276,7 +276,7 @@
       <span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,oklch(0.72 0.13 200),oklch(0.72 0.13 300));color:oklch(0.14 0.02 260);font-weight:700;font-size:14px;letter-spacing:0.02em;">KR</span>
       Kasidi Rodrigue
     </a>
-    <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="if(window.toggleMobileMenu) window.toggleMobileMenu();" aria-label="Ouvrir le menu de navigation">
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Ouvrir le menu de navigation">
       <i class="fa-solid fa-bars" id="menuIcon"></i>
     </button>
     <nav id="mainNav" style="display:flex;align-items:center;gap:26px;font-family:'Space Grotesk',sans-serif;font-size:15px;">

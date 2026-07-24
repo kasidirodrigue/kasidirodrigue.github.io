@@ -2,71 +2,77 @@
  * Kasidi Rodrigue Mwinyi — Main Interactivity & Animations 2026
  */
 
+/* -------------------------------------------------------------------------- */
+/* Global Mobile Menu Helper Functions                                        */
+/* -------------------------------------------------------------------------- */
+window.openMobileMenu = function() {
+  const mainNav = document.getElementById('mainNav');
+  const navOverlay = document.getElementById('navOverlay');
+  const menuIcon = document.getElementById('menuIcon');
+  const closeBtn = document.getElementById('mobileCloseBtn');
+  if (mainNav) mainNav.classList.add('open');
+  if (navOverlay) navOverlay.classList.add('open');
+  if (closeBtn) closeBtn.classList.add('open');
+  if (menuIcon) {
+    menuIcon.classList.remove('fa-bars');
+    menuIcon.classList.add('fa-xmark');
+  }
+  document.body.style.overflow = 'hidden';
+};
+
+window.closeMobileMenu = function() {
+  const mainNav = document.getElementById('mainNav');
+  const navOverlay = document.getElementById('navOverlay');
+  const menuIcon = document.getElementById('menuIcon');
+  const closeBtn = document.getElementById('mobileCloseBtn');
+  if (mainNav) mainNav.classList.remove('open');
+  if (navOverlay) navOverlay.classList.remove('open');
+  if (closeBtn) closeBtn.classList.remove('open');
+  if (menuIcon) {
+    menuIcon.classList.remove('fa-xmark');
+    menuIcon.classList.add('fa-bars');
+  }
+  document.body.style.overflow = '';
+};
+
+window.toggleMobileMenu = function() {
+  const mainNav = document.getElementById('mainNav');
+  const isOpen = mainNav && mainNav.classList.contains('open');
+  if (isOpen) {
+    window.closeMobileMenu();
+  } else {
+    window.openMobileMenu();
+  }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
 
   /* -------------------------------------------------------------------------- */
-  /* 0. Mobile Hamburger Menu Toggle                                            */
+  /* 0. Mobile Hamburger Menu Event Bindings                                    */
   /* -------------------------------------------------------------------------- */
-  window.openMobileMenu = function() {
-    const mainNav = document.getElementById('mainNav');
-    const navOverlay = document.getElementById('navOverlay');
-    const menuIcon = document.getElementById('menuIcon');
-    const closeBtn = document.getElementById('mobileCloseBtn');
-    if (mainNav) mainNav.classList.add('open');
-    if (navOverlay) navOverlay.classList.add('open');
-    if (closeBtn) closeBtn.classList.add('open');
-    if (menuIcon) {
-      menuIcon.classList.remove('fa-bars');
-      menuIcon.classList.add('fa-xmark');
-    }
-    document.body.style.overflow = 'hidden';
-  };
-
-  window.closeMobileMenu = function() {
-    const mainNav = document.getElementById('mainNav');
-    const navOverlay = document.getElementById('navOverlay');
-    const menuIcon = document.getElementById('menuIcon');
-    const closeBtn = document.getElementById('mobileCloseBtn');
-    if (mainNav) mainNav.classList.remove('open');
-    if (navOverlay) navOverlay.classList.remove('open');
-    if (closeBtn) closeBtn.classList.remove('open');
-    if (menuIcon) {
-      menuIcon.classList.remove('fa-xmark');
-      menuIcon.classList.add('fa-bars');
-    }
-    document.body.style.overflow = '';
-  };
-
-  window.toggleMobileMenu = function() {
-    const mainNav = document.getElementById('mainNav');
-    const isOpen = mainNav && mainNav.classList.contains('open');
-    if (isOpen) {
-      window.closeMobileMenu();
-    } else {
-      window.openMobileMenu();
-    }
-  };
-
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const mobileCloseBtn = document.getElementById('mobileCloseBtn');
   const navOverlay = document.getElementById('navOverlay');
 
   if (mobileMenuBtn) {
     mobileMenuBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
+      e.preventDefault();
       window.toggleMobileMenu();
     });
   }
 
   if (mobileCloseBtn) {
     mobileCloseBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
+      e.preventDefault();
       window.closeMobileMenu();
     });
   }
 
   if (navOverlay) {
-    navOverlay.addEventListener('click', window.closeMobileMenu);
+    navOverlay.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.closeMobileMenu();
+    });
   }
 
   // Close mobile menu when clicking a nav link
