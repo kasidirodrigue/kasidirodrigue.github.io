@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Allow AI Search Crawlers for Generative Engine Optimization (GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bravebot
+Allow: /
+
+Sitemap: https://kasidirodrigue.github.io/sitemap.xml
