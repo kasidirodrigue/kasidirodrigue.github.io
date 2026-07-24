@@ -8,30 +8,16 @@
 window.openMobileMenu = function() {
   const mainNav = document.getElementById('mainNav');
   const navOverlay = document.getElementById('navOverlay');
-  const menuIcon = document.getElementById('menuIcon');
-  const closeBtn = document.getElementById('mobileCloseBtn');
   if (mainNav) mainNav.classList.add('open');
   if (navOverlay) navOverlay.classList.add('open');
-  if (closeBtn) closeBtn.classList.add('open');
-  if (menuIcon) {
-    menuIcon.classList.remove('fa-bars');
-    menuIcon.classList.add('fa-xmark');
-  }
   document.body.style.overflow = 'hidden';
 };
 
 window.closeMobileMenu = function() {
   const mainNav = document.getElementById('mainNav');
   const navOverlay = document.getElementById('navOverlay');
-  const menuIcon = document.getElementById('menuIcon');
-  const closeBtn = document.getElementById('mobileCloseBtn');
   if (mainNav) mainNav.classList.remove('open');
   if (navOverlay) navOverlay.classList.remove('open');
-  if (closeBtn) closeBtn.classList.remove('open');
-  if (menuIcon) {
-    menuIcon.classList.remove('fa-xmark');
-    menuIcon.classList.add('fa-bars');
-  }
   document.body.style.overflow = '';
 };
 
@@ -51,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* 0. Mobile Hamburger Menu Event Bindings                                    */
   /* -------------------------------------------------------------------------- */
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-  const mobileCloseBtn = document.getElementById('mobileCloseBtn');
+  const drawerCloseBtn = document.getElementById('drawerCloseBtn');
   const navOverlay = document.getElementById('navOverlay');
 
   if (mobileMenuBtn) {
@@ -61,8 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (mobileCloseBtn) {
-    mobileCloseBtn.addEventListener('click', (e) => {
+  if (drawerCloseBtn) {
+    drawerCloseBtn.addEventListener('click', (e) => {
       e.preventDefault();
       window.closeMobileMenu();
     });

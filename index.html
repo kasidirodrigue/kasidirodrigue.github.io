@@ -136,7 +136,7 @@
         flex-direction: column !important;
         align-items: flex-start !important;
         gap: 0 !important;
-        padding: 72px 24px 40px !important;
+        padding: 24px 24px 40px !important;
         background: oklch(0.14 0.02 260) !important;
         backdrop-filter: blur(20px);
         border-left: 1px solid oklch(0.28 0.04 260);
@@ -149,29 +149,34 @@
         from { transform: translateX(100%); }
         to { transform: translateX(0); }
       }
-      /* Standalone close button - lives OUTSIDE the nav, elevated above all elements */
-      #mobileCloseBtn {
-        display: none;
-        position: fixed !important;
-        top: 16px !important;
-        right: 16px !important;
-        width: 40px;
-        height: 40px;
-        background: oklch(0.22 0.02 260);
-        border: 1px solid oklch(0.4 0.04 260);
-        color: oklch(0.95 0.005 260);
+      .mobile-nav-header {
+        display: none !important;
+      }
+      .site-header nav.open .mobile-nav-header {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+        border-bottom: 1px solid oklch(0.24 0.02 260);
+      }
+      .drawer-close-btn {
+        background: oklch(0.22 0.02 260) !important;
+        border: 1px solid oklch(0.38 0.04 260) !important;
+        color: oklch(0.97 0.005 260) !important;
+        width: 38px;
+        height: 38px;
         border-radius: 10px;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
         font-size: 20px;
+        font-weight: 700;
         cursor: pointer;
-        z-index: 100 !important;
-        pointer-events: auto;
+        line-height: 1;
         -webkit-tap-highlight-color: transparent;
-        touch-action: manipulation;
       }
-      #mobileCloseBtn.open { display: flex !important; }
-      #mobileCloseBtn i { pointer-events: none; }
       .site-header nav a {
         display: block;
         width: 100%;
@@ -185,7 +190,7 @@
         text-align: center;
       }
 
-      /* Mobile overlay backdrop - covers top banner, header, and entire body */
+      /* Mobile overlay backdrop */
       .nav-overlay {
         display: none;
         position: fixed !important;
@@ -266,10 +271,6 @@
   <!-- NAVIGATION HEADER -->
   <!-- Mobile nav overlay backdrop -->
   <div class="nav-overlay" id="navOverlay"></div>
-  <!-- Standalone close button (outside nav to avoid stacking issues on Samsung) -->
-  <button id="mobileCloseBtn" aria-label="Fermer le menu">
-    <i class="fa-solid fa-xmark"></i>
-  </button>
 
   <header class="site-header" style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 48px;background:oklch(0.13 0.02 260 / 0.85);backdrop-filter:blur(12px);border-bottom:1px solid oklch(0.24 0.02 260);">
     <a href="https://kasidirodrigue.github.io/" style="display:flex;align-items:center;gap:12px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:17px;color:oklch(0.97 0.005 260);">
@@ -280,6 +281,10 @@
       <i class="fa-solid fa-bars" id="menuIcon"></i>
     </button>
     <nav id="mainNav" style="display:flex;align-items:center;gap:26px;font-family:'Space Grotesk',sans-serif;font-size:15px;">
+      <div class="mobile-nav-header">
+        <span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;color:oklch(0.97 0.005 260);">Menu</span>
+        <button type="button" id="drawerCloseBtn" class="drawer-close-btn" aria-label="Fermer le menu">✕</button>
+      </div>
       <a href="#coaching" class="nav-link-mobile" style="color:oklch(0.82 0.02 260);">Coaching</a>
       <a href="#apropos" class="nav-link-mobile" style="color:oklch(0.82 0.02 260);">À propos</a>
       <a href="#ebooks" class="nav-link-mobile" style="color:oklch(0.82 0.02 260);">Mémoire</a>
